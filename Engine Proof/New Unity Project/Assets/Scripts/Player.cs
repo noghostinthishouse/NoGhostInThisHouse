@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
 			if(Vector3.Distance(transform.position,distance) < 0.001f)
 			{
 				move = false;
-			}
+            }
             //transform.position = distance;
         }
 	}
