@@ -7,10 +7,12 @@ public class Tile : MonoBehaviour
     public GameObject[] nearbyTiles;
 
     [SerializeField] private bool empty;
-    [SerializeField] private GameObject ghost;
+    [SerializeField] private SimpleGhost sg;
     [SerializeField] private GameObject item;
     private Transform my_transform;
     private Player player;
+
+    public bool playerOn;
 
     int NoOfAdjacentTiles;
 
@@ -20,9 +22,10 @@ public class Tile : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         NoOfAdjacentTiles = nearbyTiles.Length;
         empty = true;
-        if(ghost != null)
+        if(sg)
         {
             empty = false;
+            sg = sg.GetComponent<SimpleGhost>();
         }
     }
 
@@ -31,6 +34,18 @@ public class Tile : MonoBehaviour
         if(tileNo < NoOfAdjacentTiles)
         {
             return nearbyTiles[tileNo];
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    public Tile GetAdjacentTileT(int tileNo)
+    {
+        if (tileNo < NoOfAdjacentTiles)
+        {
+            return nearbyTiles[tileNo].GetComponent<Tile>();
         }
         else
         {
@@ -66,6 +81,10 @@ public class Tile : MonoBehaviour
     void OnMouseDown()
     {
         player.SelectTile(gameObject);
+        if (sg)
+        {
+            sg.CheckPlayer();
+        }
     }
 
     /*
