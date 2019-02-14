@@ -25,14 +25,15 @@ public class Player : MonoBehaviour
 	
 	void Update () {
         //only move when play select a valid tile
-        if (move)
+        if (move && PlayerTurn.playerTurn)
         {
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, distance, step);
 			if(Vector3.Distance(transform.position,distance) < 0.001f)
 			{
 				move = false;
-			}
+                PlayerTurn.playerTurn = false;
+            }
             //transform.position = distance;
         }
 	}

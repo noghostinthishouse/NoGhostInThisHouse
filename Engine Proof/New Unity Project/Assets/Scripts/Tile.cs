@@ -80,10 +80,13 @@ public class Tile : MonoBehaviour
 
     void OnMouseDown()
     {
-        player.SelectTile(gameObject);
-        if (sg)
+        if (!PlayerTurn.GameOver)
         {
-            sg.CheckPlayer();
+            player.SelectTile(gameObject);
+            if (sg)
+            {
+                sg.CheckPlayer();
+            }
         }
     }
 
