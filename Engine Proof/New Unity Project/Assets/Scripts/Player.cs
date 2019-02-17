@@ -32,9 +32,8 @@ public class Player : MonoBehaviour
 			if(Vector3.Distance(transform.position,distance) < 0.001f)
 			{
 				move = false;
-                PlayerTurn.playerTurn = false;
+                PlayerTurn.SetPlayerTurn();
             }
-            //transform.position = distance;
         }
 	}
 
@@ -67,7 +66,6 @@ public class Player : MonoBehaviour
                         next_t = nextTile.GetComponent<Transform>();
                         CalculateDis();
                         NextTurn();
-
                     }
                 }
             }
@@ -109,5 +107,10 @@ public class Player : MonoBehaviour
         nextTile = null;
         next_t = null;
         tile_nextTile = null;
+    }
+
+    public GameObject GetPlayerCurrentTile()
+    {
+        return currentTile;
     }
 }

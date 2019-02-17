@@ -10,25 +10,25 @@ public class SimpleGhost : MonoBehaviour
     public GameObject tile;
     private bool eat;
     private Tile t;
-    private Player player;
     private Vector3 distance;
+    private int ghostIndex;
     
     void Start()
     {
+        ghostIndex = PlayerTurn.AddGhost();
         triggered = false;
         t = tile.GetComponent<Tile>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         eat = false;
     }
 
     void Update()
     {
-        if (!PlayerTurn.playerTurn)
+        if (!PlayerTurn.playerTurn && PlayerTurn.ghostFinished[ghostIndex])
         {
             CheckPlayer();
-            PlayerTurn.playerTurn = true;
+            PlayerTurn.SetGhostTurn(ghostIndex);
         }
-        if (eat)
+        else if (eat)
         {
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, distance, step);
