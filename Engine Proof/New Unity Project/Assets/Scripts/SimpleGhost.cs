@@ -23,11 +23,13 @@ public class SimpleGhost : MonoBehaviour
 
     void Update()
     {
+        //1st trigger statement
         if (!PlayerTurn.playerTurn && PlayerTurn.ghostFinished[ghostIndex])
         {
             CheckPlayer();
             PlayerTurn.SetGhostTurn(ghostIndex);
         }
+        //2nd trigger statement (game over)
         else if (eat)
         {
             float step = speed * Time.deltaTime;

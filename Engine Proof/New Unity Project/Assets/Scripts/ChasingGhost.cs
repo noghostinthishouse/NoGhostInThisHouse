@@ -12,8 +12,7 @@ public class ChasingGhost : MonoBehaviour
 
     public GameObject nextTile;
     private Tile nextTile_t;
-
-    private bool move;
+    
     private bool eat;
     private Vector3 distance;
 
@@ -28,11 +27,11 @@ public class ChasingGhost : MonoBehaviour
         nextTile_t = nextTile.GetComponent<Tile>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         eat = false;
-        move = false;
     }
 
     void Update()
     {
+        //this statement is use to detect player in front of their tile
         if (!PlayerTurn.playerTurn && !triggered && PlayerTurn.ghostFinished[ghostIndex])
         {
             //check for trigger
@@ -41,6 +40,7 @@ public class ChasingGhost : MonoBehaviour
             //calculate which tile to move to
             PlayerTurn.SetGhostTurn(ghostIndex);
         }
+        //this statement is use to move the ghost after it is triggered
         else if(!PlayerTurn.playerTurn && triggered && PlayerTurn.ghostFinished[ghostIndex])
         {
             Debug.Log("Chasing");

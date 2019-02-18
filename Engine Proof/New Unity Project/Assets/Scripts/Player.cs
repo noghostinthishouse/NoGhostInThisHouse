@@ -15,7 +15,11 @@ public class Player : MonoBehaviour
     private bool move;
     private Vector3 distance;
 
-	void Start () {
+    private Inventory my_inventory;
+
+	void Start ()
+    {
+        my_inventory = GetComponent<Inventory>();
         current_t = currentTile.GetComponent<Transform>();
         tile = currentTile.GetComponent<Tile>();
         nextTile = null;
@@ -55,6 +59,12 @@ public class Player : MonoBehaviour
                     //adjacent tile and is empty
                     if (tile_nextTile.IsEmpty())
                     {
+                        if (tile_nextTile.item)
+                        {
+                            my_inventory.TakeItem(tile_nextTile.item);
+                            tile_nextTile.item = null;
+                            my_inventory.DisplayAllItem();
+                        }
                         found = true;
                         //enable move
                         move = true;

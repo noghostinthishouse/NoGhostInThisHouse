@@ -5,14 +5,14 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     public GameObject[] nearbyTiles;
+    public GameObject item;
 
     [SerializeField] private bool empty;
     [SerializeField] private SimpleGhost simpleGhost;
     [SerializeField] private ChasingGhost chasingGhost;
-    [SerializeField] private GameObject item;
+    
     //private Transform my_transform;
     private Player player;
-    private ChasingGhost track;
 
     public bool playerOn;
 
@@ -23,7 +23,6 @@ public class Tile : MonoBehaviour
         //my_transform = GetComponent<Transform>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         NoOfAdjacentTiles = nearbyTiles.Length;
-        track = GameObject.FindGameObjectWithTag("ChasingGhost").GetComponent<ChasingGhost>();
         empty = true;
         playerOn = false;
         if (simpleGhost || chasingGhost)
@@ -71,21 +70,19 @@ public class Tile : MonoBehaviour
         return empty;
     }
 
-    public void PlaceItem(GameObject newItem)
-    {
-        item = newItem;
-    }
-
-    public void TakeItem()
-    {
-        item = null;
-    }
-
     void OnMouseDown()
     {
         if (!PlayerTurn.GameOver && PlayerTurn.playerTurn)
         {
-            player.SelectTile(gameObject);
+            if (Input.GetMouseButtonDown(1))
+            {
+                //place/pick up flashlight
+            }
+            else
+            {
+                //check if player can move to this tile
+                player.SelectTile(gameObject);
+            }
         }
     }
 
