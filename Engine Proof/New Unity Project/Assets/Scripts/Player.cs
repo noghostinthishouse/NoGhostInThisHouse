@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     public float speed;
     public GameObject currentTile;
+    public float directionX;
+    public float directionY;
 
     private Transform current_t;
     private GameObject nextTile;
@@ -25,7 +27,7 @@ public class Player : MonoBehaviour
         nextTile = null;
         move = false;
         //tile.DebugGetAllTile();
-	}
+    }
 	
 	void Update () {
         //only move when play select a valid tile
@@ -33,7 +35,8 @@ public class Player : MonoBehaviour
         {
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, distance, step);
-			if(Vector3.Distance(transform.position,distance) < 0.001f)
+            
+            if (Vector3.Distance(transform.position,distance) < 0.001f)
 			{
 				move = false;
                 PlayerTurn.SetPlayerTurn();
@@ -104,7 +107,10 @@ public class Player : MonoBehaviour
         //calculate which way to move to
         Vector3 tmp = next_t.position - current_t.position;
         distance = transform.position + tmp;
+        directionX = tmp.x;
+        directionY = tmp.y;
     }
+
 
     void NextTurn()
     {

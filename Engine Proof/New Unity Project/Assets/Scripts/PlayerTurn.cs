@@ -12,6 +12,7 @@ public class PlayerTurn : MonoBehaviour
 
     //is called by all ghost instances
     //set one value to true when each of them finished their move
+
     public static void SetGhostTurn(int ghostIndex)
     {
         ghostFinished[ghostIndex] = false;
@@ -29,7 +30,7 @@ public class PlayerTurn : MonoBehaviour
             playerTurn = true;
         }
     }
-
+    
     public static void SetPlayerTurn()
     {
         playerTurn = false;

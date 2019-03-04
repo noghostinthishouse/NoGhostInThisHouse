@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ChasingGhost : MonoBehaviour
 {
-    [SerializeField] private bool triggered;
+//  [SerializeField] private bool triggered;
+    public bool triggered;
     public float speed;
 
     public GameObject tile;

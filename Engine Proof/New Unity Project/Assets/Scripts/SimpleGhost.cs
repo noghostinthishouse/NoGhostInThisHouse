@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SimpleGhost : MonoBehaviour
 {
-    [SerializeField] private bool triggered;
+//  [SerializeField] private bool triggered;
+    public bool triggered;
     public float speed;
 
     public GameObject tile;
@@ -12,7 +13,7 @@ public class SimpleGhost : MonoBehaviour
     private Tile t;
     private Vector3 distance;
     private int ghostIndex;
-    
+
     void Start()
     {
         ghostIndex = PlayerTurn.AddGhost();
@@ -40,7 +41,7 @@ public class SimpleGhost : MonoBehaviour
             }
         }
     }
-
+    
     public void CheckPlayer()
     {
         for(int i = 0; i < 4; i++)
@@ -62,11 +63,12 @@ public class SimpleGhost : MonoBehaviour
             }
         }
     }
-
+    
     void CalculateDis(Transform n_tile)
     {
         //calculate which way to move to
         Vector3 tmp = n_tile.transform.position - tile.transform.position;
         distance = transform.position + tmp;
     }
+    
 }

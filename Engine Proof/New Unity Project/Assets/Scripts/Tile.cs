@@ -6,10 +6,12 @@ public class Tile : MonoBehaviour
 {
     public GameObject[] nearbyTiles;
     public GameObject item;
+    public SimpleGhost simpleGhost;
+    public ChasingGhost chasingGhost;
 
     [SerializeField] private bool empty;
-    [SerializeField] private SimpleGhost simpleGhost;
-    [SerializeField] private ChasingGhost chasingGhost;
+//  [SerializeField] private SimpleGhost simpleGhost;
+//  [SerializeField] private ChasingGhost chasingGhost;
     
     //private Transform my_transform;
     private Player player;
