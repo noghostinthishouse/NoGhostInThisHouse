@@ -5,12 +5,16 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public GameObject[] inventory;
-    [SerializeField] private int noOfItem;
+    public GameObject endTile;
 
+    public bool allItem;
+
+    [SerializeField] private int noOfItem;
     private int count;
 
     void Start()
     {
+        allItem = false;
         count = 0;
         noOfItem = 1;           //can change the number later
         inventory = new GameObject[noOfItem];
@@ -28,6 +32,14 @@ public class Inventory : MonoBehaviour
         if (count < noOfItem - 1)
         {
             count++;
+        }
+        if(count == noOfItem-1)
+        {
+            allItem = true;
+        }
+        else
+        {
+            allItem = false;
         }
     }
 

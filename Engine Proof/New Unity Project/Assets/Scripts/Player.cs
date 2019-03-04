@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
             
             if (Vector3.Distance(transform.position,distance) < 0.001f)
 			{
+                CheckEndGame();
 				move = false;
                 PlayerTurn.SetPlayerTurn();
             }
@@ -123,6 +124,15 @@ public class Player : MonoBehaviour
         nextTile = null;
         next_t = null;
         tile_nextTile = null;
+    }
+
+    void CheckEndGame()
+    {
+        if ((currentTile == my_inventory.endTile) && my_inventory.allItem)
+        {
+            Debug.Log("Level complete");
+            PlayerTurn.GameOver = true;
+        }
     }
 
     public GameObject GetPlayerCurrentTile()
