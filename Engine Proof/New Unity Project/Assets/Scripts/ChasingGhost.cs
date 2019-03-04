@@ -6,6 +6,7 @@ public class ChasingGhost : MonoBehaviour
 {
 //  [SerializeField] private bool triggered;
     public bool triggered;
+    public bool stunt;
     public float speed;
 
     public GameObject tile;
@@ -22,6 +23,7 @@ public class ChasingGhost : MonoBehaviour
 
     void Start()
     {
+        stunt = false;
         ghostIndex = PlayerTurn.AddGhost();
         triggered = false;
         t = tile.GetComponent<Tile>();
@@ -32,27 +34,35 @@ public class ChasingGhost : MonoBehaviour
 
     void Update()
     {
-        //this statement is use to detect player in front of their tile
-        if (!PlayerTurn.playerTurn && !triggered && PlayerTurn.ghostFinished[ghostIndex])
+        if (!t.flashlightOn)
         {
-            //check for trigger
-            CheckPlayer();
-            CalculateDis();
-            //calculate which tile to move to
-            PlayerTurn.SetGhostTurn(ghostIndex);
-        }
-        //this statement is use to move the ghost after it is triggered
-        else if(!PlayerTurn.playerTurn && triggered && PlayerTurn.ghostFinished[ghostIndex])
-        {
-            Debug.Log("Chasing");
-            float step = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, distance, step);
-            if (Vector3.Distance(transform.position, distance) < 0.001f)
+            //this statement is use to detect player in front of their tile
+            if (!PlayerTurn.playerTurn && !triggered && PlayerTurn.ghostFinished[ghostIndex])
             {
-                PlayerTurn.SetGhostTurn(ghostIndex);
-                ChangeTile();
+                //check for trigger
+                CheckPlayer();
                 CalculateDis();
+                //calculate which tile to move to
+                PlayerTurn.SetGhostTurn(ghostIndex);
             }
+            //this statement is use to move the ghost after it is triggered
+            else if (!PlayerTurn.playerTurn && triggered && PlayerTurn.ghostFinished[ghostIndex])
+            {
+                //Debug.Log("Chasing");
+                float step = speed * Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, distance, step);
+                if (Vector3.Distance(transform.position, distance) < 0.001f)
+                {
+                    PlayerTurn.SetGhostTurn(ghostIndex);
+                    ChangeTile();
+                    CalculateDis();
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("stunt");
+            PlayerTurn.SetGhostTurn(ghostIndex);
         }
     }
 
@@ -61,7 +71,7 @@ public class ChasingGhost : MonoBehaviour
         if (nextTile_t.playerOn)
         {
             triggered = true;
-            Debug.Log("trigger");
+            //Debug.Log("trigger");
         }
     }
     

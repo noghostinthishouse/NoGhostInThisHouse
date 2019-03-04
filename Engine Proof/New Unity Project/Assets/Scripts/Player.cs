@@ -18,9 +18,11 @@ public class Player : MonoBehaviour
     private Vector3 distance;
 
     private Inventory my_inventory;
+    private Flashlight my_flashight;
 
 	void Start ()
     {
+        my_flashight = GameObject.FindGameObjectWithTag("Flashlight").GetComponent<Flashlight>();
         my_inventory = GetComponent<Inventory>();
         current_t = currentTile.GetComponent<Transform>();
         tile = currentTile.GetComponent<Tile>();
@@ -29,18 +31,43 @@ public class Player : MonoBehaviour
         //tile.DebugGetAllTile();
     }
 	
-	void Update () {
+	void Update ()
+    {
         //only move when play select a valid tile
         if (move && PlayerTurn.playerTurn)
         {
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, distance, step);
             
+            //update flashlight here so it will only call the function when player moves
+            my_flashight.FlashlightFollowPlayer();
+
             if (Vector3.Distance(transform.position,distance) < 0.001f)
 			{
                 CheckEndGame();
 				move = false;
                 PlayerTurn.SetPlayerTurn();
+            }
+        }
+
+        //place and pick up flashlight
+        if (Input.GetMouseButtonDown(1))
+        {
+            //place
+            if (!my_flashight.IsPlaced())
+            {
+                my_flashight.Place();
+                tile.flashlightPlaced = true;
+            }
+            //pick up
+            else
+            {
+                //check if player is on the tile with the flashlight
+                if (tile.flashlightPlaced)
+                {
+                    my_flashight.PickUp();
+                    tile.flashlightPlaced = false;
+                }
             }
         }
 	}
@@ -69,6 +96,7 @@ public class Player : MonoBehaviour
                             tile_nextTile.item = null;
                             my_inventory.DisplayAllItem();
                         }
+
                         found = true;
                         //enable move
                         move = true;
@@ -128,7 +156,7 @@ public class Player : MonoBehaviour
 
     void CheckEndGame()
     {
-        if ((currentTile == my_inventory.endTile) && my_inventory.allItem)
+        if ((currentTile == my_inventory.endTile) && my_inventory.allItem && !my_flashight.IsPlaced())
         {
             Debug.Log("Level complete");
             PlayerTurn.GameOver = true;

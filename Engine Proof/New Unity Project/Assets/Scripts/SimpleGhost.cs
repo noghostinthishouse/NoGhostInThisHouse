@@ -6,6 +6,7 @@ public class SimpleGhost : MonoBehaviour
 {
 //  [SerializeField] private bool triggered;
     public bool triggered;
+    public bool stunt;
     public float speed;
 
     public GameObject tile;
@@ -16,6 +17,7 @@ public class SimpleGhost : MonoBehaviour
 
     void Start()
     {
+        stunt = false;
         ghostIndex = PlayerTurn.AddGhost();
         triggered = false;
         t = tile.GetComponent<Tile>();
@@ -24,21 +26,29 @@ public class SimpleGhost : MonoBehaviour
 
     void Update()
     {
-        //1st trigger statement
-        if (!PlayerTurn.playerTurn && PlayerTurn.ghostFinished[ghostIndex])
+        if (!t.flashlightOn)
         {
-            CheckPlayer();
-            PlayerTurn.SetGhostTurn(ghostIndex);
-        }
-        //2nd trigger statement (game over)
-        else if (eat)
-        {
-            float step = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, distance, step);
-            if (Vector3.Distance(transform.position, distance) < 0.001f)
+            //1st trigger statement
+            if (!PlayerTurn.playerTurn && PlayerTurn.ghostFinished[ghostIndex])
             {
-                eat = false;
+                CheckPlayer();
+                PlayerTurn.SetGhostTurn(ghostIndex);
             }
+            //2nd trigger statement (game over)
+            else if (eat)
+            {
+                float step = speed * Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, distance, step);
+                if (Vector3.Distance(transform.position, distance) < 0.001f)
+                {
+                    eat = false;
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("stunt");
+            PlayerTurn.SetGhostTurn(ghostIndex);
         }
     }
     
@@ -50,7 +60,7 @@ public class SimpleGhost : MonoBehaviour
             {
                 if (triggered)
                 {
-                    Debug.Log("Game over");
+                    //Debug.Log("Game over");
                     eat = true;
                     PlayerTurn.GameOver = true;
                     CalculateDis(t.GetAdjacentTile(i).GetComponent<Transform>());
@@ -58,7 +68,7 @@ public class SimpleGhost : MonoBehaviour
                 else
                 {
                     triggered = true;
-                    Debug.Log("trigger");
+                    //Debug.Log("trigger");
                 }
             }
         }

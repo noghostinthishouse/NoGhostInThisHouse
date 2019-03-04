@@ -17,6 +17,8 @@ public class Tile : MonoBehaviour
     private Player player;
 
     public bool playerOn;
+    public bool flashlightPlaced;           //player place flashlight on the tile
+    public bool flashlightOn;               //flashlight is shining on the tile
 
     int NoOfAdjacentTiles;
 
@@ -76,24 +78,8 @@ public class Tile : MonoBehaviour
     {
         if (!PlayerTurn.GameOver && PlayerTurn.playerTurn)
         {
-            if (Input.GetMouseButtonDown(1))
-            {
-                //place/pick up flashlight
-            }
-            else
-            {
-                //check if player can move to this tile
-                player.SelectTile(gameObject);
-            }
+            //check if player can move to this tile
+            player.SelectTile(gameObject);
         }
     }
-
-    /*
-    public void DebugGetAllTile()
-    {
-        foreach (GameObject tile in nearbyTiles) {
-            Debug.Log(tile);
-        }
-    }
-    */
 }
