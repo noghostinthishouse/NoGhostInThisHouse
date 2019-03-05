@@ -14,9 +14,12 @@ public class SimpleGhost : MonoBehaviour
     private Tile t;
     private Vector3 distance;
     private int ghostIndex;
+    private SpriteRenderer sp;
+    public Sprite[] sprites;                // has 2 elements: ghost and furniture sprites respectively
 
     void Start()
     {
+        sp = GetComponent<SpriteRenderer>();
         stunt = false;
         ghostIndex = PlayerTurn.AddGhost();
         triggered = false;
@@ -73,7 +76,17 @@ public class SimpleGhost : MonoBehaviour
             }
         }
     }
-    
+
+    public void SetFurniture()
+    {
+        sp.sprite = sprites[1];
+    }
+
+    public void SetGhost()
+    {
+        sp.sprite = sprites[0];
+    }
+
     void CalculateDis(Transform n_tile)
     {
         //calculate which way to move to
