@@ -21,8 +21,12 @@ public class ChasingGhost : MonoBehaviour
     private int ghostIndex;
     private Player player;
 
+    private SpriteRenderer sp;
+    public Sprite[] sprites;                // has 2 elements: ghost and furniture sprites respectively
+
     void Start()
     {
+        sp = GetComponent<SpriteRenderer>();
         stunt = false;
         ghostIndex = PlayerTurn.AddGhost();
         triggered = false;
@@ -80,6 +84,16 @@ public class ChasingGhost : MonoBehaviour
         //calculate which way to move to
         Vector3 tmp = nextTile.transform.position - tile.transform.position;
         distance = transform.position + tmp;
+    }
+    
+    public void SetFurniture()
+    {
+        sp.sprite = sprites[1];
+    }
+
+    public void SetGhost()
+    {
+        sp.sprite = sprites[0];
     }
 
     public void ChangeTile()

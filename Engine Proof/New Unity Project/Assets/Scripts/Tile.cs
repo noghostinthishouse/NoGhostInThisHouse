@@ -74,6 +74,38 @@ public class Tile : MonoBehaviour
         return empty;
     }
 
+    public void FlashlightOn()
+    {
+        Debug.Log("on");
+        flashlightOn = true;
+        if (simpleGhost)
+        {
+            Debug.Log("sg back to furniture");
+            simpleGhost.SetFurniture();
+        }
+        else if (chasingGhost)
+        {
+            Debug.Log("cg back to furniture");
+            chasingGhost.SetFurniture();
+        }
+    }
+
+    public void FlashlightOff()
+    {
+        Debug.Log("off");
+        flashlightOn = false;
+        if (simpleGhost)
+        {
+            Debug.Log("sg back to ghost");
+            simpleGhost.SetGhost();
+        }
+        else if (chasingGhost)
+        {
+            Debug.Log("cg back to ghost");
+            chasingGhost.SetGhost();
+        }
+    }
+
     void OnMouseDown()
     {
         if (!PlayerTurn.GameOver && PlayerTurn.playerTurn)
