@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
                         if (tile_nextTile.item)
                         {
                             my_inventory.TakeItem(tile_nextTile.item);
-                            tile_nextTile.item = null;
+                            tile_nextTile.GetItem();
                             my_inventory.DisplayAllItem();
                         }
 

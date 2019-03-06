@@ -64,6 +64,12 @@ public class Tile : MonoBehaviour
         empty = true;
     }
 
+    public void GetItem()
+    {
+        item.SetActive(false);
+        item = null;
+    }
+
     public void SetNotEmpty()
     {
         empty = false;
@@ -76,6 +82,7 @@ public class Tile : MonoBehaviour
 
     void OnMouseDown()
     {
+        //Debug.Log("click");
         if (!PlayerTurn.GameOver && PlayerTurn.playerTurn)
         {
             //check if player can move to this tile

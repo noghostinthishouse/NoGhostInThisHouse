@@ -15,8 +15,14 @@ public class SimpleGhost : MonoBehaviour
     private Vector3 distance;
     private int ghostIndex;
 
+    private Animator anim;
+    private SpriteRenderer sp;
+    [SerializeField] private bool isFacingRight;
+
     void Start()
     {
+        sp = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         stunt = false;
         ghostIndex = PlayerTurn.AddGhost();
         triggered = false;
@@ -28,6 +34,7 @@ public class SimpleGhost : MonoBehaviour
     {
         if (!t.flashlightOn)
         {
+            anim.SetBool("Stunt", false);
             //1st trigger statement
             if (!PlayerTurn.playerTurn && PlayerTurn.ghostFinished[ghostIndex])
             {
@@ -47,6 +54,7 @@ public class SimpleGhost : MonoBehaviour
         }
         else
         {
+            anim.SetBool("Stunt", true);
             Debug.Log("stunt");
             PlayerTurn.SetGhostTurn(ghostIndex);
         }
