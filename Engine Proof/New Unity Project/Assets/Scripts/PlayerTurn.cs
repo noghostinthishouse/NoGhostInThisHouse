@@ -47,4 +47,12 @@ public class PlayerTurn : MonoBehaviour
 
         return (noOfGhost - 1);
     }
+
+    public static void Restart()
+    {
+        playerTurn = true;
+        GameOver = false;
+        noOfGhost = 0;
+        ghostFinished.Clear();
+    }
 }

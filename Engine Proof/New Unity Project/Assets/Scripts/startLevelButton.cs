@@ -5,6 +5,6 @@ public class startLevelButton : MonoBehaviour
 {
     public void startLevel()
     {
-        SceneManager.LoadScene("SampleLevel");
+        SceneManager.LoadScene("Level_Protototype");
     }
 }
