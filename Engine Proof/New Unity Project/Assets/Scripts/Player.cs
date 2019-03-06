@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
 {
     public float speed;
     public GameObject currentTile;
-    public float directionX;
-    public float directionY;
+    public float directionX = 1.0f;
+    public float directionY = 1.0f;
 
     private Transform current_t;
     private GameObject nextTile;
@@ -18,22 +18,30 @@ public class Player : MonoBehaviour
     private bool move;
     private Vector3 distance;
 
+    private SpriteRenderer sp;
+    public Sprite[] sprites; // four directions, o - top right, 1 - bottom right, 2 - top left , 3 - bottom left
+
     private Inventory my_inventory;
     private Flashlight my_flashight;
 
 	void Start ()
     {
+        sp = GetComponent<SpriteRenderer>();
         my_flashight = GameObject.FindGameObjectWithTag("Flashlight").GetComponent<Flashlight>();
         my_inventory = GetComponent<Inventory>();
         current_t = currentTile.GetComponent<Transform>();
         tile = currentTile.GetComponent<Tile>();
         nextTile = null;
         move = false;
+        SelectDirections();
         //tile.DebugGetAllTile();
     }
 	
 	void Update ()
     {
+        //directions
+        SelectDirections();
+
         //only move when play select a valid tile
         if (move && PlayerTurn.playerTurn)
         {
@@ -167,6 +175,26 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Level complete");
             PlayerTurn.GameOver = true;
+        }
+    }
+
+    void SelectDirections()
+    {
+        if (directionX > 0 && directionY > 0)
+        {
+            sp.sprite = sprites[0];
+        }
+        else if (directionX > 0 && directionY < 0)
+        {
+            sp.sprite = sprites[1];
+        }
+        else if (directionX < 0 && directionY > 0)
+        {
+            sp.sprite = sprites[2];
+        }
+        else if (directionX < 0 && directionY < 0)
+        {
+            sp.sprite = sprites[3];
         }
     }
 

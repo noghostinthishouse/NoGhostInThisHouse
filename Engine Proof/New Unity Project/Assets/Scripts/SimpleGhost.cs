@@ -44,6 +44,7 @@ public class SimpleGhost : MonoBehaviour
             //2nd trigger statement (game over)
             else if (eat)
             {
+                Debug.Log("dead");
                 float step = speed * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, distance, step);
                 if (Vector3.Distance(transform.position, distance) < 0.001f)
@@ -64,19 +65,22 @@ public class SimpleGhost : MonoBehaviour
     {
         for(int i = 0; i < 4; i++)
         {
-            if (t.GetAdjacentTileT(i).playerOn)
+            if (t.GetAdjacentTileT(i) != null)
             {
-                if (triggered)
+                if (t.GetAdjacentTileT(i).playerOn)
                 {
-                    //Debug.Log("Game over");
-                    eat = true;
-                    PlayerTurn.GameOver = true;
-                    CalculateDis(t.GetAdjacentTile(i).GetComponent<Transform>());
-                }
-                else
-                {
-                    triggered = true;
-                    //Debug.Log("trigger");
+                    if (triggered)
+                    {
+                        //Debug.Log("Game over");
+                        eat = true;
+                        PlayerTurn.GameOver = true;
+                        CalculateDis(t.GetAdjacentTile(i).GetComponent<Transform>());
+                    }
+                    else
+                    {
+                        triggered = true;
+                        //Debug.Log("trigger");
+                    }
                 }
             }
         }

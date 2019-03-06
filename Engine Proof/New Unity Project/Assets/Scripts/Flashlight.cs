@@ -5,13 +5,26 @@ using UnityEngine;
 public class Flashlight : MonoBehaviour
 {
     private Player player;
+    private Vector3 upperRightTransform = new Vector3(0, 0, 0);
+    private Vector3 lowerRightTransform = new Vector3(0, 0, 270);
+    private Vector3 upperLeftTransform = new Vector3(0, 0, 90);
+    private Vector3 lowerLeftTransform = new Vector3(0, 0, 180);
     private Transform playerTrans;
     private Vector3 offset;
     private Tile pointedTile;
     private Tile prevPointedTile;
-    private float playerDirectionX;
-    private float playerDirectionY;
+    private float playerDirectionX = 1.0f;
+    private float playerDirectionY = 1.0f;
     private bool placeFlashlight;
+
+    public float topRightOffsetX;
+    public float topRightOffsetY;
+    public float bottomRightOffsetX;
+    public float bottomRightOffsetY;
+    public float topLeftOffsetX;
+    public float topLeftOffsetY;
+    public float bottomLeftOffsetX;
+    public float bottomLeftOffsetY;
 
     // Start is called before the first frame update
     void Start()
@@ -40,22 +53,26 @@ public class Flashlight : MonoBehaviour
 
             if (playerDirectionX > 0 && playerDirectionY > 0)
             {
-                offset.Set(1.5f, -0.5f, 1.0f);
+                offset.Set(topRightOffsetX, topRightOffsetY, 1.0f);
+                transform.eulerAngles = upperRightTransform;
                 //Debug.Log("Facing top right");
             }
             else if (playerDirectionX > 0 && playerDirectionY < 0)
             {
-                offset.Set(1.5f, -2.5f, -1.0f);
+                offset.Set(bottomRightOffsetX, bottomRightOffsetY, -1.0f);
+                transform.eulerAngles = lowerRightTransform;
                 //Debug.Log("Facing bottom right");
             }
             else if (playerDirectionX < 0 && playerDirectionY > 0)
             {
-                offset.Set(-1.5f, -0.5f, 1.0f);
+                offset.Set(topLeftOffsetX, topLeftOffsetY, 1.0f);
+                transform.eulerAngles = upperLeftTransform;
                 //Debug.Log("Facing top left");
             }
             else if (playerDirectionX < 0 && playerDirectionY < 0)
             {
-                offset.Set(-1.5f, -2.5f, -1.0f);
+                offset.Set(bottomLeftOffsetX, bottomLeftOffsetY, -1.0f);
+                transform.eulerAngles = lowerLeftTransform;
                 //Debug.Log("Facing bottom left");
             }
             transform.position = playerTrans.position + offset;
