@@ -7,4 +7,9 @@ public class startGameButton : MonoBehaviour
     {
         SceneManager.LoadScene("StageSelect");
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

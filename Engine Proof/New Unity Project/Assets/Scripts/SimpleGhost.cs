@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SimpleGhost : MonoBehaviour
 {
@@ -15,14 +16,13 @@ public class SimpleGhost : MonoBehaviour
     private Vector3 distance;
     private int ghostIndex;
 
-    private Animator anim;
+    public Animator anim;
     private SpriteRenderer sp;
     [SerializeField] private bool isFacingRight;
 
     void Start()
     {
         sp = GetComponent<SpriteRenderer>();
-        anim = GetComponent<Animator>();
         stunt = false;
         ghostIndex = PlayerTurn.AddGhost();
         triggered = false;
@@ -50,6 +50,7 @@ public class SimpleGhost : MonoBehaviour
                 if (Vector3.Distance(transform.position, distance) < 0.001f)
                 {
                     eat = false;
+                    SceneManager.LoadScene("Dead");
                 }
             }
         }
@@ -82,7 +83,7 @@ public class SimpleGhost : MonoBehaviour
                         //Debug.Log("trigger");
                     }
                 }
-            }
+           }
         }
     }
     

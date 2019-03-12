@@ -68,3 +68,6 @@ TagManager:
   - name: Light
     uniqueID: 3296520033
     locked: 0
+  - name: FadedIn
+    uniqueID: 1992366747
+    locked: 0

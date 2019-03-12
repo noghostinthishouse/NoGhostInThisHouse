@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
 
 	void Start ()
     {
+        PlayerTurn.Restart();
         sp = GetComponent<SpriteRenderer>();
         my_flashight = GameObject.FindGameObjectWithTag("Flashlight").GetComponent<Flashlight>();
         my_inventory = GetComponent<Inventory>();
@@ -175,6 +176,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Level complete");
             PlayerTurn.GameOver = true;
+            SceneManager.LoadScene("Victory");
         }
     }
 
