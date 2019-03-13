@@ -5,26 +5,28 @@ using UnityEngine;
 public class Flashlight : MonoBehaviour
 {
     private Player player;
-    private Vector3 upperRightTransform = new Vector3(0, 0, 0);
-    private Vector3 lowerRightTransform = new Vector3(0, 0, 270);
-    private Vector3 upperLeftTransform = new Vector3(0, 0, 90);
-    private Vector3 lowerLeftTransform = new Vector3(0, 0, 180);
+    //private Vector3 upperRightTransform = new Vector3(0, 0, 0);
+    //private Vector3 lowerRightTransform = new Vector3(0, 0, 270);
+    //private Vector3 upperLeftTransform = new Vector3(0, 0, 90);
+    //private Vector3 lowerLeftTransform = new Vector3(0, 0, 180);
     private Transform playerTrans;
     private Vector3 offset;
     private Tile pointedTile;
     private Tile prevPointedTile;
-    private float playerDirectionX = 1.0f;
-    private float playerDirectionY = 1.0f;
+    //private float playerDirectionX = 1.0f;
+    //private float playerDirectionY = 1.0f;
     private bool placeFlashlight;
 
-    public float topRightOffsetX;
-    public float topRightOffsetY;
-    public float bottomRightOffsetX;
-    public float bottomRightOffsetY;
-    public float topLeftOffsetX;
-    public float topLeftOffsetY;
-    public float bottomLeftOffsetX;
-    public float bottomLeftOffsetY;
+    //flashlight directions
+    //public float topRightOffsetX;
+    //public float topRightOffsetY;
+    //public float bottomRightOffsetX;
+    //public float bottomRightOffsetY;
+    //public float topLeftOffsetX;
+    //public float topLeftOffsetY;
+    //public float bottomLeftOffsetX;
+    //public float bottomLeftOffsetY;
+    public float speed = 10.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -34,49 +36,46 @@ public class Flashlight : MonoBehaviour
         placeFlashlight = false;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerTrans = player.GetComponent<Transform>();
+        offset = playerTrans.position - transform.position;
     }
 
     // Update is called once per frame
-    /*void Update()
+    void Update()
     {
+        if (!player.IsMove() && !placeFlashlight && !PlayerTurn.GameOver)
+        {
+            Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
 
-    }*/
+            //change character sprite to match rotation
+            if (direction.x > 0 && direction.y > 0)
+            {
+                player.SetDirection(0);
+            }
+            else if (direction.x > 0 && direction.y < 0)
+            {
+                player.SetDirection(1);
+            }
+            else if (direction.x < 0 && direction.y > 0)
+            {
+                player.SetDirection(2);
+            }
+            else if (direction.x < 0 && direction.y < 0)
+            {
+                player.SetDirection(3);
+            }
+        }
+    }
 
     public void FlashlightFollowPlayer()
     {
-        //    Debug.Log("Flashlight follow player was called");
-        //follow player when not placed
+        //Debug.Log("Flashlight follow player was called");
         if (!placeFlashlight)
         {
-            playerDirectionX = player.directionX;
-            playerDirectionY = player.directionY;
-
-            if (playerDirectionX > 0 && playerDirectionY > 0)
-            {
-                offset.Set(topRightOffsetX, topRightOffsetY, 1.0f);
-                transform.eulerAngles = upperRightTransform;
-                //Debug.Log("Facing top right");
-            }
-            else if (playerDirectionX > 0 && playerDirectionY < 0)
-            {
-                offset.Set(bottomRightOffsetX, bottomRightOffsetY, -1.0f);
-                transform.eulerAngles = lowerRightTransform;
-                //Debug.Log("Facing bottom right");
-            }
-            else if (playerDirectionX < 0 && playerDirectionY > 0)
-            {
-                offset.Set(topLeftOffsetX, topLeftOffsetY, 1.0f);
-                transform.eulerAngles = upperLeftTransform;
-                //Debug.Log("Facing top left");
-            }
-            else if (playerDirectionX < 0 && playerDirectionY < 0)
-            {
-                offset.Set(bottomLeftOffsetX, bottomLeftOffsetY, -1.0f);
-                transform.eulerAngles = lowerLeftTransform;
-                //Debug.Log("Facing bottom left");
-            }
-            transform.position = playerTrans.position + offset;
-        }
+            transform.position = playerTrans.position /*offset*/;
+        }   
     }
     
     public void Place()
@@ -114,17 +113,11 @@ public class Flashlight : MonoBehaviour
             }
             pointedTile = collider.GetComponent<Tile>();
             pointedTile.flashlightOn = true;
-            
-            /*if (pointedTile.simpleGhost != null)
-            {
-                Debug.Log("Found simple ghost");
-                pointedTile.simpleGhost.stunt = true;
-            }
-            if (pointedTile.chasingGhost != null)
-            {
-                Debug.Log("Found chasing ghost");
-                pointedTile.chasingGhost.stunt = true;
-            }*/
         }
+    }
+
+    public Tile GetPointedTile()
+    {
+        return pointedTile;
     }
 }

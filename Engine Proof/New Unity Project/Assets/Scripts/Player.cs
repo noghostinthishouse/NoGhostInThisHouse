@@ -40,12 +40,13 @@ public class Player : MonoBehaviour
 	
 	void Update ()
     {
-        //directions
-        SelectDirections();
 
         //only move when play select a valid tile
         if (move && PlayerTurn.playerTurn)
         {
+            //directions
+            SelectDirections();
+
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, distance, step);
             
@@ -63,11 +64,19 @@ public class Player : MonoBehaviour
         //place and pick up flashlight
         if (Input.GetMouseButtonDown(1))
         {
+            Debug.Log("Placing fl");
+            
             //place
             if (!my_flashight.IsPlaced())
             {
-                my_flashight.Place();
-                tile.flashlightPlaced = true;
+                for (int i = 0; i < 4; i++)
+                {
+                    if (tile.GetAdjacentTileT(i) == my_flashight.GetPointedTile())
+                    {
+                        my_flashight.Place();
+                        tile.flashlightPlaced = true;
+                    }
+                }
             }
             //pick up
             else
@@ -156,7 +165,6 @@ public class Player : MonoBehaviour
         directionY = tmp.y;
     }
 
-
     void NextTurn()
     {
         //change currentTile to nextTile
@@ -200,8 +208,18 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void SetDirection(int directionIndex)
+    {
+        sp.sprite = sprites[directionIndex];
+    }
+
     public GameObject GetPlayerCurrentTile()
     {
         return currentTile;
+    }
+
+    public bool IsMove()
+    {
+        return move;
     }
 }
