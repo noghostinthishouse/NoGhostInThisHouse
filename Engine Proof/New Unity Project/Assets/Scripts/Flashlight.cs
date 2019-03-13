@@ -37,18 +37,21 @@ public class Flashlight : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerTrans = player.GetComponent<Transform>();
         offset = playerTrans.position - transform.position;
+        transform.position = playerTrans.position - offset;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!player.IsMove() && !placeFlashlight && !PlayerTurn.GameOver)
+        Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        if (!player.IsMove() && !PlayerTurn.GameOver)
         {
-            Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
-
+            if (!placeFlashlight)
+            {
+                Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
+            }
             //change character sprite to match rotation
             if (direction.x > 0 && direction.y > 0)
             {
@@ -74,7 +77,7 @@ public class Flashlight : MonoBehaviour
         //Debug.Log("Flashlight follow player was called");
         if (!placeFlashlight)
         {
-            transform.position = playerTrans.position /*offset*/;
+            transform.position = playerTrans.position - offset;
         }   
     }
     
