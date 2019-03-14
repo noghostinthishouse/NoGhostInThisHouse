@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
 
     private Inventory my_inventory;
     private Flashlight my_flashight;
+    public PlayerMovement my_movement;
 
 	void Start ()
     {
@@ -94,6 +95,11 @@ public class Player : MonoBehaviour
         {
             PlayerTurn.Restart();
             SceneManager.LoadScene("Level_Protototype"); 
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            my_movement.SelectThisTile();
         }
 	}
 

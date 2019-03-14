@@ -80,7 +80,15 @@ public class Tile : MonoBehaviour
         return empty;
     }
 
-    void OnMouseDown()
+    public void MoveToThisTile()
+    {
+        if (!PlayerTurn.GameOver && PlayerTurn.playerTurn)
+        {
+            player.SelectTile(gameObject);
+        }
+    }
+
+    /*void OnMouseDown()
     {
         //Debug.Log("click");
         if (!PlayerTurn.GameOver && PlayerTurn.playerTurn)
@@ -88,5 +96,5 @@ public class Tile : MonoBehaviour
             //check if player can move to this tile
             player.SelectTile(gameObject);
         }
-    }
+    }*/
 }
