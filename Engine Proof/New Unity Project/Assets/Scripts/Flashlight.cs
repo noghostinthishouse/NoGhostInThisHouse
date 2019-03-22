@@ -50,8 +50,7 @@ public class Flashlight : MonoBehaviour
         offset = playerTrans.position - transform.position;
         transform.position = playerTrans.position - offset;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;

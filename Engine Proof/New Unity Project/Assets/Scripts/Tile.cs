@@ -10,10 +10,7 @@ public class Tile : MonoBehaviour
     public ChasingGhost chasingGhost;
 
     [SerializeField] private bool empty;
-//  [SerializeField] private SimpleGhost simpleGhost;
-//  [SerializeField] private ChasingGhost chasingGhost;
-    
-    //private Transform my_transform;
+
     private Player player;
 
     public bool playerOn;
@@ -24,7 +21,6 @@ public class Tile : MonoBehaviour
 
     void Start()
     {
-        //my_transform = GetComponent<Transform>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         NoOfAdjacentTiles = nearbyTiles.Length;
         empty = true;

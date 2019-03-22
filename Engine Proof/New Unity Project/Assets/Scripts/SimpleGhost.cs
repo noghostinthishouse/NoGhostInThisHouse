@@ -44,14 +44,7 @@ public class SimpleGhost : MonoBehaviour
             //2nd trigger statement (game over)
             else if (eat)
             {
-                Debug.Log("dead");
-                float step = speed * Time.deltaTime;
-                transform.position = Vector3.MoveTowards(transform.position, distance, step);
-                if (Vector3.Distance(transform.position, distance) < 0.001f)
-                {
-                    eat = false;
-                    SceneManager.LoadScene("Dead");
-                }
+                Move();
             }
         }
         else
@@ -87,6 +80,18 @@ public class SimpleGhost : MonoBehaviour
         }
     }
     
+    void Move()
+    {
+        Debug.Log("dead");
+        float step = speed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, distance, step);
+        if (Vector3.Distance(transform.position, distance) < 0.001f)
+        {
+            eat = false;
+            SceneManager.LoadScene("Dead");
+        }
+    }
+
     void CalculateDis(Transform n_tile)
     {
         //calculate which way to move to
