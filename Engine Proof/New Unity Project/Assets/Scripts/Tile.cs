@@ -17,6 +17,8 @@ public class Tile : MonoBehaviour
     public bool flashlightPlaced;           //player place flashlight on the tile
     public bool flashlightOn;               //flashlight is shining on the tile
 
+    public HighlightTile ht;
+
     int NoOfAdjacentTiles;
 
     void Start()
@@ -82,6 +84,11 @@ public class Tile : MonoBehaviour
         {
             player.SelectTile(gameObject);
         }
+    }
+
+    public void SetHighlight(bool b)
+    {
+        ht.SetHighlight(b);
     }
 
     /*void OnMouseDown()
