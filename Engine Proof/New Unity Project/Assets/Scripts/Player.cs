@@ -56,6 +56,7 @@ public class Player : MonoBehaviour
 
             if (Vector3.Distance(transform.position,distance) < 0.001f)
 			{
+                PickUpItem();
                 CheckEndGame();
 				move = false;
                 PlayerTurn.SetPlayerTurn();
@@ -101,7 +102,17 @@ public class Player : MonoBehaviour
         {
             my_movement.SelectThisTile();
         }
-	}
+
+        if(Input.GetAxis("Mouse ScrollWheel") > 0.0f)
+        {
+            my_flashight.TurnOn();
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0.0f)
+        {
+            my_flashight.TurnOff();
+        }
+
+    }
 
     public void SelectTile(GameObject selectedTile)
     {
@@ -121,13 +132,6 @@ public class Player : MonoBehaviour
                     //adjacent tile and is empty
                     if (tile_nextTile.IsEmpty())
                     {
-                        if (tile_nextTile.item)
-                        {
-                            my_inventory.TakeItem(tile_nextTile.item);
-                            tile_nextTile.GetItem();
-                            my_inventory.DisplayAllItem();
-                        }
-
                         found = true;
                         //enable move
                         move = true;
@@ -182,6 +186,16 @@ public class Player : MonoBehaviour
         nextTile = null;
         next_t = null;
         tile_nextTile = null;
+    }
+
+    void PickUpItem()
+    {
+        if (tile.item)
+        {
+            my_inventory.TakeItem(tile.item);
+            tile.GetItem();
+            my_inventory.DisplayAllItem();
+        }
     }
 
     void CheckEndGame()

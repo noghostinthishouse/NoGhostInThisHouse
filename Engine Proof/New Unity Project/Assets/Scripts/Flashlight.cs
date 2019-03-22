@@ -32,11 +32,16 @@ public class Flashlight : MonoBehaviour
     //public float bottomLeftOffsetX;
     //public float bottomLeftOffsetY;
 
+    public SpriteRenderer[] sp;
+    private int spNum;
+    private bool turnOn;
+
     public float speed = 10.0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        turnOn = true;
         pointedTile = null;
         prevPointedTile = null;
         placeFlashlight = false;
@@ -67,9 +72,9 @@ public class Flashlight : MonoBehaviour
         if (!placeFlashlight)
         {
             transform.position = playerTrans.position - offset;
-        }   
+        }
     }
-    
+
     public void Place()
     {
         placeFlashlight = true;
@@ -104,12 +109,35 @@ public class Flashlight : MonoBehaviour
                 prevPointedTile.flashlightOn = false;
             }
             pointedTile = collider.GetComponent<Tile>();
-            pointedTile.flashlightOn = true;
+            if (turnOn)
+            {
+                pointedTile.flashlightOn = true;
+            }
         }
     }
 
     public Tile GetPointedTile()
     {
         return pointedTile;
+    }
+
+    public void TurnOff()
+    {
+        turnOn = false;
+        pointedTile.flashlightOn = false;
+        for (int i = 0; i < sp.Length; i++)
+        {
+            sp[i].enabled = false;
+        }
+    }
+
+    public void TurnOn()
+    {
+        turnOn = true;
+        pointedTile.flashlightOn = true;
+        for (int i = 0; i < sp.Length; i++)
+        {
+            sp[i].enabled = true;
+        }
     }
 }
