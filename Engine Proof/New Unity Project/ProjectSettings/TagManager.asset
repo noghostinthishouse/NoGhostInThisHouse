@@ -62,6 +62,9 @@ TagManager:
   - name: Character
     uniqueID: 2208039639
     locked: 0
+  - name: Furniture_Front
+    uniqueID: 1538248513
+    locked: 0
   - name: Brightness
     uniqueID: 1612712693
     locked: 0
