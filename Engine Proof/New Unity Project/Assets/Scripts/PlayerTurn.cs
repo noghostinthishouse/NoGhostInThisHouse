@@ -50,7 +50,7 @@ public class PlayerTurn : MonoBehaviour
     {
         ghostFinished.Add(false);
         noOfGhost++;
-        Debug.Log(noOfGhost);
+        //Debug.Log(noOfGhost);
         return (noOfGhost - 1);
     }
 
