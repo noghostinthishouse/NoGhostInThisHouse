@@ -6,14 +6,13 @@ public class Tile : MonoBehaviour
 {
     public GameObject[] nearbyTiles;
     public GameObject item;
-    public SimpleGhost simpleGhost;
-    public ChasingGhost chasingGhost;
+    public GameObject GhostInitTile;
 
     [SerializeField] private bool empty;
 
     private Player player;
 
-    public bool playerOn;
+    public bool playerOn = false;
     public bool flashlightPlaced;           //player place flashlight on the tile
     public bool flashlightOn;               //flashlight is shining on the tile
 
@@ -26,8 +25,7 @@ public class Tile : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         NoOfAdjacentTiles = nearbyTiles.Length;
         empty = true;
-        playerOn = false;
-        if (simpleGhost || chasingGhost)
+        if (GhostInitTile)
         {
             empty = false;
         }

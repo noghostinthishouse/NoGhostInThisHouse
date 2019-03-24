@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Tile prevPointedTile;
     private float speed = 10.0f;
     private Player player;
+    private bool movable;
 
     void Start()
     {
@@ -51,7 +52,10 @@ public class PlayerMovement : MonoBehaviour
                 prevPointedTile = pointedTile;
             }
             pointedTile = collider.GetComponent<Tile>();
-            pointedTile.SetHighlight(true);
+            if (CheckMovable())
+            {
+                pointedTile.SetHighlight(true);
+            }
         }
     }
 
@@ -70,6 +74,21 @@ public class PlayerMovement : MonoBehaviour
             prevPointedTile = pointedTile;
             prevPointedTile.SetHighlight(false);
         }
+    }
+
+    bool CheckMovable()
+    {
+        for(int i = 0; i < 4; i++)
+        {
+            if (pointedTile.GetAdjacentTileT(i))
+            {
+                if (pointedTile.GetAdjacentTileT(i).playerOn && pointedTile.IsEmpty())
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public void SelectThisTile()
