@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChasingGhost : MonoBehaviour
+public class UpgradedChasingGhost : MonoBehaviour
 {
     public bool triggered;
     public bool stunt;
@@ -13,6 +13,9 @@ public class ChasingGhost : MonoBehaviour
 
     public GameObject nextTile;         //the tile in front of the ghost
     private Tile nextTile_t;
+
+    public GameObject nextTile2;        //the further tile in front of the ghost
+    private Tile nextTile_t2;
 
     private bool eat;
     private Vector3 distance;
@@ -34,6 +37,7 @@ public class ChasingGhost : MonoBehaviour
         triggered = false;
         t = tile.GetComponent<Tile>();
         nextTile_t = nextTile.GetComponent<Tile>();
+        nextTile_t2 = nextTile2.GetComponent<Tile>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         eat = false;
     }
@@ -42,6 +46,7 @@ public class ChasingGhost : MonoBehaviour
     {
         if (!t.flashlightOn)
         {
+            //Debug.Log(PlayerTurn.ghostFinished[ghostIndex]);
             anim.SetBool("Stunt", false);
             //this statement is use to detect player in front of their tile
             if (!triggered && PlayerTurn.ghostFinished[ghostIndex])
@@ -50,7 +55,15 @@ public class ChasingGhost : MonoBehaviour
                 CheckPlayer();
                 //calculate which tile to move to
                 CalculateDis();
-                PlayerTurn.SetGhostTurn(ghostIndex);
+                if (nextTile_t.playerOn)
+                {
+                    PlayerTurn.GameOver = true;
+                    Move();
+                }
+                else
+                {
+                    PlayerTurn.SetGhostTurn(ghostIndex);
+                }
             }
             //this statement is use to move the ghost after it is triggered
             else if (triggered && PlayerTurn.ghostFinished[ghostIndex])
@@ -69,9 +82,11 @@ public class ChasingGhost : MonoBehaviour
 
     public void CheckPlayer()
     {
-        if (nextTile_t.playerOn)
+        Debug.Log(nextTile_t2.playerOn);
+        if (nextTile_t.playerOn || nextTile_t2.playerOn)
         {
             triggered = true;
+            Debug.Log("triggered");
         }
     }
 
@@ -85,7 +100,14 @@ public class ChasingGhost : MonoBehaviour
             anim.SetBool("Front", false);
             ChangeTile();
             CalculateDis();
-            PlayerTurn.SetGhostTurn(ghostIndex);
+            if (PlayerTurn.GameOver)
+            {
+                PlayerTurn.SetGameOver();
+            }
+            else
+            {
+                PlayerTurn.SetGhostTurn(ghostIndex);
+            }
         }
     }
 
@@ -96,12 +118,13 @@ public class ChasingGhost : MonoBehaviour
         distance = transform.position + tmp;
 
         //calculate which animation to use;
-        if (nextTile.transform.position.x > tile.transform.position.x 
+        if (nextTile.transform.position.x > tile.transform.position.x
             && nextTile.transform.position.y > tile.transform.position.y)
         {
             phase = 4;
-        } else if (nextTile.transform.position.x > tile.transform.position.x
-            && nextTile.transform.position.y < tile.transform.position.y)
+        }
+        else if (nextTile.transform.position.x > tile.transform.position.x
+          && nextTile.transform.position.y < tile.transform.position.y)
         {
             phase = 3;
         }
@@ -110,12 +133,12 @@ public class ChasingGhost : MonoBehaviour
         {
             phase = 2;
         }
-        else if (nextTile.transform.position.x < tile.transform.position.x 
+        else if (nextTile.transform.position.x < tile.transform.position.x
             && nextTile.transform.position.y > tile.transform.position.y)
         {
             phase = 1;
         }
-        
+
     }
 
     // 1 = top left, 2 = bottom left, 3 = bottom right, 4 = top right
@@ -162,9 +185,14 @@ public class ChasingGhost : MonoBehaviour
     {
         t.SetEmpty();
         nextTile_t.SetNotEmpty();
+
         tile = nextTile;
         t = nextTile_t;
-        nextTile = player.GetPlayerCurrentTile();
-        nextTile_t = nextTile.GetComponent<Tile>();
+
+        nextTile = nextTile2;
+        nextTile_t = nextTile_t2;
+
+        nextTile2 = player.GetPlayerCurrentTile();
+        nextTile_t2 = nextTile2.GetComponent<Tile>();
     }
 }

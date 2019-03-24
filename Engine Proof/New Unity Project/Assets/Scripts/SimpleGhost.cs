@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SimpleGhost : MonoBehaviour
 {
@@ -36,7 +35,7 @@ public class SimpleGhost : MonoBehaviour
         {
             anim.SetBool("Stunt", false);
             //1st trigger statement
-            if (!PlayerTurn.playerTurn && PlayerTurn.ghostFinished[ghostIndex])
+            if (PlayerTurn.ghostFinished[ghostIndex])
             {
                 CheckPlayer();
                 PlayerTurn.SetGhostTurn(ghostIndex);
@@ -50,7 +49,6 @@ public class SimpleGhost : MonoBehaviour
         else
         {
             anim.SetBool("Stunt", true);
-            Debug.Log("stunt");
             PlayerTurn.SetGhostTurn(ghostIndex);
         }
     }
@@ -82,13 +80,12 @@ public class SimpleGhost : MonoBehaviour
     
     void Move()
     {
-        Debug.Log("dead");
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, distance, step);
         if (Vector3.Distance(transform.position, distance) < 0.001f)
         {
             eat = false;
-            SceneManager.LoadScene("Dead");
+            PlayerTurn.SetGameOver();
         }
     }
 

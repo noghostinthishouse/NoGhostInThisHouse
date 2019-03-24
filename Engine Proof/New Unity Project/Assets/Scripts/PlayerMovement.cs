@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (PlayerTurn.playerTurn && !player.IsMove())
+        if (PlayerTurn.playerTurn && !player.IsMove() && !PlayerTurn.GameOver)
         {
             Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
                 prevPointedTile = pointedTile;
             }
             pointedTile = collider.GetComponent<Tile>();
+            pointedTile.SetHighlight(true);
         }
     }
 
@@ -59,6 +60,15 @@ public class PlayerMovement : MonoBehaviour
         if (collider.tag == "Tile")
         {
             pointedTile = collider.GetComponent<Tile>();
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.tag == "Tile")
+        {
+            prevPointedTile = pointedTile;
+            prevPointedTile.SetHighlight(false);
         }
     }
 

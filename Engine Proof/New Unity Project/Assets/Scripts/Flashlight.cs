@@ -106,14 +106,12 @@ public class Flashlight : MonoBehaviour
                 //I had trouble with OnTriggerExit2D() so I did this
                 prevPointedTile = pointedTile;
                 prevPointedTile.flashlightOn = false;
-                prevPointedTile.SetHighlight(false);
 
             }
             pointedTile = collider.GetComponent<Tile>();
             if (turnOn)
             {
                 pointedTile.flashlightOn = true;
-                pointedTile.SetHighlight(true);
             }
         }
     }

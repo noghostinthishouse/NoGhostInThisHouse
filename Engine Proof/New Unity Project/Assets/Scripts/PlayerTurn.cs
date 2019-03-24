@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerTurn : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class PlayerTurn : MonoBehaviour
 
     //is called by all ghost instances
     //set one value to true when each of them finished their move
+
+    public static void SetGameOver()
+    {
+        SceneManager.LoadScene("Dead");
+    }
 
     public static void SetGhostTurn(int ghostIndex)
     {
@@ -44,7 +50,7 @@ public class PlayerTurn : MonoBehaviour
     {
         ghostFinished.Add(false);
         noOfGhost++;
-
+        Debug.Log(noOfGhost);
         return (noOfGhost - 1);
     }
 
