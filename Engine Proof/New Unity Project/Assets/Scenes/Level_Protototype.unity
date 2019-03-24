@@ -26844,7 +26844,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7453648101170442911}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b76196858ca40914497d4f0d18d115c0, type: 3}
   m_Name: 
@@ -26854,4 +26854,24 @@ MonoBehaviour:
   speed: 2
   tile: {fileID: 1174755181}
   anim: {fileID: 1024443151}
+  isFacingRight: 0
+--- !u!114 &7453648101170442913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7453648101170442911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab7480af380a64a448cfe82e7308cd47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTile: {fileID: 1174755181}
+  tiles:
+  - {fileID: 1966480831}
+  - {fileID: 602058386}
+  - {fileID: 1395294308}
+  - {fileID: 367576095}
+  speed: 5
   isFacingRight: 0
