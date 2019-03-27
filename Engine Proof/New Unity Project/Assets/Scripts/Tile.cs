@@ -15,20 +15,16 @@ public class Tile : MonoBehaviour
     public bool playerOn = false;
     public bool flashlightPlaced;           //player place flashlight on the tile
     public bool flashlightOn;               //flashlight is shining on the tile
-    public bool check;                      //use with FollowLightGhost
 
     public HighlightTile ht;
 
-    public int NoOfAdjacentTiles;
+    int NoOfAdjacentTiles;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         NoOfAdjacentTiles = nearbyTiles.Length;
-
         empty = true;
-        check = false;
-
         if (GhostInitTile)
         {
             empty = false;
@@ -92,7 +88,7 @@ public class Tile : MonoBehaviour
     {
         ht.SetHighlight(b);
     }
-    
+
     /*void OnMouseDown()
     {
         //Debug.Log("click");

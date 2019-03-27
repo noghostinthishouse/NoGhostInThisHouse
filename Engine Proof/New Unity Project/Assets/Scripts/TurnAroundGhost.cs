@@ -85,6 +85,7 @@ public class TurnAroundGhost : MonoBehaviour
         pointedTile = tiles[currentTileIndex].GetComponent<Tile>();
         CalculateDis();
         //SetAnimation();
+        Debug.Log(currentTileIndex);
     }
 
     void Move()

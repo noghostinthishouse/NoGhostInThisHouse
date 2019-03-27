@@ -7,6 +7,7 @@ TagManager:
   - ChasingGhost
   - Tile
   - Flashlight
+  - Menu Canvas
   layers:
   - Default
   - TransparentFX
@@ -59,11 +60,11 @@ TagManager:
   - name: Ghost_Furniture
     uniqueID: 3572931055
     locked: 0
-  - name: Addtional_Wall
-    uniqueID: 3658882073
-    locked: 0
   - name: Character
     uniqueID: 2208039639
+    locked: 0
+  - name: Additional_Wall
+    uniqueID: 1704653133
     locked: 0
   - name: Furniture_Front
     uniqueID: 1538248513

@@ -16,7 +16,7 @@ public class PlayerTurn : MonoBehaviour
 
     public static void SetGameOver()
     {
-        SceneManager.LoadScene("Dead");
+        GameObject.FindGameObjectWithTag("Menu Canvas").GetComponent<pauseMenu>().Lose();
     }
 
     public static void SetGhostTurn(int ghostIndex)
