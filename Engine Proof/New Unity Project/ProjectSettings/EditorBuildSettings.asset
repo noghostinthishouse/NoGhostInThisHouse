@@ -12,6 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/StageSelect.unity
     guid: 447653f31fb57664ab8ef1b21eec9477
   - enabled: 1
-    path: Assets/Scenes/Level_Protototype.unity
-    guid: 3a96e456bc51e874abb7a6fffa967f49
+    path: Assets/Scenes/Level/Chapter1/1Tutorial1-1.unity
+    guid: 7f2132f5f2f580a4f8dc411bf8416728
+  - enabled: 1
+    path: Assets/Scenes/Level/Chapter1/2Tutorial_ChasingGhost.unity
+    guid: 844dc816178297a469f5e26d010c945d
+  - enabled: 1
+    path: Assets/Scenes/Level/Chapter1/3Puzzle1_1.unity
+    guid: 9124b31312938d742b67d8dd3d1e2671
+  - enabled: 1
+    path: Assets/Scenes/Level/Chapter1/4Puzzle1_2.unity
+    guid: f5e858698d3f8694c96712feb5791ac5
+  - enabled: 1
+    path: Assets/Scenes/Level/Chapter1/5Puzzle1_3.unity
+    guid: dbccbe752122ade4b9f9576ed759a0cf
   m_configObjects: {}

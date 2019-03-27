@@ -99,6 +99,11 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            LevelComplete();
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             my_movement.SelectThisTile();
@@ -203,10 +208,7 @@ public class Player : MonoBehaviour
     {
         if ((currentTile == my_inventory.endTile) && my_inventory.allItem && !my_flashight.IsPlaced())
         {
-            Debug.Log("Level complete");
-            PlayerTurn.GameOver = true;
-            stageSelectController.stageClear[SceneManager.GetActiveScene().buildIndex - 2] = 1;
-            game_menu.Victory();
+            LevelComplete();
 
         }
     }
@@ -244,5 +246,13 @@ public class Player : MonoBehaviour
     public bool IsMove()
     {
         return move;
+    }
+
+    void LevelComplete()
+    {
+        Debug.Log("Level complete");
+        PlayerTurn.GameOver = true;
+        stageSelectController.stageClear[SceneManager.GetActiveScene().buildIndex - 2] = 1;
+        game_menu.Victory();
     }
 }
