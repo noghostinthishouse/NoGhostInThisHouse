@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public GameObject currentTile;
     public float directionX = 1.0f;
     public float directionY = 1.0f;
+    public bool placeFlashlight;
 
     private Transform current_t;
     private GameObject nextTile;
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour
         current_t = currentTile.GetComponent<Transform>();
         tile = currentTile.GetComponent<Tile>();
         nextTile = null;
+        placeFlashlight = false;
         move = false;
         SelectDirections();
         //tile.DebugGetAllTile();
@@ -65,8 +67,6 @@ public class Player : MonoBehaviour
         //place and pick up flashlight
         if (Input.GetMouseButtonDown(1))
         {
-            Debug.Log("Placing fl");
-            
             //place
             if (!my_flashight.IsPlaced())
             {
@@ -76,6 +76,7 @@ public class Player : MonoBehaviour
                     {
                         my_flashight.Place();
                         tile.flashlightPlaced = true;
+                        placeFlashlight = true;
                     }
                 }
             }
@@ -87,6 +88,7 @@ public class Player : MonoBehaviour
                 {
                     my_flashight.PickUp();
                     tile.flashlightPlaced = false;
+                    placeFlashlight = false;
                 }
             }
         }
@@ -204,6 +206,11 @@ public class Player : MonoBehaviour
             Debug.Log("Level complete");
             PlayerTurn.GameOver = true;
             SceneManager.LoadScene("Victory");
+        }
+        else if(currentTile == my_inventory.endTile)
+        {
+            //some UI telling the user what they need to find
+            Debug.Log("You need something to unlock the door");
         }
     }
 
