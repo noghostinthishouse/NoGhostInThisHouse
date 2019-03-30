@@ -116,21 +116,32 @@ public class Flashlight : MonoBehaviour
 
     public void TurnOff()
     {
-        turnOn = false;
-        pointedTile.flashlightOn = false;
-        for (int i = 0; i < sp.Length; i++)
+        if (!placeFlashlight)
         {
-            sp[i].enabled = false;
+            turnOn = false;
+            pointedTile.flashlightOn = false;
+            for (int i = 0; i < sp.Length; i++)
+            {
+                sp[i].enabled = false;
+            }
         }
     }
 
     public void TurnOn()
     {
-        turnOn = true;
-        pointedTile.flashlightOn = true;
-        for (int i = 0; i < sp.Length; i++)
+        if (!placeFlashlight)
         {
-            sp[i].enabled = true;
+            turnOn = true;
+            pointedTile.flashlightOn = true;
+            for (int i = 0; i < sp.Length; i++)
+            {
+                sp[i].enabled = true;
+            }
         }
+    }
+
+    public bool IsOn()
+    {
+        return turnOn;
     }
 }

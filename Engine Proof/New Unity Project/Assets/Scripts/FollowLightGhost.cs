@@ -7,6 +7,7 @@ public class FollowLightGhost : MonoBehaviour
     public GameObject currentTile;
     public AllTiles allTiles;
     public float speed;
+    public Flashlight[] flashlight;
 
     private GameObject nextTile;        // holds the tile to the shortest route
     private GameObject targetTile;
@@ -14,7 +15,6 @@ public class FollowLightGhost : MonoBehaviour
     private Tile currentT;
     private Tile nextT;
     private Tile targetT;
-
 
     private Player player;
 
@@ -54,9 +54,10 @@ public class FollowLightGhost : MonoBehaviour
     void Update()
     {
         if (PlayerTurn.ghostFinished[ghostIndex])
-        {
-            if (!currentT.flashlightPlaced || !currentT.playerOn)
+        {   
+            if (!currentT.flashlightPlaced && !currentT.playerOn && !move && CheckAnyFlashlightOn())
             {
+                move = true;
                 if (IsFlashlightPlaced())
                 {
                     targetTile = FindTileWithFlashlight();
@@ -72,12 +73,12 @@ public class FollowLightGhost : MonoBehaviour
                 {
                     eat = true;
                 }
-                if (move)
-                {
-                    CalculateDis();
-                    SetAnimation();
-                    Move();
-                }
+                CalculateDis();
+                SetAnimation();
+            }
+            else if (move)
+            {
+                Move();
             }
             else
             {
@@ -86,44 +87,70 @@ public class FollowLightGhost : MonoBehaviour
         }
     }
     
-    GameObject FindPath(GameObject targetT)
+    bool CheckAnyFlashlightOn()
     {
-        List<GameObject> checkTile = new List<GameObject>();        // keep tile game object that has been checked, clears after each route check
-        List<int> path = new List<int>();                           // keep number of tile use to go to the target
+        foreach(Flashlight f in flashlight)
+        {
+            if (f.IsOn())
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    GameObject FindPath(GameObject target)
+    {
+        List<GameObject> checkedTile = new List<GameObject>();                      // keep tile game object that has been checked, clears after each route check
+        List<int> path = new List<int>();                                           // keep number of tile use to go to the target
+        //Dictionary<GameObject, int> pathCount = new Dictionary<GameObject, int>();
 
         GameObject tmpTile;
         Tile tmpTileT;
 
-        for (int i = 0; i < currentT.nearbyTiles.Length; i++)
+        GameObject[] sortedTile1 = SortTile(currentT.nearbyTiles, target);
+
+        for (int i = 0; i < sortedTile1.Length; i++)
         {
             // add the current tile so it wont' search backwards
-            checkTile.Add(currentTile);
+            checkedTile.Add(currentTile);
             path.Add(1);
+            //pathCount.Add(currentT.GetAdjacentTile(i), 1);
 
-            tmpTile = currentT.GetAdjacentTile(i);
-            tmpTileT = currentT.GetComponent<Tile>();
+            tmpTile = sortedTile1[i];
+            tmpTileT = tmpTile.GetComponent<Tile>();
 
             bool deadEnd = false;
-            while(tmpTile != targetT && tmpTileT.IsEmpty() && !deadEnd)
+
+            while(tmpTile != target && tmpTileT.IsEmpty() && !deadEnd)
             {
+                //pathCount[currentT.GetAdjacentTile(i)]++;
                 path[i]++;
-                checkTile.Add(tmpTile);
+                checkedTile.Add(tmpTile);
                 deadEnd = true;
-                for (int j = 0; j < tmpTileT.nearbyTiles.Length; j++)
+                //sort before loop
+                GameObject[] sortedTile2 = SortTile(tmpTileT.nearbyTiles, target);
+                for (int j = 0; j < sortedTile2.Length; j++)
                 {
                     // check if the tile hasn't already been check and is empty
-                    if (!Search(tmpTileT.nearbyTiles[j]) && tmpTileT.IsEmpty())
+                    if (!Search(checkedTile, sortedTile2[j]) && sortedTile2[j].GetComponent<Tile>().IsEmpty())
                     {
                         tmpTile = tmpTileT.nearbyTiles[j];
                         deadEnd = false;
                         break;
                     }
+
                 }
                 tmpTileT = tmpTile.GetComponent<Tile>();
+                if (deadEnd)
+                {
+                    Debug.Log("DEAD END");
+                }
             }
+            Debug.Log("END ROUTE " + (i + 1));
             // clear after finished one route to start finding the next one
-            checkTile.Clear();
-            if (deadEnd)
+            checkedTile.Clear();
+            if (deadEnd || (!tmpTileT.IsEmpty() && !deadEnd))
             {
                 path[i] = -1;
             }
@@ -134,16 +161,40 @@ public class FollowLightGhost : MonoBehaviour
         int index = 0;
         for(int i = 0; i < path.Count; i++)
         {
+            Debug.Log(currentT.nearbyTiles[i] + " : " + path[i]);
             if(num > path[i] && path[i] != -1)
             {
                 num = path[i];
                 index = i;
-                Debug.Log(path.Count);      //------------------------------------------------------------------
             }
         }
+        Debug.Log("END");
         return currentT.nearbyTiles[index];
     }
 
+
+    GameObject[] SortTile(GameObject[] tileToSort, GameObject target)
+    {
+        GameObject[] tiles = tileToSort;
+        for (int i = 0; i < tileToSort.Length - 1; i++)
+        {
+            GameObject tmp;
+            if (Vector3.Distance(target.transform.position, tileToSort[i].transform.position) > Vector3.Distance(target.transform.position, tileToSort[i + 1].transform.position))
+            {
+                tmp = tileToSort[i];
+                tileToSort[i] = tileToSort[i + 1];
+                tileToSort[i + 1] = tmp;
+            }
+        }
+        Debug.Log("Sort tile start");
+        for (int i = 0; i < tileToSort.Length; i++)
+        {
+            Debug.Log(tileToSort[i]);
+        }
+        Debug.Log("Sort tile end");
+
+        return tileToSort;
+    }
     GameObject FindTileWithFlashlight()
     {
         foreach (GameObject t in allTiles.Tiles)
@@ -180,9 +231,9 @@ public class FollowLightGhost : MonoBehaviour
         return false;
     }
 
-    bool Search(GameObject searchItem)
+    bool Search(List<GameObject> checkedTile, GameObject searchItem)
     {
-        foreach(GameObject t in allTiles.Tiles)
+        foreach(GameObject t in checkedTile)
         {
             if(t == searchItem)
             {

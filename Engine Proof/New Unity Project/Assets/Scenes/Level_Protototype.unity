@@ -18873,6 +18873,8 @@ MonoBehaviour:
   currentTile: {fileID: 802200565}
   allTiles: {fileID: 1486542510}
   speed: 10
+  flashlight:
+  - {fileID: 1757836911}
   isFacingRight: 1
 --- !u!1 &1710580229
 GameObject:
@@ -19165,7 +19167,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712839172}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b76196858ca40914497d4f0d18d115c0, type: 3}
   m_Name: 
@@ -30779,7 +30781,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7453648101170442911}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b76196858ca40914497d4f0d18d115c0, type: 3}
   m_Name: 
