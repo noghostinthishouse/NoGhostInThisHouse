@@ -6,31 +6,13 @@ public class Flashlight : MonoBehaviour
 {
     private Player player;
 
-    //private Vector3 upperRightTransform = new Vector3(0, 0, 0);
-    //private Vector3 lowerRightTransform = new Vector3(0, 0, 270);
-    //private Vector3 upperLeftTransform = new Vector3(0, 0, 90);
-    //private Vector3 lowerLeftTransform = new Vector3(0, 0, 180);
-
     private Transform playerTrans;
     private Vector3 offset;
 
     private Tile pointedTile;
     private Tile prevPointedTile;
 
-    //private float playerDirectionX = 1.0f;
-    //private float playerDirectionY = 1.0f;
-
-    private bool placeFlashlight;
-
-    //flashlight directions
-    //public float topRightOffsetX;
-    //public float topRightOffsetY;
-    //public float bottomRightOffsetX;
-    //public float bottomRightOffsetY;
-    //public float topLeftOffsetX;
-    //public float topLeftOffsetY;
-    //public float bottomLeftOffsetX;
-    //public float bottomLeftOffsetY;
+    [SerializeField] private bool placeFlashlight;
 
     public SpriteRenderer[] sp;
     private int spNum;
@@ -44,11 +26,13 @@ public class Flashlight : MonoBehaviour
         turnOn = true;
         pointedTile = null;
         prevPointedTile = null;
-        placeFlashlight = false;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerTrans = player.GetComponent<Transform>();
-        offset = playerTrans.position - transform.position;
-        transform.position = playerTrans.position - offset;
+        offset = new Vector3(0.0f, -1.0f, 0.0f);
+        if (!placeFlashlight)
+        {
+            transform.position = playerTrans.position + offset;
+        }
     }
     
     void Update()
@@ -67,10 +51,9 @@ public class Flashlight : MonoBehaviour
 
     public void FlashlightFollowPlayer()
     {
-        //Debug.Log("Flashlight follow player was called");
         if (!placeFlashlight)
         {
-            transform.position = playerTrans.position - offset;
+            transform.position = playerTrans.position + offset;
         }
     }
 
@@ -88,27 +71,37 @@ public class Flashlight : MonoBehaviour
     {
         return placeFlashlight;
     }
-
-    //change to OnTriggerEnter2D, so it will only call once
+    
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag == "Tile")
         {
-            //Debug.Log("flashlight touching tile");
-
             //----------------------------------------------------------
             // I've create a new bool 'flashlightOn' in Tile
             // when true --> ghost will not do anything
             //----------------------------------------------------------
-
-            if (pointedTile)
+            if (!collider.GetComponent<Tile>().flashlightOn)
             {
-                //I had trouble with OnTriggerExit2D() so I did this
-                prevPointedTile = pointedTile;
-                prevPointedTile.flashlightOn = false;
+                if (pointedTile)
+                {
+                    //I had trouble with OnTriggerExit2D() so I did this
+                    prevPointedTile = pointedTile;
+                    prevPointedTile.flashlightOn = false;
 
+                }
+                pointedTile = collider.GetComponent<Tile>();
+                if (turnOn)
+                {
+                    pointedTile.flashlightOn = true;
+                }
             }
-            pointedTile = collider.GetComponent<Tile>();
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D collider)
+    {
+        if (collider.tag == "Tile")
+        {
             if (turnOn)
             {
                 pointedTile.flashlightOn = true;

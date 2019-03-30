@@ -21,22 +21,24 @@ public class Player : MonoBehaviour
     private SpriteRenderer sp;
     public Sprite[] sprites; // four directions, o - top right, 1 - bottom right, 2 - top left , 3 - bottom left
 
-    private Inventory my_inventory;
-    private Flashlight my_flashight;
     public PlayerMovement my_movement;
+    public GameObject my_flashight;         // so we can switch between different flashlights
+    private Inventory my_inventory;
     private pauseMenu game_menu;
 
 	void Start ()
     {
-        sp = GetComponent<SpriteRenderer>();
-        my_flashight = GameObject.FindGameObjectWithTag("Flashlight").GetComponent<Flashlight>();
-        my_inventory = GetComponent<Inventory>();
         game_menu = GameObject.FindGameObjectWithTag("Menu Canvas").GetComponent<pauseMenu>();
+
         current_t = currentTile.GetComponent<Transform>();
+        my_inventory = GetComponent<Inventory>();
         tile = currentTile.GetComponent<Tile>();
+        sp = GetComponent<SpriteRenderer>();
+
         nextTile = null;
         move = false;
         SelectDirections();
+
         //tile.DebugGetAllTile();
     }
 	
@@ -53,7 +55,7 @@ public class Player : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, distance, step);
             
             //update flashlight here so it will only call the function when player moves
-            my_flashight.FlashlightFollowPlayer();
+            my_flashight.GetComponent<Flashlight>().FlashlightFollowPlayer();
 
             if (Vector3.Distance(transform.position,distance) < 0.001f)
 			{
@@ -65,19 +67,18 @@ public class Player : MonoBehaviour
         }
 
         //place and pick up flashlight
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && my_flashight)
         {
-            Debug.Log("Placing fl");
             
             //place
-            if (!my_flashight.IsPlaced())
+            if (!my_flashight.GetComponent<Flashlight>().IsPlaced())
             {
                 for (int i = 0; i < 4; i++)
                 {
-                    if (tile.GetAdjacentTileT(i) == my_flashight.GetPointedTile())
+                    if (tile.GetAdjacentTileT(i) == my_flashight.GetComponent<Flashlight>().GetPointedTile())
                     {
-                        my_flashight.Place();
-                        tile.flashlightPlaced = true;
+                        tile.PlaceFlashlight(my_flashight);
+                        my_flashight.GetComponent<Flashlight>().Place();
                     }
                 }
             }
@@ -85,10 +86,11 @@ public class Player : MonoBehaviour
             else
             {
                 //check if player is on the tile with the flashlight
+                Debug.Log(tile.flashlightPlaced);
                 if (tile.flashlightPlaced)
                 {
-                    my_flashight.PickUp();
-                    tile.flashlightPlaced = false;
+                    my_flashight = tile.PickUpFlashlight();
+                    my_flashight.GetComponent<Flashlight>().PickUp();
                 }
             }
         }
@@ -111,11 +113,11 @@ public class Player : MonoBehaviour
 
         if(Input.GetAxis("Mouse ScrollWheel") > 0.0f)
         {
-            my_flashight.TurnOn();
+            my_flashight.GetComponent<Flashlight>().TurnOn();
         }
         else if (Input.GetAxis("Mouse ScrollWheel") < 0.0f)
         {
-            my_flashight.TurnOff();
+            my_flashight.GetComponent<Flashlight>().TurnOff();
         }
 
     }
@@ -206,10 +208,9 @@ public class Player : MonoBehaviour
 
     void CheckEndGame()
     {
-        if ((currentTile == my_inventory.endTile) && my_inventory.allItem && !my_flashight.IsPlaced())
+        if ((currentTile == my_inventory.endTile) && my_inventory.allItem && !my_flashight.GetComponent<Flashlight>().IsPlaced())
         {
             LevelComplete();
-
         }
     }
 

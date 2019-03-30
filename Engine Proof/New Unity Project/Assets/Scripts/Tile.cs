@@ -18,6 +18,8 @@ public class Tile : MonoBehaviour
 
     public HighlightTile ht;
 
+    [SerializeField] private GameObject flashlight = null;
+
     int NoOfAdjacentTiles;
 
     void Start()
@@ -28,6 +30,10 @@ public class Tile : MonoBehaviour
         if (GhostInitTile)
         {
             empty = false;
+        }
+        if (flashlight)
+        {
+            flashlightPlaced = true;
         }
     }
 
@@ -87,6 +93,21 @@ public class Tile : MonoBehaviour
     public void SetHighlight(bool b)
     {
         ht.SetHighlight(b);
+    }
+
+    public void PlaceFlashlight(GameObject f)
+    {
+        flashlight = f;
+        flashlightPlaced = true;
+    }
+
+    public GameObject PickUpFlashlight()
+    {
+        GameObject tmp = flashlight;
+        flashlight = null;
+        flashlightPlaced = false;
+
+        return tmp;
     }
 
     /*void OnMouseDown()
