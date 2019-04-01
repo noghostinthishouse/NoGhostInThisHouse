@@ -59,8 +59,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collider.tag == "Tile")
         {
-            pointedTile.SetHighlight(false);
-            pointedTile = null;
+            if (pointedTile)
+            {
+                pointedTile.SetHighlight(false);
+                pointedTile = null;
+            }
         }
     }
 
@@ -81,6 +84,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void SelectThisTile()
     {
-        pointedTile.MoveToThisTile();
+        if (pointedTile)
+        {
+            pointedTile.MoveToThisTile();
+        }
     }
 }

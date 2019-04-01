@@ -82,13 +82,6 @@ public class Flashlight : MonoBehaviour
             //----------------------------------------------------------
             if (!collider.GetComponent<Tile>().flashlightOn)
             {
-                if (pointedTile)
-                {
-                    //I had trouble with OnTriggerExit2D() so I did this
-                    prevPointedTile = pointedTile;
-                    prevPointedTile.flashlightOn = false;
-
-                }
                 pointedTile = collider.GetComponent<Tile>();
                 if (turnOn)
                 {
@@ -98,13 +91,14 @@ public class Flashlight : MonoBehaviour
         }
     }
 
-    void OnTriggerStay2D(Collider2D collider)
+    void OnTriggerExit2D(Collider2D collider)
     {
-        if (collider.tag == "Tile")
+        if(collider.tag == "Tile")
         {
-            if (turnOn)
+            if (pointedTile)
             {
-                pointedTile.flashlightOn = true;
+                pointedTile.flashlightOn = false;
+                pointedTile = null;
             }
         }
     }
