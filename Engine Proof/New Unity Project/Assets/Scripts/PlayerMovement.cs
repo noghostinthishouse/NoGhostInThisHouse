@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Tile pointedTile;
-    private Tile prevPointedTile;
     private float speed = 10.0f;
     private Player player;
-    private bool movable;
+
+    public float angle;
 
     void Start()
     {
@@ -47,10 +47,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collider.tag == "Tile")
         {
-            if (pointedTile)
-            {
-                prevPointedTile = pointedTile;
-            }
             pointedTile = collider.GetComponent<Tile>();
             if (CheckMovable())
             {
@@ -59,20 +55,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnTriggerStay2D(Collider2D collider)
-    {
-        if (collider.tag == "Tile")
-        {
-            pointedTile = collider.GetComponent<Tile>();
-        }
-    }
-
     void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.tag == "Tile")
         {
-            prevPointedTile = pointedTile;
-            prevPointedTile.SetHighlight(false);
+            pointedTile.SetHighlight(false);
+            pointedTile = null;
         }
     }
 

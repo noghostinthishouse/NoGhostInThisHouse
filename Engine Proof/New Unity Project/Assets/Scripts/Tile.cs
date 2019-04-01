@@ -90,6 +90,11 @@ public class Tile : MonoBehaviour
         }
     }
 
+    public GameObject GetGameObject()
+    {
+        return gameObject;
+    }
+
     public void SetHighlight(bool b)
     {
         ht.SetHighlight(b);
