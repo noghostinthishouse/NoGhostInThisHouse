@@ -1578,6 +1578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!1 &605446762 stripped
 GameObject:
@@ -1624,6 +1625,7 @@ MonoBehaviour:
   flashlightPlaced: 0
   flashlightOn: 0
   ht: {fileID: 605446763}
+  flashlight: {fileID: 0}
 --- !u!50 &605446766
 Rigidbody2D:
   serializedVersion: 4
@@ -1971,6 +1973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!1 &746656674 stripped
 GameObject:
@@ -2020,6 +2023,7 @@ MonoBehaviour:
   flashlightPlaced: 0
   flashlightOn: 0
   ht: {fileID: 746656675}
+  flashlight: {fileID: 0}
 --- !u!50 &746656678
 Rigidbody2D:
   serializedVersion: 4
@@ -7885,6 +7889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!1 &1022749115 stripped
 GameObject:
@@ -7931,6 +7936,7 @@ MonoBehaviour:
   flashlightPlaced: 0
   flashlightOn: 0
   ht: {fileID: 1022749116}
+  flashlight: {fileID: 0}
 --- !u!50 &1022749119
 Rigidbody2D:
   serializedVersion: 4
@@ -8046,6 +8052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!1 &1025025322 stripped
 GameObject:
@@ -8095,6 +8102,7 @@ MonoBehaviour:
   flashlightPlaced: 0
   flashlightOn: 0
   ht: {fileID: 1025025323}
+  flashlight: {fileID: 0}
 --- !u!50 &1025025326
 Rigidbody2D:
   serializedVersion: 4
@@ -8374,6 +8382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8f7fd36a0f5664ca33ebc8f1e905df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placeFlashlight: 0
   sp:
   - {fileID: 820888016}
   - {fileID: 248467122}
@@ -8512,6 +8521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!1 &1179295612 stripped
 GameObject:
@@ -8558,6 +8568,7 @@ MonoBehaviour:
   flashlightPlaced: 0
   flashlightOn: 0
   ht: {fileID: 1179295613}
+  flashlight: {fileID: 0}
 --- !u!50 &1179295616
 Rigidbody2D:
   serializedVersion: 4
@@ -9226,6 +9237,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 708800d7a2ac4fb46950d21602f65c64, type: 3}
   - {fileID: 21300000, guid: 432fd5052b9fc9d4ca9cee4e4857cd64, type: 3}
   my_movement: {fileID: 1695725157}
+  my_flashight: {fileID: 1135798577}
 --- !u!212 &1370778641
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9604,6 +9616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!1 &1493818380 stripped
 GameObject:
@@ -9650,6 +9663,7 @@ MonoBehaviour:
   flashlightPlaced: 0
   flashlightOn: 0
   ht: {fileID: 1493818381}
+  flashlight: {fileID: 0}
 --- !u!50 &1493818384
 Rigidbody2D:
   serializedVersion: 4
@@ -9903,6 +9917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed9b74433a6363438022eaf36e972f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angle: 0
 --- !u!61 &1695725158
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10023,6 +10038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!4 &1721893055 stripped
 Transform:
@@ -10069,6 +10085,7 @@ MonoBehaviour:
   flashlightPlaced: 0
   flashlightOn: 0
   ht: {fileID: 1721893056}
+  flashlight: {fileID: 0}
 --- !u!50 &1721893059
 Rigidbody2D:
   serializedVersion: 4
@@ -10540,6 +10557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!1 &1926884377 stripped
 GameObject:
@@ -10586,6 +10604,7 @@ MonoBehaviour:
   flashlightPlaced: 0
   flashlightOn: 0
   ht: {fileID: 1926884378}
+  flashlight: {fileID: 0}
 --- !u!50 &1926884381
 Rigidbody2D:
   serializedVersion: 4
@@ -10892,6 +10911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!4 &1971404577 stripped
 Transform:
@@ -10939,6 +10959,7 @@ MonoBehaviour:
   flashlightPlaced: 0
   flashlightOn: 0
   ht: {fileID: 1971404578}
+  flashlight: {fileID: 0}
 --- !u!50 &1971404581
 Rigidbody2D:
   serializedVersion: 4

@@ -71,6 +71,7 @@ public class SimpleGhost : MonoBehaviour
                     else
                     {
                         triggered = true;
+                        anim.SetBool("Trigger", true);
                         //Debug.Log("trigger");
                     }
                 }

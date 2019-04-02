@@ -42,6 +42,7 @@ public class ChasingGhost : MonoBehaviour
     {
         if (!t.flashlightOn)
         {
+            t.SetNotEmpty();
             anim.SetBool("Stunt", false);
             //this statement is use to detect player in front of their tile
             if (!triggered && PlayerTurn.ghostFinished[ghostIndex])
@@ -62,6 +63,7 @@ public class ChasingGhost : MonoBehaviour
         else
         {
             Debug.Log("stunt");
+            t.SetEmpty();
             PlayerTurn.SetGhostTurn(ghostIndex);
             anim.SetBool("Stunt", true);
         }
