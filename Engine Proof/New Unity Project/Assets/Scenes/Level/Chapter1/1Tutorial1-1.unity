@@ -8509,8 +8509,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325297703}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.317461, y: 5.5868998, z: -6.173828}
-  m_LocalScale: {x: -1, y: 1, z: 0.722}
+  m_LocalPosition: {x: -10.62, y: 6.38, z: -6.173828}
+  m_LocalScale: {x: 1, y: 1, z: 0.722}
   m_Children:
   - {fileID: 799950901}
   - {fileID: 2093423225}
@@ -10669,6 +10669,36 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.16
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
     - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
@@ -10765,7 +10795,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093423224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.44, y: -2.16, z: 8.551009}
+  m_LocalPosition: {x: 0.23, y: -2.41, z: 8.551009}
   m_LocalScale: {x: 1.3850416, y: 1.3850416, z: 1.3850416}
   m_Children: []
   m_Father: {fileID: 1325297707}
