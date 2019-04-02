@@ -10,6 +10,10 @@ public class stageSelectController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+    private void Awake()
+    {
         stageClear = new int[SceneManager.sceneCountInBuildSettings - 2];
 
         for (int i = 0; i < SceneManager.sceneCountInBuildSettings - 2; i++)
