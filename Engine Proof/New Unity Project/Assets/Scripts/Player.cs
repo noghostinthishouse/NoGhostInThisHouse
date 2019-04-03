@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
 
     private SpriteRenderer sp;
     public Sprite[] sprites; // four directions, o - top right, 1 - bottom right, 2 - top left , 3 - bottom left
-    private Animator my_anim;
 
     public PlayerMovement my_movement;
     public GameObject my_flashight;         // so we can switch between different flashlights
@@ -34,9 +33,7 @@ public class Player : MonoBehaviour
         current_t = currentTile.GetComponent<Transform>();
         my_inventory = GetComponent<Inventory>();
         tile = currentTile.GetComponent<Tile>();
-
         sp = GetComponent<SpriteRenderer>();
-        my_anim = GetComponent<Animator>();
 
         nextTile = null;
         move = false;
@@ -65,7 +62,6 @@ public class Player : MonoBehaviour
                 PickUpItem();
                 CheckEndGame();
 				move = false;
-                my_anim.SetBool("Move", false);
                 PlayerTurn.SetPlayerTurn();
             }
         }
@@ -81,8 +77,6 @@ public class Player : MonoBehaviour
                 {
                     if (tile.GetAdjacentTileT(i) == my_flashight.GetComponent<Flashlight>().GetPointedTile())
                     {
-                        // might need 'place flashlight' animation
-                        my_anim.SetBool("PickUp", true);
                         tile.PlaceFlashlight(my_flashight);
                         my_flashight.GetComponent<Flashlight>().Place();
                     }
@@ -95,7 +89,6 @@ public class Player : MonoBehaviour
                 Debug.Log(tile.flashlightPlaced);
                 if (tile.flashlightPlaced)
                 {
-                    my_anim.SetBool("PickUp", false);
                     my_flashight = tile.PickUpFlashlight();
                     my_flashight.GetComponent<Flashlight>().PickUp();
                 }
@@ -148,8 +141,8 @@ public class Player : MonoBehaviour
                     if (tile_nextTile.IsEmpty())
                     {
                         found = true;
+                        //enable move
                         move = true;
-                        my_anim.SetBool("Move", true);
 
                         tile.playerOn = false;
                         tile_nextTile.playerOn = true;
@@ -225,25 +218,25 @@ public class Player : MonoBehaviour
     {
         if (directionX > 0 && directionY > 0)
         {
-            my_anim.SetInteger("Phase", 0);
+            sp.sprite = sprites[0];
         }
         else if (directionX > 0 && directionY < 0)
         {
-            my_anim.SetInteger("Phase", 1);
+            sp.sprite = sprites[1];
         }
         else if (directionX < 0 && directionY > 0)
         {
-            my_anim.SetInteger("Phase", 2);
+            sp.sprite = sprites[2];
         }
         else if (directionX < 0 && directionY < 0)
         {
-            my_anim.SetInteger("Phase", 3);
+            sp.sprite = sprites[3];
         }
     }
 
     public void SetDirection(int directionIndex)
     {
-        my_anim.SetInteger("Phase", directionIndex);
+        sp.sprite = sprites[directionIndex];
     }
 
     public GameObject GetPlayerCurrentTile()
@@ -260,7 +253,7 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Level complete");
         PlayerTurn.GameOver = true;
-        stageSelectController.stageClear[SceneManager.GetActiveScene().buildIndex - 2] = 1;
+        stageSelectController.stageClear[SceneManager.GetActiveScene().buildIndex - 1] = 1; // set next level to unlocked
         game_menu.Victory();
     }
 }

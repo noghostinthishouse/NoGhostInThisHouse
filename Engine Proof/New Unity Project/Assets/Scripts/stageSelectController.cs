@@ -1,18 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class stageSelectController : MonoBehaviour
 {
-    static public int[] stageClear; // 0 - not cleared, 1 - cleared
+    static public int[] stageClear = { 1, 0, 0, 0, 0 }; // 0 - not cleared, 1 - cleared
+    public Image stageTitle;
+    public Sprite[] stageTitleSprites;
+    public Image levelImage;
+    public Sprite[] levelImageSprites;
+    public GameObject stageLocked;
+    public GameObject leftArrow;
+    public GameObject rightArrow;
+
+    private int currentSelect;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    private void Awake()
+    /*
+    void Awake()
     {
         stageClear = new int[SceneManager.sceneCountInBuildSettings - 2];
 
@@ -20,12 +27,30 @@ public class stageSelectController : MonoBehaviour
         {
             stageClear[i] = 0;
         }
+        currentSelect = 0;
+
+        stageClear[0] = 1;
+    }
+    */
+    void Start()
+    {
+        currentSelect = 0;
     }
 
-    public void startLevel(int i)
+    void Update()
     {
-        PlayerTurn.Restart();
-        SceneManager.LoadScene(i);
+        showLocked();
+        showArrows();
+        showStageArt();
+    }
+
+    public void startLevel()
+    {
+        if (stageClear[currentSelect] == 1)
+        {
+            PlayerTurn.Restart();
+            SceneManager.LoadScene(currentSelect + 2);
+        }
     }
 
     public void goBackToTitle()
@@ -43,8 +68,70 @@ public class stageSelectController : MonoBehaviour
         Application.Quit();
     }
 
-    public void DisplayStageState(int stageState)
+    public void goLeft()
     {
+        if (currentSelect > 0)
+        {
+            currentSelect--;
+        }
+    }
+
+    public void goRight()
+    {
+        if (currentSelect < 4)
+        {
+            currentSelect++;
+        }
+    }
+
+    private void showArrows()
+    {
+        if (currentSelect == 0)
+        {
+            leftArrow.SetActive(false);
+        }
+        if (currentSelect == 4)
+        {
+            rightArrow.SetActive(false);
+        }
+        if (currentSelect != 0)
+        {
+            leftArrow.SetActive(true);
+        }
+        if (currentSelect != 4)
+        {
+            rightArrow.SetActive(true);
+        }
+
+    }
+
+    private void showLocked()
+    {
+        if (stageClear[currentSelect] == 0)
+        {
+            stageLocked.SetActive(true);
+        }
+        else
+        {
+            stageLocked.SetActive(false);
+        }
+    }
+
+    private void showStageArt()
+    {
+        stageTitle.sprite = stageTitleSprites[currentSelect];
+        levelImage.sprite = levelImageSprites[currentSelect];
+        
+        var tempColor = levelImage.color;
+        if (stageClear[currentSelect] == 0)
+        {
+            tempColor.a = 0.4f;
+        }
+        else
+        {
+            tempColor.a = 1f;
+        }
+        levelImage.color = tempColor;
         
     }
 }
