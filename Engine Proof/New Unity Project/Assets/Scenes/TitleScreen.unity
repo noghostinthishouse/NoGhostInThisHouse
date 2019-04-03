@@ -206,7 +206,6 @@ GameObject:
   - component: {fileID: 379105188}
   - component: {fileID: 379105187}
   - component: {fileID: 379105186}
-  - component: {fileID: 379105185}
   - component: {fileID: 379105189}
   m_Layer: 5
   m_Name: Start_Button
@@ -235,18 +234,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1, y: -81}
   m_SizeDelta: {x: 297.7, y: 55.8}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &379105185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379105183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80f6da19280cd354cb19aca2e3c97f25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &379105186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +274,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800525122}
+      - m_Target: {fileID: 768887449}
         m_MethodName: startGame
         m_Mode: 1
         m_Arguments:
@@ -654,7 +641,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761162343}
   m_CullTransparentMesh: 0
---- !u!1 &800525121
+--- !u!1 &768887448
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -662,36 +649,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 800525123}
-  - component: {fileID: 800525122}
+  - component: {fileID: 768887450}
+  - component: {fileID: 768887449}
   m_Layer: 0
-  m_Name: StageSelectController
+  m_Name: TitleScreenController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &800525122
+--- !u!114 &768887449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800525121}
+  m_GameObject: {fileID: 768887448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cc14ecd34ae13d4883748cbbcf6c735, type: 3}
+  m_Script: {fileID: 11500000, guid: 261ca2aed59fa2d41934b7af92139423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &800525123
+--- !u!4 &768887450
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800525121}
+  m_GameObject: {fileID: 768887448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 456.02048, y: 384, z: 0}
+  m_LocalPosition: {x: 655.13855, y: 391.765, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1066,9 +1053,7 @@ GameObject:
   - component: {fileID: 1910830585}
   - component: {fileID: 1910830584}
   - component: {fileID: 1910830583}
-  - component: {fileID: 1910830582}
   - component: {fileID: 1910830581}
-  - component: {fileID: 1910830580}
   m_Layer: 5
   m_Name: Quit_Button
   m_TagString: Untagged
@@ -1096,18 +1081,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1, y: -127}
   m_SizeDelta: {x: 297.7, y: 55.8}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1910830580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1910830578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee19ad5b905f9e54d80a9e1d8fc88ea9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1910830581
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1204,18 +1177,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1910830582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1910830578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80f6da19280cd354cb19aca2e3c97f25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1910830583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1256,7 +1217,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800525122}
+      - m_Target: {fileID: 768887449}
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
