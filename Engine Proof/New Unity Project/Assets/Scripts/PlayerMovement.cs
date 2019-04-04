@@ -20,25 +20,28 @@ public class PlayerMovement : MonoBehaviour
         if (PlayerTurn.playerTurn && !player.IsMove() && !PlayerTurn.GameOver)
         {
             Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
             //change character sprite to match rotation
-            if (direction.x > 0 && direction.y > 0)
+            if (player.enableRotate)
             {
-                player.SetDirection(0);
-            }
-            else if (direction.x > 0 && direction.y < 0)
-            {
-                player.SetDirection(1);
-            }
-            else if (direction.x < 0 && direction.y > 0)
-            {
-                player.SetDirection(2);
-            }
-            else if (direction.x < 0 && direction.y < 0)
-            {
-                player.SetDirection(3);
+                if (direction.x > 0 && direction.y > 0)
+                {
+                    player.SetDirection(0);
+                }
+                else if (direction.x > 0 && direction.y < 0)
+                {
+                    player.SetDirection(1);
+                }
+                else if (direction.x < 0 && direction.y > 0)
+                {
+                    player.SetDirection(2);
+                }
+                else if (direction.x < 0 && direction.y < 0)
+                {
+                    player.SetDirection(3);
+                }
             }
         }
     }

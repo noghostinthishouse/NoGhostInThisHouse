@@ -5,6 +5,7 @@ using UnityEngine;
 public class Flashlight : MonoBehaviour
 {
     private Player player;
+    private PlayerMovement playerm;
 
     private Transform playerTrans;
     private Vector3 offset;
@@ -17,6 +18,7 @@ public class Flashlight : MonoBehaviour
     public SpriteRenderer[] sp;
     private int spNum;
     private bool turnOn;
+    private float angle;
 
     public float speed = 10.0f;
 
@@ -26,7 +28,9 @@ public class Flashlight : MonoBehaviour
         turnOn = true;
         pointedTile = null;
         prevPointedTile = null;
+
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        playerm = GameObject.FindGameObjectWithTag("PlayerCol").GetComponent<PlayerMovement>();
         playerTrans = player.GetComponent<Transform>();
         offset = new Vector3(0.0f, -1.0f, 0.0f);
         if (!placeFlashlight)
@@ -37,10 +41,19 @@ public class Flashlight : MonoBehaviour
     
     void Update()
     {
-        Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        if (!player.IsMove() && !PlayerTurn.GameOver && PlayerTurn.playerTurn)
+        if (player.enableRotate)
         {
+            Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            if (!placeFlashlight)
+            {
+                Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
+            }
+        }
+        else if (player.IsMove())
+        {
+            angle = playerm.angle;
             if (!placeFlashlight)
             {
                 Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);

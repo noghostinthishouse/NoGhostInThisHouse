@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public GameObject currentTile;
     public float directionX = 1.0f;
     public float directionY = 1.0f;
+    public bool enableRotate;
 
     private Transform current_t;
     private GameObject nextTile;
@@ -24,12 +25,14 @@ public class Player : MonoBehaviour
     public PlayerMovement my_movement;
     public GameObject my_flashight;         // so we can switch between different flashlights
     private Inventory my_inventory;
+    private Animator my_anim;
     private pauseMenu game_menu;
 
 	void Start ()
     {
         game_menu = GameObject.FindGameObjectWithTag("Menu Canvas").GetComponent<pauseMenu>();
 
+        my_anim = GetComponent<Animator>();
         current_t = currentTile.GetComponent<Transform>();
         my_inventory = GetComponent<Inventory>();
         tile = currentTile.GetComponent<Tile>();
@@ -38,6 +41,7 @@ public class Player : MonoBehaviour
         nextTile = null;
         move = false;
         SelectDirections();
+        enableRotate = false;
 
         //tile.DebugGetAllTile();
     }
@@ -48,12 +52,8 @@ public class Player : MonoBehaviour
         //only move when play select a valid tile
         if (move && PlayerTurn.playerTurn)
         {
-            //directions
-            SelectDirections();
-
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, distance, step);
-            
             //update flashlight here so it will only call the function when player moves
             my_flashight.GetComponent<Flashlight>().FlashlightFollowPlayer();
 
@@ -62,6 +62,7 @@ public class Player : MonoBehaviour
                 PickUpItem();
                 CheckEndGame();
 				move = false;
+                my_anim.SetBool("Move", false);
                 PlayerTurn.SetPlayerTurn();
             }
         }
@@ -69,30 +70,40 @@ public class Player : MonoBehaviour
         //place and pick up flashlight
         if (Input.GetMouseButtonDown(1) && my_flashight)
         {
-            
-            //place
-            if (!my_flashight.GetComponent<Flashlight>().IsPlaced())
+            if (enableRotate)
             {
-                for (int i = 0; i < 4; i++)
+                //place
+                if (!my_flashight.GetComponent<Flashlight>().IsPlaced())
                 {
-                    if (tile.GetAdjacentTileT(i) == my_flashight.GetComponent<Flashlight>().GetPointedTile())
+                    for (int i = 0; i < 4; i++)
                     {
-                        tile.PlaceFlashlight(my_flashight);
-                        my_flashight.GetComponent<Flashlight>().Place();
+                        if (tile.GetAdjacentTileT(i) == my_flashight.GetComponent<Flashlight>().GetPointedTile())
+                        {
+                            my_anim.SetBool("PickUp", true);
+                            tile.PlaceFlashlight(my_flashight);
+                            my_flashight.GetComponent<Flashlight>().Place();
+                            enableRotate = false;
+                        }
                     }
                 }
             }
-            //pick up
-            else
+            else if(my_flashight.GetComponent<Flashlight>().IsPlaced())
             {
                 //check if player is on the tile with the flashlight
                 Debug.Log(tile.flashlightPlaced);
                 if (tile.flashlightPlaced)
                 {
+                    my_anim.SetBool("PickUp", false);
                     my_flashight = tile.PickUpFlashlight();
                     my_flashight.GetComponent<Flashlight>().PickUp();
                 }
             }
+            else
+            {
+                enableRotate = true;
+            }
+            //pick up
+            
         }
 
         if (Input.GetKey(KeyCode.R))
@@ -108,7 +119,14 @@ public class Player : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            my_movement.SelectThisTile();
+            if (!enableRotate)
+            {
+                my_movement.SelectThisTile();
+            }
+            else
+            {
+                enableRotate = false;
+            }
         }
 
         if(Input.GetAxis("Mouse ScrollWheel") > 0.0f)
@@ -143,6 +161,7 @@ public class Player : MonoBehaviour
                         found = true;
                         //enable move
                         move = true;
+                        my_anim.SetBool("Move", true);
 
                         tile.playerOn = false;
                         tile_nextTile.playerOn = true;
@@ -150,6 +169,7 @@ public class Player : MonoBehaviour
                         //get Transform
                         next_t = nextTile.GetComponent<Transform>();
                         CalculateDis();
+                        SelectDirections();
                         NextTurn();
                     }
                 }
@@ -218,25 +238,25 @@ public class Player : MonoBehaviour
     {
         if (directionX > 0 && directionY > 0)
         {
-            sp.sprite = sprites[0];
+            my_anim.SetInteger("Phase", 0);
         }
         else if (directionX > 0 && directionY < 0)
         {
-            sp.sprite = sprites[1];
+            my_anim.SetInteger("Phase", 1);
         }
         else if (directionX < 0 && directionY > 0)
         {
-            sp.sprite = sprites[2];
+            my_anim.SetInteger("Phase", 2);
         }
         else if (directionX < 0 && directionY < 0)
         {
-            sp.sprite = sprites[3];
+            my_anim.SetInteger("Phase", 3);
         }
     }
 
     public void SetDirection(int directionIndex)
     {
-        sp.sprite = sprites[directionIndex];
+        my_anim.SetInteger("Phase", directionIndex);
     }
 
     public GameObject GetPlayerCurrentTile()
