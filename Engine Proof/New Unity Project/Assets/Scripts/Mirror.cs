@@ -5,36 +5,69 @@ using UnityEngine;
 public class Mirror : MonoBehaviour
 {
     public Tile currentTile;
-    public Tile lightFromTile;
-    public Tile lightToTile;
-    public SpriteRenderer[] light;
+    public Tile tile1;
+    public Tile tile2;
+    public SpriteRenderer[] light1;
+    public SpriteRenderer[] light2;
+
+    private int tileReflect;
 
     void Start()
     {
-        for (int i = 0; i < light.Length; i++)
+        for (int i = 0; i < light1.Length; i++)
         {
-            light[i].enabled = false;
+            light1[i].enabled = false;
+            light2[i].enabled = false;
         }
     }
     
     void Update()
     {
-        if(currentTile.flashlightOn && lightFromTile.playerOn)
+        if (currentTile.flashlightOn)
         {
-            lightToTile.flashlightOn = true;
+            if (tile1.playerOn || tile1.flashlightPlaced)
+            {
+                tile2.flashlightOn = true;
+                ReflectLightOn(2);
+            }
+            else if(tile2.playerOn || tile2.flashlightPlaced)
+            {
+                tile1.flashlightOn = true;
+                ReflectLightOn(1);
+            }
         }
         else
         {
-            lightToTile.flashlightOn = false;
+            tile2.flashlightOn = false;
+            tile1.flashlightOn = false;
+            ReflectLightOff();
         }
-        ReflectLight(lightToTile.flashlightOn);
     }
 
-    void ReflectLight(bool reflect)
+    void ReflectLightOn(int t)
     {
-        for (int i = 0; i < light.Length; i++)
+        if (t == 1)
         {
-            light[i].enabled = reflect;
+            for (int i = 0; i < light1.Length; i++)
+            {
+                light1[i].enabled = true;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < light2.Length; i++)
+            {
+                light2[i].enabled = true;
+            }
+        }
+    }
+
+    void ReflectLightOff()
+    {
+        for (int i = 0; i < light1.Length; i++)
+        {
+            light1[i].enabled = false;
+            light2[i].enabled = false;
         }
     }
 }

@@ -62,7 +62,6 @@ public class ChasingGhost : MonoBehaviour
         }
         else
         {
-            Debug.Log("stunt");
             t.SetEmpty();
             PlayerTurn.SetGhostTurn(ghostIndex);
             anim.SetBool("Stunt", true);

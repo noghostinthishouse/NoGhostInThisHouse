@@ -18,7 +18,8 @@ public class Player : MonoBehaviour
     private Tile tile_nextTile;
     private bool move;
     private Vector3 distance;
-    private float prevAngle;
+    private float prevAngleF;           // flashlight
+    private float prevAngleM;           // player
     private int prevPhase;
 
     private SpriteRenderer sp;
@@ -45,7 +46,7 @@ public class Player : MonoBehaviour
         SelectDirections();
         enableRotate = false;
 
-        prevAngle = my_flashight.GetComponent<Flashlight>().angle;
+        prevAngleF = my_flashight.GetComponent<Flashlight>().angle;
         prevPhase = my_movement.GetPhase();
 
         //tile.DebugGetAllTile();
@@ -69,7 +70,7 @@ public class Player : MonoBehaviour
 				move = false;
                 my_anim.SetBool("Move", false);
                 PlayerTurn.SetPlayerTurn();
-                prevAngle = my_flashight.GetComponent<Flashlight>().angle;
+                prevAngleF = my_flashight.GetComponent<Flashlight>().angle;
                 prevPhase = my_movement.GetPhase();
             }
         }
@@ -84,12 +85,18 @@ public class Player : MonoBehaviour
                 {
                     for (int i = 0; i < 4; i++)
                     {
-                        if (tile.GetAdjacentTileT(i) == my_flashight.GetComponent<Flashlight>().GetPointedTile())
+                        if (my_flashight.GetComponent<Flashlight>().GetPointedTile())
                         {
-                            my_anim.SetBool("PickUp", true);
-                            tile.PlaceFlashlight(my_flashight);
-                            my_flashight.GetComponent<Flashlight>().Place();
-                            enableRotate = false;
+                            if (tile.GetAdjacentTileT(i) == my_flashight.GetComponent<Flashlight>().GetPointedTile())
+                            {
+                                my_anim.SetBool("PickUp", true);
+                                tile.PlaceFlashlight(my_flashight);
+                                my_flashight.GetComponent<Flashlight>().Place();
+                                enableRotate = false;
+                                prevAngleM = my_movement.angle;
+                                prevAngleF = my_flashight.GetComponent<Flashlight>().angle;
+                                prevPhase = my_movement.GetPhase();
+                            }
                         }
                     }
                 }
@@ -103,6 +110,7 @@ public class Player : MonoBehaviour
                     my_anim.SetBool("PickUp", false);
                     my_flashight = tile.PickUpFlashlight();
                     my_flashight.GetComponent<Flashlight>().PickUp();
+                    my_flashight.GetComponent<Flashlight>().angle = prevAngleM;
                 }
             }
             else
@@ -134,7 +142,7 @@ public class Player : MonoBehaviour
             {
                 enableRotate = false;
                 SetDirection(prevPhase);
-                my_flashight.GetComponent<Flashlight>().SetAngle(prevAngle);
+                my_flashight.GetComponent<Flashlight>().SetAngle(prevAngleF);
             }
         }
 
@@ -171,6 +179,8 @@ public class Player : MonoBehaviour
                         //enable move
                         move = true;
                         my_anim.SetBool("Move", true);
+
+                        prevAngleM = my_movement.angle;
 
                         tile.playerOn = false;
                         tile_nextTile.playerOn = true;
