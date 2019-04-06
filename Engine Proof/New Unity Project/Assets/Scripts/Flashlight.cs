@@ -16,9 +16,10 @@ public class Flashlight : MonoBehaviour
     [SerializeField] private bool placeFlashlight;
 
     public SpriteRenderer[] sp;
+    public float angle;
+    public bool place = false;
     private int spNum;
     private bool turnOn;
-    private float angle;
 
     public float speed = 10.0f;
 
@@ -41,25 +42,32 @@ public class Flashlight : MonoBehaviour
     
     void Update()
     {
-        if (player.enableRotate)
+        if (!placeFlashlight)
         {
-            Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            if (!placeFlashlight)
+            if (player.enableRotate)
+            {
+                Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+                angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
+            }
+            else if (player.IsMove())
+            {
+                angle = playerm.angle;
+                Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
+            }
+            else
             {
                 Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
                 transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
             }
         }
-        else if (player.IsMove())
-        {
-            angle = playerm.angle;
-            if (!placeFlashlight)
-            {
-                Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
-            }
-        }
+    }
+
+    public void SetAngle(float a)
+    {
+        angle = a;
     }
 
     public void FlashlightFollowPlayer()
@@ -126,7 +134,10 @@ public class Flashlight : MonoBehaviour
         if (!placeFlashlight)
         {
             turnOn = false;
-            pointedTile.flashlightOn = false;
+            if (pointedTile)
+            {
+                pointedTile.flashlightOn = false;
+            }
             for (int i = 0; i < sp.Length; i++)
             {
                 sp[i].enabled = false;
@@ -139,7 +150,10 @@ public class Flashlight : MonoBehaviour
         if (!placeFlashlight)
         {
             turnOn = true;
-            pointedTile.flashlightOn = true;
+            if (pointedTile)
+            {
+                pointedTile.flashlightOn = true;
+            }
             for (int i = 0; i < sp.Length; i++)
             {
                 sp[i].enabled = true;

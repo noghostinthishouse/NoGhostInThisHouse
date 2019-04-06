@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     private Tile tile_nextTile;
     private bool move;
     private Vector3 distance;
+    private float prevAngle;
+    private int prevPhase;
 
     private SpriteRenderer sp;
     public Sprite[] sprites; // four directions, o - top right, 1 - bottom right, 2 - top left , 3 - bottom left
@@ -43,6 +45,9 @@ public class Player : MonoBehaviour
         SelectDirections();
         enableRotate = false;
 
+        prevAngle = my_flashight.GetComponent<Flashlight>().angle;
+        prevPhase = my_movement.GetPhase();
+
         //tile.DebugGetAllTile();
     }
 	
@@ -64,6 +69,8 @@ public class Player : MonoBehaviour
 				move = false;
                 my_anim.SetBool("Move", false);
                 PlayerTurn.SetPlayerTurn();
+                prevAngle = my_flashight.GetComponent<Flashlight>().angle;
+                prevPhase = my_movement.GetPhase();
             }
         }
 
@@ -126,6 +133,8 @@ public class Player : MonoBehaviour
             else
             {
                 enableRotate = false;
+                SetDirection(prevPhase);
+                my_flashight.GetComponent<Flashlight>().SetAngle(prevAngle);
             }
         }
 

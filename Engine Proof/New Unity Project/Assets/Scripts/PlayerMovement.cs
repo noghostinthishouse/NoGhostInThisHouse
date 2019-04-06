@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Tile pointedTile;
     private float speed = 10.0f;
     private Player player;
+    private int phase;
 
     public float angle;
 
@@ -28,20 +29,21 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (direction.x > 0 && direction.y > 0)
                 {
-                    player.SetDirection(0);
+                    phase = 0;
                 }
                 else if (direction.x > 0 && direction.y < 0)
                 {
-                    player.SetDirection(1);
+                    phase = 1;
                 }
                 else if (direction.x < 0 && direction.y > 0)
                 {
-                    player.SetDirection(2);
+                    phase = 2;
                 }
                 else if (direction.x < 0 && direction.y < 0)
                 {
-                    player.SetDirection(3);
+                    phase = 3;
                 }
+                player.SetDirection(phase);
             }
         }
     }
@@ -91,5 +93,10 @@ public class PlayerMovement : MonoBehaviour
         {
             pointedTile.MoveToThisTile();
         }
+    }
+
+    public int GetPhase()
+    {
+        return phase;
     }
 }
