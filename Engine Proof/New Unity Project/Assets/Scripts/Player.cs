@@ -241,7 +241,6 @@ public class Player : MonoBehaviour
         {
             my_inventory.TakeItem(tile.item);
             tile.GetItem();
-            my_inventory.DisplayAllItem();
         }
     }
 

@@ -43,14 +43,4 @@ public class Inventory : MonoBehaviour
             allItem = false;
         }
     }
-
-    public void DisplayAllItem()
-    {
-        Debug.Log("No. of item : ");
-        Debug.Log(noOfItem);
-        foreach(GameObject item in inventory)
-        {
-            Debug.Log(item);
-        }
-    }
 }

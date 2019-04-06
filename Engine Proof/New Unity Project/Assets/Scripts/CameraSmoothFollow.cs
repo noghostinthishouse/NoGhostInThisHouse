@@ -9,10 +9,26 @@ public class CameraSmoothFollow : MonoBehaviour
     public float followDistance;
     public GameObject target;
     public Vector3 offset;
+    public Collider2D room;
+    public Camera cam;
+
+    Vector3 Min;
+    Vector3 Max;
+
+    float height;
+    float width;
+
     Vector3 targetPos;
+
     // Use this for initialization
     void Start()
     {
+        height = 2.0f * cam.orthographicSize;
+        width = height * cam.aspect;
+
+        Min = room.bounds.min;
+        Max = room.bounds.max;
+
         targetPos = transform.position;
     }
 
@@ -32,6 +48,34 @@ public class CameraSmoothFollow : MonoBehaviour
 
             transform.position = Vector3.Lerp(transform.position, targetPos + offset, 0.25f);
 
+            // check left bound
+            if(transform.position.x < Min.x + width / 2)
+            {
+                Vector3 tmp = transform.position;
+                tmp.x = Min.x + width / 2;
+                transform.position = tmp;
+            }
+            // check lower bound
+            if (transform.position.y < Min.y + height / 2)
+            {
+                Vector3 tmp = transform.position;
+                tmp.y = Min.y + height / 2;
+                transform.position = tmp;
+            }
+            // check right bound
+            if (transform.position.x > Max.x - width / 2)
+            {
+                Vector3 tmp = transform.position;
+                tmp.x = Max.x - width / 2;
+                transform.position = tmp;
+            }
+            // check upper bound
+            if (transform.position.y > Max.y - height / 2)
+            {
+                Vector3 tmp = transform.position;
+                tmp.y = Max.y - height / 2;
+                transform.position = tmp;
+            }
         }
     }
 }
