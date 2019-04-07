@@ -17,7 +17,6 @@ public class Flashlight : MonoBehaviour
 
     public SpriteRenderer[] sp;
     public float angle;
-    public bool place = false;
     private int spNum;
     private bool turnOn;
 

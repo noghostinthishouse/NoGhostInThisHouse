@@ -13,12 +13,21 @@ public class SoundManager : MonoBehaviour
     public AudioClip[] sfxClips; 
     public AudioClip[] bgmClips; 
     /*
-    ------------------ use this space to tell which index is what ------------------ 
+    ------------------ use this space to tell which index is what sound ------------------ 
         SFX
-        0 - 
+        0 - walking
+        1 - turning
+        2 - footsteps
+        3 - button click
+        4 - pick up flashlight
+        5 - place flashlight
+        6 - turn off flashlight
+        6 - turn on flashlight
          
         BGM
-        0 - 
+        0 - game title
+        1 - ghost stage
+        2 - ambient
          
     */
     // Start is called before the first frame update
@@ -32,7 +41,6 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
         DontDestroyOnLoad(gameObject);
     }
 

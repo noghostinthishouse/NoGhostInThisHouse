@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public float directionX = 1.0f;
     public float directionY = 1.0f;
     public bool enableRotate;
+    public int OriginalPhase;
 
     private Transform current_t;
     private GameObject nextTile;
@@ -20,10 +21,7 @@ public class Player : MonoBehaviour
     private Vector3 distance;
     private float prevAngleF;           // flashlight
     private float prevAngleM;           // player
-    private int prevPhase;
-
-    private SpriteRenderer sp;
-    public Sprite[] sprites; // four directions, o - top right, 1 - bottom right, 2 - top left , 3 - bottom left
+    private int prevPhase;              // four directions, o - top right, 1 - bottom right, 2 - top left , 3 - bottom left
 
     public PlayerMovement my_movement;
     public GameObject my_flashight;         // so we can switch between different flashlights
@@ -39,15 +37,14 @@ public class Player : MonoBehaviour
         current_t = currentTile.GetComponent<Transform>();
         my_inventory = GetComponent<Inventory>();
         tile = currentTile.GetComponent<Tile>();
-        sp = GetComponent<SpriteRenderer>();
 
         nextTile = null;
         move = false;
-        SelectDirections();
         enableRotate = false;
 
         prevAngleF = my_flashight.GetComponent<Flashlight>().angle;
-        prevPhase = my_movement.GetPhase();
+        prevPhase = OriginalPhase;
+        SetDirection(OriginalPhase);
 
         //tile.DebugGetAllTile();
     }
@@ -96,11 +93,13 @@ public class Player : MonoBehaviour
                                 prevAngleM = my_movement.angle;
                                 prevAngleF = my_flashight.GetComponent<Flashlight>().angle;
                                 prevPhase = my_movement.GetPhase();
+                                SoundManager.instance.PlaySFX(5);
                             }
                         }
                     }
                 }
             }
+            //pick up
             else if(my_flashight.GetComponent<Flashlight>().IsPlaced())
             {
                 //check if player is on the tile with the flashlight
@@ -111,13 +110,13 @@ public class Player : MonoBehaviour
                     my_flashight = tile.PickUpFlashlight();
                     my_flashight.GetComponent<Flashlight>().PickUp();
                     my_flashight.GetComponent<Flashlight>().angle = prevAngleM;
+                    SoundManager.instance.PlaySFX(4);
                 }
             }
             else
             {
                 enableRotate = true;
             }
-            //pick up
             
         }
 
@@ -146,12 +145,22 @@ public class Player : MonoBehaviour
             }
         }
 
+        // turn on
         if(Input.GetAxis("Mouse ScrollWheel") > 0.0f)
         {
+            if (!my_flashight.GetComponent<Flashlight>().IsOn())
+            {
+                SoundManager.instance.PlaySFX(7);
+            }
             my_flashight.GetComponent<Flashlight>().TurnOn();
         }
+        // turn off
         else if (Input.GetAxis("Mouse ScrollWheel") < 0.0f)
         {
+            if (my_flashight.GetComponent<Flashlight>().IsOn())
+            {
+                SoundManager.instance.PlaySFX(6);
+            }
             my_flashight.GetComponent<Flashlight>().TurnOff();
         }
 
@@ -190,6 +199,8 @@ public class Player : MonoBehaviour
                         CalculateDis();
                         SelectDirections();
                         NextTurn();
+
+                        SoundManager.instance.PlaySFX(0);
                     }
                 }
             }

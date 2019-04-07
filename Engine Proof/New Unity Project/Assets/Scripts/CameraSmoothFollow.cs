@@ -30,6 +30,8 @@ public class CameraSmoothFollow : MonoBehaviour
         Max = room.bounds.max;
 
         targetPos = transform.position;
+
+        SoundManager.instance.PlayBGM(1);
     }
 
     // Update is called once per frame

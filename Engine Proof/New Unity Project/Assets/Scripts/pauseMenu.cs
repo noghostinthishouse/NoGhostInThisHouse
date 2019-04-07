@@ -48,7 +48,6 @@ public class pauseMenu : MonoBehaviour
 
     void Pause()
     {
-
         // maybe buggy?
         my_player.enabled = false;
         player_movement.enabled = false;
@@ -62,6 +61,7 @@ public class pauseMenu : MonoBehaviour
     public void Retry()
     {
         Time.timeScale = 1f;
+        SoundManager.instance.StopBGM();
         PlayerTurn.Restart();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -69,11 +69,13 @@ public class pauseMenu : MonoBehaviour
     public void Menu()
     {
         Time.timeScale = 1f;
+        SoundManager.instance.StopBGM();
         SceneManager.LoadScene("StageSelect");
     }
 
     public void Victory()
     {
+        SoundManager.instance.StopBGM();
         ingameMenuUI.SetActive(false);
         pauseMenuUI.SetActive(false);
         victoryScreen.SetActive(true);
@@ -81,6 +83,7 @@ public class pauseMenu : MonoBehaviour
 
     public void Lose()
     {
+        SoundManager.instance.StopBGM();
         ingameMenuUI.SetActive(false);
         pauseMenuUI.SetActive(false);
         loseScreen.SetActive(true);
@@ -88,6 +91,7 @@ public class pauseMenu : MonoBehaviour
 
     public void NextLevel()
     {
+        SoundManager.instance.StopBGM();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
