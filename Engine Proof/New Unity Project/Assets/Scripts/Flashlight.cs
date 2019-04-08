@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Flashlight : MonoBehaviour
 {
+    public flashlightPlace fl;
+
     private Player player;
     private PlayerMovement playerm;
 
@@ -16,7 +18,6 @@ public class Flashlight : MonoBehaviour
     [SerializeField] private bool placeFlashlight;
 
     public SpriteRenderer[] lightSP;
-    public SpriteRenderer flashlightSP;
     public float angle;
     private int spNum;
     private bool turnOn;
@@ -30,7 +31,6 @@ public class Flashlight : MonoBehaviour
         pointedTile = null;
         prevPointedTile = null;
         
-        flashlightSP.enabled = false;
         offset = new Vector3(0.0f, -1.0f, 0.0f);
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
@@ -81,16 +81,16 @@ public class Flashlight : MonoBehaviour
         }
     }
 
-    public void Place()
+    public void Place(int index)
     {
         placeFlashlight = true;
-        flashlightSP.enabled = true;
+        fl.PutFlashlightDown(index);
     }
 
     public void PickUp()
     {
         placeFlashlight = false;
-        flashlightSP.enabled = false;
+        fl.PickFlashlightUp();
     }
 
     public bool IsPlaced()

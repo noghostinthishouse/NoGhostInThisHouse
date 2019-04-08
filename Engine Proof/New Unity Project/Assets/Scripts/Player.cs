@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
                             {
                                 my_anim.SetBool("PickUp", true);
                                 tile.PlaceFlashlight(my_flashight);
-                                my_flashight.GetComponent<Flashlight>().Place();
+                                my_flashight.GetComponent<Flashlight>().Place(my_movement.GetPhase());
                                 enableRotate = false;
                                 prevAngleM = my_movement.angle;
                                 prevAngleF = my_flashight.GetComponent<Flashlight>().angle;
