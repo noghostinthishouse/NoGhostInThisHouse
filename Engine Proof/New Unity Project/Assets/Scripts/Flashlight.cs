@@ -15,7 +15,8 @@ public class Flashlight : MonoBehaviour
 
     [SerializeField] private bool placeFlashlight;
 
-    public SpriteRenderer[] sp;
+    public SpriteRenderer[] lightSP;
+    public SpriteRenderer flashlightSP;
     public float angle;
     private int spNum;
     private bool turnOn;
@@ -28,11 +29,14 @@ public class Flashlight : MonoBehaviour
         turnOn = true;
         pointedTile = null;
         prevPointedTile = null;
+        
+        flashlightSP.enabled = false;
+        offset = new Vector3(0.0f, -1.0f, 0.0f);
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerm = GameObject.FindGameObjectWithTag("PlayerCol").GetComponent<PlayerMovement>();
         playerTrans = player.GetComponent<Transform>();
-        offset = new Vector3(0.0f, -1.0f, 0.0f);
+
         if (!placeFlashlight)
         {
             transform.position = playerTrans.position + offset;
@@ -80,11 +84,13 @@ public class Flashlight : MonoBehaviour
     public void Place()
     {
         placeFlashlight = true;
+        flashlightSP.enabled = true;
     }
 
     public void PickUp()
     {
         placeFlashlight = false;
+        flashlightSP.enabled = false;
     }
 
     public bool IsPlaced()
@@ -137,9 +143,9 @@ public class Flashlight : MonoBehaviour
             {
                 pointedTile.flashlightOn = false;
             }
-            for (int i = 0; i < sp.Length; i++)
+            for (int i = 0; i < lightSP.Length; i++)
             {
-                sp[i].enabled = false;
+                lightSP[i].enabled = false;
             }
         }
     }
@@ -153,9 +159,9 @@ public class Flashlight : MonoBehaviour
             {
                 pointedTile.flashlightOn = true;
             }
-            for (int i = 0; i < sp.Length; i++)
+            for (int i = 0; i < lightSP.Length; i++)
             {
-                sp[i].enabled = true;
+                lightSP[i].enabled = true;
             }
         }
     }
