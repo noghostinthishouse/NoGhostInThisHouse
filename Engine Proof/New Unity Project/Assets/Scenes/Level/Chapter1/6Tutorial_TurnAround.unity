@@ -2332,6 +2332,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1883627547, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 167462364, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108025310, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1669420989, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
     - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
@@ -2374,6 +2390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nearbyTiles:
   - {fileID: 912819831}
+  - {fileID: 825644133}
   - {fileID: 825644133}
   item: {fileID: 0}
   GhostInitTile: {fileID: 0}

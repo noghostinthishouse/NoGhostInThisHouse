@@ -9794,17 +9794,17 @@ PrefabInstance:
     - target: {fileID: 3827736453666984338, guid: 4b5aadcf59af2e54d97a365d6e4fdf74,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.281826
+      value: 7.4685
       objectReference: {fileID: 0}
     - target: {fileID: 3827736453666984338, guid: 4b5aadcf59af2e54d97a365d6e4fdf74,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.32364845
+      value: -1.0914
       objectReference: {fileID: 0}
     - target: {fileID: 3827736453666984338, guid: 4b5aadcf59af2e54d97a365d6e4fdf74,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.1736877
+      value: 3.0261
       objectReference: {fileID: 0}
     - target: {fileID: 3827736453666984338, guid: 4b5aadcf59af2e54d97a365d6e4fdf74,
         type: 3}
@@ -9861,6 +9861,11 @@ PrefabInstance:
       propertyPath: flashlight.Array.data[0]
       value: 
       objectReference: {fileID: 1283157265}
+    - target: {fileID: 3827736453666984340, guid: 4b5aadcf59af2e54d97a365d6e4fdf74,
+        type: 3}
+      propertyPath: isFacingRight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b5aadcf59af2e54d97a365d6e4fdf74, type: 3}
 --- !u!4 &2321953033536254162 stripped

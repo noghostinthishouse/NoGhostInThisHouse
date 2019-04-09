@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Level/Chapter1/2Tutorial_ChasingGhost.unity
+- path: Assets/Scenes/Level/Chapter1/3Puzzle1_1.unity
   isLoaded: 1
   isActive: 1
