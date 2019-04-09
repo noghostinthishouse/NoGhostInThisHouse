@@ -333,7 +333,6 @@ MonoBehaviour:
   - {fileID: 280326789}
   - {fileID: 2058881490}
   speed: 5
-  isFacingRight: 0
 --- !u!114 &6543625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,7 +514,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &40514225 stripped
 GameObject:
@@ -2778,7 +2777,7 @@ Transform:
   - {fileID: 1353342018}
   - {fileID: 425357386}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &430328301
 BoxCollider2D:
@@ -8462,7 +8461,7 @@ PrefabInstance:
     - target: {fileID: 6052639303772603486, guid: 32081521d58dad648804e81fbd03bf37,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6052639303772603486, guid: 32081521d58dad648804e81fbd03bf37,
         type: 3}
@@ -10087,7 +10086,7 @@ Transform:
   m_Children:
   - {fileID: 20278671}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1564156943
 GameObject:
@@ -10238,7 +10237,7 @@ PrefabInstance:
     - target: {fileID: 4919858732359757012, guid: a0f4a52f9117a044585ca96d81a2cee9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4919858732359757012, guid: a0f4a52f9117a044585ca96d81a2cee9,
         type: 3}
@@ -11021,7 +11020,7 @@ PrefabInstance:
     - target: {fileID: 405704070988647586, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 405704070988647586, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
@@ -11772,7 +11771,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1902886116
 MonoBehaviour:
@@ -11793,7 +11792,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   room: {fileID: 430328301}
   cam: {fileID: 1902886113}
-  BGMIndex: 0
+  BGMIndex: 1
 --- !u!1001 &1929428546
 PrefabInstance:
   m_ObjectHideFlags: 0

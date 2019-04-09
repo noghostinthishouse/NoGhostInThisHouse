@@ -7371,6 +7371,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32081521d58dad648804e81fbd03bf37, type: 3}
+--- !u!1 &890898350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6052639303772603482, guid: 32081521d58dad648804e81fbd03bf37,
+    type: 3}
+  m_PrefabInstance: {fileID: 890898349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &939601812
 GameObject:
   m_ObjectHideFlags: 0
@@ -9652,7 +9658,7 @@ MonoBehaviour:
   interpVelocity: 0
   minDistance: 0
   followDistance: 0
-  target: {fileID: 0}
+  target: {fileID: 890898350}
   offset: {x: 0, y: 0, z: 0}
   room: {fileID: 939601814}
   cam: {fileID: 1781064947}

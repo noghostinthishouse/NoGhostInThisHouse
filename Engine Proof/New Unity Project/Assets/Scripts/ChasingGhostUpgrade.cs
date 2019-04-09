@@ -46,6 +46,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
     {
         if (!currentT.flashlightOn)
         {
+            currentT.SetNotEmpty();
             anim.SetBool("Stunt", false);
 
             if (!trigger && PlayerTurn.ghostFinished[ghostIndex])
@@ -78,6 +79,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
         }
         else
         {
+            currentT.SetEmpty();
             anim.SetBool("Stunt", true);
             PlayerTurn.SetGhostTurn(ghostIndex);
         }

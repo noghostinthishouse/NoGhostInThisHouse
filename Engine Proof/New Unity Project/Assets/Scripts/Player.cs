@@ -63,12 +63,14 @@ public class Player : MonoBehaviour
             my_flashight.GetComponent<Flashlight>().FlashlightFollowPlayer();
 
             if (Vector3.Distance(transform.position,distance) < 0.001f)
-			{
+            {
+                move = false;
+                my_anim.SetBool("Move", false);
+
                 PickUpItem();
                 CheckEndGame();
-				move = false;
-                my_anim.SetBool("Move", false);
                 PlayerTurn.SetPlayerTurn();
+
                 prevAngleF = my_flashight.GetComponent<Flashlight>().angle;
                 prevPhase = my_movement.GetPhase();
             }

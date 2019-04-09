@@ -17,11 +17,14 @@ public class Inventory : MonoBehaviour
         allItem = false;
         count = 0;                             //can change the number later
         inventory = new GameObject[noOfItem];
-
         //init array with null
         for (int i = 0; i < noOfItem; i++)
         {
             inventory[i] = null;
+        }
+        if(noOfItem == 0)
+        {
+            allItem = true;
         }
     }
 

@@ -195,6 +195,7 @@ public class FollowLightGhost : MonoBehaviour
 
         return tileToSort;
     }
+
     GameObject FindTileWithFlashlight()
     {
         foreach (GameObject t in allTiles.Tiles)

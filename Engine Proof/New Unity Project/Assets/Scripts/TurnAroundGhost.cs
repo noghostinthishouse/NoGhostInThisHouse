@@ -45,34 +45,33 @@ public class TurnAroundGhost : MonoBehaviour
     {
         if (!currentT.flashlightOn)
         {
-            if (!stunt)
+            if (!eat && PlayerTurn.ghostFinished[ghostIndex])
             {
-                if (!eat && PlayerTurn.ghostFinished[ghostIndex])
+                if (!CheckPlayer())
                 {
-                    if (!CheckPlayer())
+                    if (!stunt)
                     {
                         Turn();
-                        CheckPlayer();
                     }
-                }
-                if (eat)
-                {
-                    Move();
-                }
-                else
-                {
-                    PlayerTurn.SetGhostTurn(ghostIndex);
+                    else
+                    {
+                        stunt = false;
+                    }
+                    CheckPlayer();
                 }
             }
-            else
-            {
-                stunt = false;
-                PlayerTurn.SetGhostTurn(ghostIndex);
-            }
+        }
+        else if(PlayerTurn.ghostFinished[ghostIndex])
+        {
+            stunt = true;
+            CheckPlayer();
+        }
+        if (eat && PlayerTurn.ghostFinished[ghostIndex])
+        {
+            Move();
         }
         else
         {
-            stunt = true;
             PlayerTurn.SetGhostTurn(ghostIndex);
         }
     }

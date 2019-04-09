@@ -10,7 +10,6 @@ public class Mirror : MonoBehaviour
     public SpriteRenderer[] light1;
     public SpriteRenderer[] light2;
 
-    private int tileReflect;
 
     void Start()
     {

@@ -7,21 +7,34 @@ public class keyIcon : MonoBehaviour
     private Inventory my_inventory;
     public Sprite[] sprites; // 0 - key not picked up ; 1 - key picked up
 
+    bool hasKey;
+
     void Start()
     {
-        key_icon = GameObject.Find("Key Icon").GetComponent<Image>();
+        if(GameObject.Find("Key Icon"))
+        {
+            key_icon = GameObject.Find("Key Icon").GetComponent<Image>();
+            hasKey = true;
+        }
+        else
+        {
+            hasKey = false;
+        }
         my_inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
     void Update()
     {
-        if (my_inventory.allItem)
+        if (hasKey)
         {
-            key_icon.sprite = sprites[1];
-        }
-        else
-        {
-            key_icon.sprite = sprites[0];
+            if (my_inventory.allItem)
+            {
+                key_icon.sprite = sprites[1];
+            }
+            else
+            {
+                key_icon.sprite = sprites[0];
+            }
         }
     }
 }
