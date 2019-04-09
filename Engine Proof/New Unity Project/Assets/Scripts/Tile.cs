@@ -98,6 +98,10 @@ public class Tile : MonoBehaviour
     public void SetHighlight(bool b)
     {
         ht.SetHighlight(b);
+        if (b)
+        {
+            SoundManager.instance.PlaySFX(10);
+        }
     }
 
     public void PlaceFlashlight(GameObject f)

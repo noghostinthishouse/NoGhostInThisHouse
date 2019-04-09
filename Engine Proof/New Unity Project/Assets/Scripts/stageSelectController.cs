@@ -49,27 +49,32 @@ public class stageSelectController : MonoBehaviour
         if (stageClear[currentSelect] == 1)
         {
             PlayerTurn.Restart();
+            SoundManager.instance.PlaySFX(3);
             SceneManager.LoadScene(currentSelect + 2);
         }
     }
 
     public void goBackToTitle()
     {
+        SoundManager.instance.PlaySFX(3);
         SceneManager.LoadScene("TitleScreen");
     }
 
     public void startGame()
     {
+        SoundManager.instance.PlaySFX(3);
         SceneManager.LoadScene("StageSelect");
     }
 
     public void Quit()
     {
+        SoundManager.instance.PlaySFX(3);
         Application.Quit();
     }
 
     public void goLeft()
     {
+        SoundManager.instance.PlaySFX(3);
         if (currentSelect > 0)
         {
             currentSelect--;
@@ -78,6 +83,7 @@ public class stageSelectController : MonoBehaviour
 
     public void goRight()
     {
+        SoundManager.instance.PlaySFX(3);
         if (currentSelect < 4)
         {
             currentSelect++;
