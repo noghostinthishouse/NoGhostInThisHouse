@@ -8,6 +8,7 @@ public class BGMController : MonoBehaviour
 
     void Start()
     {
-        SoundManager.instance.PlayBGM(BGMIndex);
+        SoundManager.instance.PlaySFX(11);
+        SoundManager.instance.PlayBGM(1);
     }
 }

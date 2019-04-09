@@ -16,11 +16,10 @@ public class TurnAroundGhost : MonoBehaviour
     private int ghostIndex;
 
     private bool eat;
+    private bool stunt;
 
     private Animator anim;
-    private SpriteRenderer sp;
     private int phase;
-    [SerializeField] private bool isFacingRight;
 
     private Vector3 distance;
 
@@ -29,12 +28,14 @@ public class TurnAroundGhost : MonoBehaviour
     {
         currentTileIndex = 0;
         eat = false;
+        stunt = false;
 
         currentT = currentTile.GetComponent<Tile>();
         pointedTile = tiles[currentTileIndex].GetComponent<Tile>();
-
-        sp = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+
+        CalculateDis();
+        SetAnimation();
 
         ghostIndex = PlayerTurn.AddGhost();
     }
@@ -44,27 +45,34 @@ public class TurnAroundGhost : MonoBehaviour
     {
         if (!currentT.flashlightOn)
         {
-            //anim.SetBool("Stunt", false);
-            if (!eat && PlayerTurn.ghostFinished[ghostIndex])
+            if (!stunt)
             {
-                if (!CheckPlayer())
+                if (!eat && PlayerTurn.ghostFinished[ghostIndex])
                 {
-                    Turn();
-                    CheckPlayer();
+                    if (!CheckPlayer())
+                    {
+                        Turn();
+                        CheckPlayer();
+                    }
                 }
-            }
-            if (eat)
-            {
-                Move();
+                if (eat)
+                {
+                    Move();
+                }
+                else
+                {
+                    PlayerTurn.SetGhostTurn(ghostIndex);
+                }
             }
             else
             {
+                stunt = false;
                 PlayerTurn.SetGhostTurn(ghostIndex);
             }
         }
         else
         {
-            //anim.SetBool("Stunt", true);
+            stunt = true;
             PlayerTurn.SetGhostTurn(ghostIndex);
         }
     }
@@ -84,7 +92,7 @@ public class TurnAroundGhost : MonoBehaviour
         currentTileIndex = (currentTileIndex + 1) % tiles.Length;
         pointedTile = tiles[currentTileIndex].GetComponent<Tile>();
         CalculateDis();
-        //SetAnimation();
+        SetAnimation();
         Debug.Log(currentTileIndex);
     }
 
@@ -94,8 +102,6 @@ public class TurnAroundGhost : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, distance, step);
         if (Vector3.Distance(transform.position, distance) < 0.001f)
         {
-            //anim.SetBool("Behind", false);
-            //anim.SetBool("Front", false);
             PlayerTurn.SetGameOver();
         }
     }
@@ -110,12 +116,12 @@ public class TurnAroundGhost : MonoBehaviour
         if (pointedTile.transform.position.x > currentTile.transform.position.x
             && pointedTile.transform.position.y > currentTile.transform.position.y)
         {
-            phase = 4;
+            phase = 0;
         }
         else if (pointedTile.transform.position.x > currentTile.transform.position.x
           && pointedTile.transform.position.y < currentTile.transform.position.y)
         {
-            phase = 3;
+            phase = 1;
         }
         else if (pointedTile.transform.position.x < currentTile.transform.position.x
             && pointedTile.transform.position.y < currentTile.transform.position.y)
@@ -125,47 +131,12 @@ public class TurnAroundGhost : MonoBehaviour
         else if (pointedTile.transform.position.x < currentTile.transform.position.x
             && pointedTile.transform.position.y > currentTile.transform.position.y)
         {
-            phase = 1;
+            phase = 3;
         }
     }
 
-    //1 = top left, 2 = bottom left, 3 = bottom right, 4 = top right
-    //void SetAnimation()
-    //{
-    //    switch (phase)
-    //    {
-    //        case 1:
-    //            if (isFacingRight)
-    //            {
-    //                sp.flipX = false;
-    //                isFacingRight = !isFacingRight;
-    //            }
-    //            anim.SetBool("Behind", true);
-    //            break;
-    //        case 2:
-    //            if (isFacingRight)
-    //            {
-    //                sp.flipX = false;
-    //                isFacingRight = !isFacingRight;
-    //            }
-    //            anim.SetBool("Front", true);
-    //            break;
-    //        case 3:
-    //            if (!isFacingRight)
-    //            {
-    //                sp.flipX = true;
-    //                isFacingRight = !isFacingRight;
-    //            }
-    //            anim.SetBool("Front", true);
-    //            break;
-    //        case 4:
-    //            if (!isFacingRight)
-    //            {
-    //                sp.flipX = true;
-    //                isFacingRight = !isFacingRight;
-    //            }
-    //            anim.SetBool("Behind", true);
-    //            break;
-    //    }
-    //}
+    void SetAnimation()
+    {
+        anim.SetInteger("Phase", phase);
+    }
 }

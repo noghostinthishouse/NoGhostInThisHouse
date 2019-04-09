@@ -22,7 +22,12 @@ public class SoundManager : MonoBehaviour
         4 - pick up flashlight
         5 - place flashlight
         6 - turn off flashlight
-        6 - turn on flashlight
+        7 - turn on flashlight
+        8 - simple ghost move
+        9 - simple ghost laugh
+        10 - highlight tile 
+        11 - clear level
+        12 - enter level
          
         BGM
         0 - game title

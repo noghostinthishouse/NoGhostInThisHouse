@@ -11,6 +11,7 @@ public class CameraSmoothFollow : MonoBehaviour
     public Vector3 offset;
     public Collider2D room;
     public Camera cam;
+    public int BGMIndex;
 
     Vector3 Min;
     Vector3 Max;
@@ -31,7 +32,8 @@ public class CameraSmoothFollow : MonoBehaviour
 
         targetPos = transform.position;
 
-        SoundManager.instance.PlayBGM(1);
+        SoundManager.instance.PlayBGM(BGMIndex);
+        SoundManager.instance.PlaySFX(12);          //plays enter sound
     }
 
     // Update is called once per frame

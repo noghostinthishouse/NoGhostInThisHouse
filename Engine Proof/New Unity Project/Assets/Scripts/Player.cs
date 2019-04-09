@@ -46,6 +46,8 @@ public class Player : MonoBehaviour
         prevPhase = OriginalPhase;
         SetDirection(OriginalPhase);
 
+
+
         //tile.DebugGetAllTile();
     }
 	
@@ -259,6 +261,7 @@ public class Player : MonoBehaviour
     {
         if ((currentTile == my_inventory.endTile) && my_inventory.allItem && !my_flashight.GetComponent<Flashlight>().IsPlaced())
         {
+            SoundManager.instance.PlaySFX(11);      // plays end sound
             LevelComplete();
         }
     }

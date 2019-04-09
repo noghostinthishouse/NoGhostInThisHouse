@@ -15,8 +15,7 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         allItem = false;
-        count = 0;
-        noOfItem = 1;                               //can change the number later
+        count = 0;                             //can change the number later
         inventory = new GameObject[noOfItem];
 
         //init array with null

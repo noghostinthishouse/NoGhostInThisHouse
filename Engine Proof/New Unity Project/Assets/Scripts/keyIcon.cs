@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class keyIcon : MonoBehaviour
 {
-
     private Image key_icon;
     private Inventory my_inventory;
     public Sprite[] sprites; // 0 - key not picked up ; 1 - key picked up
