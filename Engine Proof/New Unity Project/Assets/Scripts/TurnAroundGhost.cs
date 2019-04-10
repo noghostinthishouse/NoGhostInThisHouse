@@ -17,6 +17,7 @@ public class TurnAroundGhost : MonoBehaviour
 
     private bool eat;
     private bool stunt;
+    private bool start;
 
     private Animator anim;
     private int phase;
@@ -29,6 +30,7 @@ public class TurnAroundGhost : MonoBehaviour
         currentTileIndex = 0;
         eat = false;
         stunt = false;
+        start = false;
 
         currentT = currentTile.GetComponent<Tile>();
         pointedTile = tiles[currentTileIndex].GetComponent<Tile>();
@@ -43,7 +45,12 @@ public class TurnAroundGhost : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!currentT.flashlightOn)
+        if (!start)
+        {
+            currentTileIndex = 0;
+            start = true;
+        }
+        else if (!currentT.flashlightOn)
         {
             if (!eat && PlayerTurn.ghostFinished[ghostIndex])
             {
@@ -92,7 +99,7 @@ public class TurnAroundGhost : MonoBehaviour
         pointedTile = tiles[currentTileIndex].GetComponent<Tile>();
         CalculateDis();
         SetAnimation();
-        Debug.Log(currentTileIndex);
+        //Debug.Log(currentTileIndex);
     }
 
     void Move()

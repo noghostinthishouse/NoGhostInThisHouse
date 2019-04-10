@@ -6483,8 +6483,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 1992366747
-  m_SortingOrder: 0
+  m_SortingLayerID: -998447263
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!1 &587553734
 GameObject:
@@ -7368,6 +7368,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FlipX
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052639303970894348, guid: 32081521d58dad648804e81fbd03bf37,
+        type: 3}
+      propertyPath: angle
+      value: -40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32081521d58dad648804e81fbd03bf37, type: 3}

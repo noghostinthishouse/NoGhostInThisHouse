@@ -36,6 +36,7 @@ public class Flashlight : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerm = GameObject.FindGameObjectWithTag("PlayerCol").GetComponent<PlayerMovement>();
         playerTrans = player.GetComponent<Transform>();
+        angle = playerm.angle;
 
         if (!placeFlashlight)
         {
@@ -47,14 +48,7 @@ public class Flashlight : MonoBehaviour
     {
         if (!placeFlashlight)
         {
-            if (player.enableRotate)
-            {
-                Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-                angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
-            }
-            else if (player.IsMove())
+            if (player.enableRotate || player.IsMove())
             {
                 angle = playerm.angle;
                 Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);

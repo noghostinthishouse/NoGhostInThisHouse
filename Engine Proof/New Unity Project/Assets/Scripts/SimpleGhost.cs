@@ -72,7 +72,7 @@ public class SimpleGhost : MonoBehaviour
                     {
                         triggered = true;
                         anim.SetBool("Trigger", true);
-                        //Debug.Log("trigger");
+                        Debug.Log("trigger");
                     }
                 }
            }

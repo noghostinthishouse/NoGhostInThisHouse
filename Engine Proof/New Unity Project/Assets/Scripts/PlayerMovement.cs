@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 10.0f;
     private Player player;
     private int phase;
+    private Vector3 direction;
 
     public float angle;
 
@@ -20,31 +21,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (PlayerTurn.playerTurn && !player.IsMove() && !PlayerTurn.GameOver)
         {
-            Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            CalculateDirection();
+            //angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
-            //change character sprite to match rotation
-            if (player.enableRotate)
-            {
-                if (direction.x > 0 && direction.y > 0)
-                {
-                    phase = 0;
-                }
-                else if (direction.x > 0 && direction.y < 0)
-                {
-                    phase = 1;
-                }
-                else if (direction.x < 0 && direction.y > 0)
-                {
-                    phase = 2;
-                }
-                else if (direction.x < 0 && direction.y < 0)
-                {
-                    phase = 3;
-                }
-                player.SetDirection(phase);
-            }
         }
     }
 
@@ -85,6 +65,37 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         return false;
+    }
+
+    void CalculateDirection()
+    {
+        direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+
+        //change character sprite to match rotation
+        if (direction.x > 0 && direction.y > 0)
+        {
+            angle = 30;
+            phase = 0;
+        }
+        else if (direction.x > 0 && direction.y < 0)
+        {
+            angle = -40;
+            phase = 1;
+        }
+        else if (direction.x < 0 && direction.y > 0)
+        {
+            angle = 160;
+            phase = 2;
+        }
+        else if (direction.x < 0 && direction.y < 0)
+        {
+            angle = -130;
+            phase = 3;
+        }
+        if (player.enableRotate)
+        {
+            player.SetDirection(phase);
+        }
     }
 
     public void SelectThisTile()

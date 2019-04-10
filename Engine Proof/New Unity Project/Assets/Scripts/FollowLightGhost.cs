@@ -85,6 +85,18 @@ public class FollowLightGhost : MonoBehaviour
             else
             {
                 PlayerTurn.SetGhostTurn(ghostIndex);
+                if (IsFlashlightPlaced())
+                {
+                    targetTile = FindTileWithFlashlight();
+                }
+                else
+                {
+                    targetTile = FindTileWithPlayer();
+                }
+
+                nextTile = FindPath(targetTile);
+                nextT = nextTile.GetComponent<Tile>();
+                CalculateDis();
             }
         }
     }
@@ -144,12 +156,12 @@ public class FollowLightGhost : MonoBehaviour
 
                 }
                 tmpTileT = tmpTile.GetComponent<Tile>();
-                if (deadEnd)
-                {
-                    Debug.Log("DEAD END");
-                }
+                //if (deadEnd)
+                //{
+                //    Debug.Log("DEAD END");
+                //}
             }
-            Debug.Log("END ROUTE " + (i + 1));
+            // Debug.Log("END ROUTE " + (i + 1));
             // clear after finished one route to start finding the next one
             checkedTile.Clear();
             if (deadEnd || (!tmpTileT.IsEmpty() && !deadEnd))
@@ -163,14 +175,14 @@ public class FollowLightGhost : MonoBehaviour
         int index = 0;
         for(int i = 0; i < path.Count; i++)
         {
-            Debug.Log(currentT.nearbyTiles[i] + " : " + path[i]);
+            // Debug.Log(currentT.nearbyTiles[i] + " : " + path[i]);
             if(num > path[i] && path[i] != -1)
             {
                 num = path[i];
                 index = i;
             }
         }
-        Debug.Log("END");
+        // Debug.Log("END");
         return currentT.nearbyTiles[index];
     }
 
@@ -188,12 +200,12 @@ public class FollowLightGhost : MonoBehaviour
                 tileToSort[i + 1] = tmp;
             }
         }
-        Debug.Log("Sort tile start");
-        for (int i = 0; i < tileToSort.Length; i++)
-        {
-            Debug.Log(tileToSort[i]);
-        }
-        Debug.Log("Sort tile end");
+        //Debug.Log("Sort tile start");
+        //for (int i = 0; i < tileToSort.Length; i++)
+        //{
+        //    Debug.Log(tileToSort[i]);
+        //}
+        //Debug.Log("Sort tile end");
 
         return tileToSort;
     }

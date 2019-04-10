@@ -51,7 +51,6 @@ public class ChasingGhostUpgrade : MonoBehaviour
             anim.SetBool("Stunt", false);
             //nextNextTile = allTile.FindPlayerTile();
             //nextNextT = nextNextT.GetComponent<Tile>();
-
             if (!trigger && PlayerTurn.ghostFinished[ghostIndex])
             {
                 //check for trigger
@@ -70,11 +69,15 @@ public class ChasingGhostUpgrade : MonoBehaviour
                     PlayerTurn.SetGhostTurn(ghostIndex);
                 }
             }
-            else if (trigger && PlayerTurn.ghostFinished[ghostIndex])
+            else if (trigger && PlayerTurn.ghostFinished[ghostIndex] && !PlayerTurn.GameOver)
             {
                 if (nextT.playerOn)
                 {
                     PlayerTurn.GameOver = true;
+                }
+                else if(currentT.playerOn)
+                {
+                    PlayerTurn.SetGameOver();
                 }
                 SetAnimation();
                 Move();
@@ -82,6 +85,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
         }
         else
         {
+            FindTile();
             currentT.SetEmpty();
             anim.SetBool("Stunt", true);
             PlayerTurn.SetGhostTurn(ghostIndex);
@@ -95,6 +99,12 @@ public class ChasingGhostUpgrade : MonoBehaviour
             trigger = true;
             anim.SetBool("Awake",true);
         }
+    }
+
+    void FindTile()
+    {
+        nextNextTile = player.GetPlayerCurrentTile();
+        nextNextT = nextNextTile.GetComponent<Tile>();
     }
 
     void Move()
@@ -149,6 +159,10 @@ public class ChasingGhostUpgrade : MonoBehaviour
 
     public void ChangeTile()
     {
+        if(nextT == nextNextT)
+        {
+            FindTile();
+        }
         currentT.SetEmpty();
         nextT.SetNotEmpty();
 
@@ -158,8 +172,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
         nextTile = nextNextTile;
         nextT = nextNextT;
 
-        nextNextTile = player.GetPlayerCurrentTile();
-        nextNextT = nextNextTile.GetComponent<Tile>();
+        FindTile();
     }
 
     //1 = top left, 2 = bottom left, 3 = bottom right, 4 = top right

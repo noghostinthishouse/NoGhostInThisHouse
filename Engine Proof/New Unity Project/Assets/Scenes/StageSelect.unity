@@ -492,7 +492,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 7}
-  m_SizeDelta: {x: 129, y: 192}
+  m_SizeDelta: {x: 387.18, y: 387.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &975903834
 MonoBehaviour:
@@ -507,14 +507,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.63529414}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d446ccc710061a042ad82143a50bdece, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3647d36b8204032499acd61ec6f205fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -937,7 +937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1276124798
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1211,7 +1211,6 @@ RectTransform:
   - {fileID: 1398585565}
   - {fileID: 1276124798}
   - {fileID: 975903833}
-  - {fileID: 1629448013}
   m_Father: {fileID: 979415942}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1257,85 +1256,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454206458}
   m_CullTransparentMesh: 0
---- !u!1 &1629448010
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1629448013}
-  - component: {fileID: 1629448012}
-  - component: {fileID: 1629448011}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1629448011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629448010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 36
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 1 - 1
---- !u!222 &1629448012
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629448010}
-  m_CullTransparentMesh: 0
---- !u!224 &1629448013
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629448010}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1454206459}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -145.01}
-  m_SizeDelta: {x: 245.42, y: 46.016}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1763825983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,34 +1503,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageTitle: {fileID: 1276124799}
   stageTitleSprites:
-  - {fileID: 21300000, guid: 01adb73f43267ef4ab04fdad80917f69, type: 3}
-  - {fileID: 21300000, guid: 71894a40f72cee645ae07e5eb2c4362b, type: 3}
-  - {fileID: 21300000, guid: 550526d476f6d45448a89cb45f912578, type: 3}
-  - {fileID: 21300000, guid: 9da3000d7e8792248804b5173034503a, type: 3}
-  - {fileID: 21300000, guid: 032075e4b78099145941a0d6c3e38106, type: 3}
-  - {fileID: 21300000, guid: 8fa4c2727eb55df419fe4280d32bdb8e, type: 3}
-  - {fileID: 21300000, guid: 3f3b766f1ad331640aac73301f92e223, type: 3}
-  - {fileID: 21300000, guid: 3f3b766f1ad331640aac73301f92e223, type: 3}
-  - {fileID: 21300000, guid: 3f3b766f1ad331640aac73301f92e223, type: 3}
-  - {fileID: 21300000, guid: 3f3b766f1ad331640aac73301f92e223, type: 3}
+  - {fileID: 21300000, guid: 2a2c8fafbe8dc3a489f9fb1303130c1c, type: 3}
+  - {fileID: 21300000, guid: fe3489a7467d7d64f98c875fb6fa91c7, type: 3}
+  - {fileID: 21300000, guid: 9ae5aa0cc9b586f4689b87cf14be2c79, type: 3}
+  - {fileID: 21300000, guid: 8c36947555252d546a315642637314e2, type: 3}
   - {fileID: 21300000, guid: 3f3b766f1ad331640aac73301f92e223, type: 3}
   levelImage: {fileID: 1763825985}
   levelImageSprites:
-  - {fileID: 21300000, guid: 01adb73f43267ef4ab04fdad80917f69, type: 3}
-  - {fileID: 21300000, guid: 71894a40f72cee645ae07e5eb2c4362b, type: 3}
-  - {fileID: 21300000, guid: 550526d476f6d45448a89cb45f912578, type: 3}
-  - {fileID: 21300000, guid: 9da3000d7e8792248804b5173034503a, type: 3}
+  - {fileID: 21300000, guid: c5c96f589d36a4e45ae87ba367201669, type: 3}
+  - {fileID: 21300000, guid: c8ae6da47a31440419031b5f58f9c4b1, type: 3}
+  - {fileID: 21300000, guid: 35a128c55c5c6c144ba61b508065adea, type: 3}
+  - {fileID: 21300000, guid: 3acf973f571dde54b95c64a7f358c039, type: 3}
   - {fileID: 21300000, guid: 032075e4b78099145941a0d6c3e38106, type: 3}
-  - {fileID: 21300000, guid: 8fa4c2727eb55df419fe4280d32bdb8e, type: 3}
-  - {fileID: 21300000, guid: 79fa1ead89719174ba460225a1b7bf7f, type: 3}
-  - {fileID: 21300000, guid: 4c6d99b39a0ab3442a25fe2c9bc721e6, type: 3}
-  - {fileID: 21300000, guid: 607aeafd11f8ed442bf69355f7073efd, type: 3}
-  - {fileID: 21300000, guid: 2d1e3adbab54ddd4db0a8c0b27876ac7, type: 3}
-  - {fileID: 21300000, guid: 0db16ac76d65b04449cfccd430bebffc, type: 3}
   stageLocked: {fileID: 975903832}
   leftArrow: {fileID: 17307842}
   rightArrow: {fileID: 1185730737}
-  stageName: {fileID: 1629448011}
 --- !u!4 &2044273142
 Transform:
   m_ObjectHideFlags: 0

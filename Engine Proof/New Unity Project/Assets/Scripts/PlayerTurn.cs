@@ -61,6 +61,18 @@ public class PlayerTurn : MonoBehaviour
         GameOver = false;
         Win = false;
         noOfGhost = 0;
+        for (int i = 0; i < noOfGhost; i++)
+        {
+            ghostFinished[i] = false;
+        }
+    }
+
+    public static void Clear()
+    {
+        playerTurn = true;
+        GameOver = false;
+        Win = false;
+        noOfGhost = 0;
         ghostFinished.Clear();
     }
 }

@@ -59,6 +59,10 @@ public class ChasingGhost : MonoBehaviour
             //this statement is use to move the ghost after it is triggered
             else if (triggered && PlayerTurn.ghostFinished[ghostIndex])
             {
+                if (t.playerOn)
+                {
+                    PlayerTurn.SetGameOver();
+                }
                 SetAnimation();
                 Move();
             }

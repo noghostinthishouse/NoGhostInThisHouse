@@ -14,10 +14,8 @@ public class pauseMenu : MonoBehaviour
 
     void Start()
     {
-        PlayerTurn.Restart();
         my_player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         player_movement = GameObject.Find("RotatingCollider").GetComponent<PlayerMovement>();
-
     }
 
     void Update()
@@ -92,6 +90,7 @@ public class pauseMenu : MonoBehaviour
 
     public void NextLevel()
     {
+        PlayerTurn.Clear();
         SoundManager.instance.StopBGM();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

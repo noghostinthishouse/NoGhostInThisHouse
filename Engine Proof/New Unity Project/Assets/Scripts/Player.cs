@@ -45,9 +45,7 @@ public class Player : MonoBehaviour
         prevAngleF = my_flashight.GetComponent<Flashlight>().angle;
         prevPhase = OriginalPhase;
         SetDirection(OriginalPhase);
-
-
-
+        
         //tile.DebugGetAllTile();
     }
 	
@@ -158,6 +156,7 @@ public class Player : MonoBehaviour
             }
             my_flashight.GetComponent<Flashlight>().TurnOn();
         }
+
         // turn off
         else if (Input.GetAxis("Mouse ScrollWheel") < 0.0f)
         {
@@ -227,6 +226,11 @@ public class Player : MonoBehaviour
         }
         
     }
+
+    //bool PlayingAnimation()
+    //{
+    //    my_anim.GetCurrentAnimatorStateInfo(0).IsName("");
+    //}
 
     void CalculateDis()
     {

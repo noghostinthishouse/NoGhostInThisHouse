@@ -11,11 +11,14 @@ public class CopyActionGhostMovement : MonoBehaviour
     private Tile pointedTile;
     private Tile prevTile;
 
+    float angle;
+
     // Start is called before the first frame update
     void Start()
     {
         playerCol = GameObject.FindGameObjectWithTag("PlayerCol").GetComponent<PlayerMovement>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        angle = playerCol.angle;
     }
 
     // Update is called once per frame
@@ -23,8 +26,7 @@ public class CopyActionGhostMovement : MonoBehaviour
     {
         if (!player.IsMove())
         {
-            Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - playerCol.transform.position;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            angle = playerCol.angle;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
         }
