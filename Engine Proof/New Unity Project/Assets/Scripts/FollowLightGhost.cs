@@ -57,6 +57,8 @@ public class FollowLightGhost : MonoBehaviour
         {   
             if (!currentT.flashlightPlaced && !currentT.playerOn && !move && CheckAnyFlashlightOn())
             {
+                anim.SetBool("Front", false);
+                anim.SetBool("Behind", false);
                 move = true;
                 if (IsFlashlightPlaced())
                 {
