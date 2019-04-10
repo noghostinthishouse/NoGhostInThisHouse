@@ -72,11 +72,11 @@ public class ChasingGhostUpgrade : MonoBehaviour
             }
             else if (trigger && PlayerTurn.ghostFinished[ghostIndex])
             {
-                SetAnimation();
                 if (nextT.playerOn)
                 {
                     PlayerTurn.GameOver = true;
                 }
+                SetAnimation();
                 Move();
             }
         }
@@ -93,6 +93,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
         if (nextT.playerOn || nextNextT.playerOn)
         {
             trigger = true;
+            anim.SetBool("Awake",true);
         }
     }
 

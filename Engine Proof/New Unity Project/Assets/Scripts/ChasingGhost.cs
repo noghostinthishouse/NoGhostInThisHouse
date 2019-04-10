@@ -44,6 +44,8 @@ public class ChasingGhost : MonoBehaviour
         {
             t.SetNotEmpty();
             anim.SetBool("Stunt", false);
+            anim.SetBool("Behind", false);
+            anim.SetBool("Front", false);
             //this statement is use to detect player in front of their tile
             if (!triggered && PlayerTurn.ghostFinished[ghostIndex])
             {
@@ -51,6 +53,7 @@ public class ChasingGhost : MonoBehaviour
                 CheckPlayer();
                 //calculate which tile to move to
                 CalculateDis();
+                SetAnimation();
                 PlayerTurn.SetGhostTurn(ghostIndex);
             }
             //this statement is use to move the ghost after it is triggered
@@ -73,6 +76,7 @@ public class ChasingGhost : MonoBehaviour
         if (nextTile_t.playerOn)
         {
             triggered = true;
+            anim.SetBool("Awake", true);
         }
     }
 
