@@ -26,4 +26,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level/Chapter1/5Puzzle1_3.unity
     guid: dbccbe752122ade4b9f9576ed759a0cf
+  - enabled: 1
+    path: Assets/Scenes/Level/Chapter1/6Tutorial_TurnAround.unity
+    guid: 0e23203c489f9ad44a8983b88abc31d8
+  - enabled: 1
+    path: Assets/Scenes/Level/Chapter2/1FollowLight_Ghost.unity
+    guid: 9e65b0a415a2dc649babef6f6d36cf87
+  - enabled: 1
+    path: Assets/Scenes/Level/Chapter2/3Tutorial_Mirror.unity
+    guid: 5736fe332a0d86a4183a04653c524965
+  - enabled: 1
+    path: Assets/Scenes/Level/Chapter3/1Tutorial_CopyAction_Ghost.unity
+    guid: b42a60d3ae2d5354a83e24bb6e44e293
+  - enabled: 1
+    path: Assets/Scenes/Level/Chapter3/3Tutorial_Mad_Ghost.unity
+    guid: 7c343927146b0e945b323ae886caf92a
+  - enabled: 1
+    path: Assets/Scenes/Level/Chapter3/4Puzzle8.unity
+    guid: 4c09c419e2bd1364bb9277fb520903fe
   m_configObjects: {}

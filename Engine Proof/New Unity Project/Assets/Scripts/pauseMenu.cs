@@ -14,6 +14,7 @@ public class pauseMenu : MonoBehaviour
 
     void Start()
     {
+        PlayerTurn.Restart();
         my_player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         player_movement = GameObject.Find("RotatingCollider").GetComponent<PlayerMovement>();
 
