@@ -10,6 +10,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
     public GameObject currentTile;
     public GameObject nextTile;
     public GameObject nextNextTile;
+    public AllTiles allTile;
 
     private Tile currentT;
     private Tile nextT;
@@ -44,10 +45,12 @@ public class ChasingGhostUpgrade : MonoBehaviour
     
     void Update()
     {
-        if (!currentT.flashlightOn)
+        if (!currentT.flashlightOn && !PlayerTurn.Win)
         {
             currentT.SetNotEmpty();
             anim.SetBool("Stunt", false);
+            //nextNextTile = allTile.FindPlayerTile();
+            //nextNextT = nextNextT.GetComponent<Tile>();
 
             if (!trigger && PlayerTurn.ghostFinished[ghostIndex])
             {

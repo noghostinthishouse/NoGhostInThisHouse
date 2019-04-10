@@ -7,6 +7,7 @@ public class PlayerTurn : MonoBehaviour
 {
     public static bool playerTurn = true;
     public static bool GameOver = false;
+    public static bool Win = false;
     public static List<bool> ghostFinished = new List<bool>();
     public static int noOfGhost = 0;
     private static bool endTurn;
@@ -58,6 +59,7 @@ public class PlayerTurn : MonoBehaviour
     {
         playerTurn = true;
         GameOver = false;
+        Win = false;
         noOfGhost = 0;
         ghostFinished.Clear();
     }

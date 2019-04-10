@@ -263,6 +263,7 @@ public class Player : MonoBehaviour
     {
         if ((currentTile == my_inventory.endTile) && my_inventory.allItem && !my_flashight.GetComponent<Flashlight>().IsPlaced())
         {
+            PlayerTurn.Win = true;
             SoundManager.instance.PlaySFX(11);      // plays end sound
             LevelComplete();
         }
