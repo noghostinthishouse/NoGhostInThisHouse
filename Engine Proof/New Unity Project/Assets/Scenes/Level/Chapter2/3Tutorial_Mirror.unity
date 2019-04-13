@@ -211,7 +211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
-    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!1 &60003763
 GameObject:
@@ -266,7 +266,7 @@ MonoBehaviour:
   - {fileID: 150137903}
   - {fileID: 1531801550}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  GhostInitTile: {fileID: 367352211}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -695,7 +695,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4493a6517eff3584c8a65b3a80df2b6d, type: 3}
   m_Color: {r: 0.33962262, g: 0.3359257, b: 0.3155927, a: 1}
@@ -853,7 +853,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4534fd461d4a21b46b2f9c153eb0c4ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1055,6 +1055,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &367352211 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9080231103584501763, guid: 8112d17f3d79aa74f93d6573c158a5d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1882065702}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &371342466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,7 +1544,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1538248513
-  m_SortingLayer: 0
+  m_SortingLayer: 8
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 45272c7cb40e7ab4a971e56117dc092b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1959,7 +1965,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1612712693
-  m_SortingLayer: 7
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 37de656687adbba40a77c4b222906cbe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.8039216}
@@ -2177,7 +2183,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a21ae91017bccfc478b74c51b4816bd1, type: 3}
   m_Color: {r: 0.6792453, g: 0.6735655, b: 0.63759345, a: 1}
@@ -2328,7 +2334,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 08018035ed7d70945a8af622797ca822, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2536,9 +2542,7 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
-    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!1001 &1073607880
 PrefabInstance:
@@ -3122,7 +3126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
-    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!1 &1227052563 stripped
 GameObject:
@@ -3479,36 +3483,36 @@ PrefabInstance:
     - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
         type: 3}
       propertyPath: m_SpriteTilingProperty.border.x
-      value: 0
+      value: 0.049999997
       objectReference: {fileID: 0}
     - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
         type: 3}
       propertyPath: m_SpriteTilingProperty.border.y
-      value: 0
+      value: 0.049999997
       objectReference: {fileID: 0}
     - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
         type: 3}
       propertyPath: m_SpriteTilingProperty.border.z
-      value: 0
+      value: 0.049999997
       objectReference: {fileID: 0}
     - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
         type: 3}
       propertyPath: m_SpriteTilingProperty.border.w
-      value: 0
+      value: 0.049999997
       objectReference: {fileID: 0}
     - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 5.36
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 4.8
+      value: 0.16
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
-    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!1001 &1369454378
 PrefabInstance:
@@ -3607,9 +3611,39 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.16
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
-    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!114 &1383075152 stripped
 MonoBehaviour:
@@ -3645,7 +3679,7 @@ MonoBehaviour:
   - {fileID: 110400293}
   - {fileID: 150137903}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  GhostInitTile: {fileID: 1674938261}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -3824,7 +3858,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 52be5990dbf9f094a9d85ac7da9e8dcc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4239,7 +4273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
-    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!1 &1596753995
 GameObject:
@@ -4533,7 +4567,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0
@@ -9248,7 +9282,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4493a6517eff3584c8a65b3a80df2b6d, type: 3}
   m_Color: {r: 1, g: 0.9277542, b: 0.4764151, a: 1}
@@ -9419,6 +9453,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1674938261 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9080231103584501763, guid: 8112d17f3d79aa74f93d6573c158a5d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 9080231102713857633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1677187713
 GameObject:
   m_ObjectHideFlags: 0
@@ -9761,36 +9801,36 @@ PrefabInstance:
     - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
         type: 3}
       propertyPath: m_SpriteTilingProperty.border.x
-      value: 0
+      value: 0.049999997
       objectReference: {fileID: 0}
     - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
         type: 3}
       propertyPath: m_SpriteTilingProperty.border.y
-      value: 0
+      value: 0.049999997
       objectReference: {fileID: 0}
     - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
         type: 3}
       propertyPath: m_SpriteTilingProperty.border.z
-      value: 0
+      value: 0.049999997
       objectReference: {fileID: 0}
     - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
         type: 3}
       propertyPath: m_SpriteTilingProperty.border.w
-      value: 0
+      value: 0.049999997
       objectReference: {fileID: 0}
     - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 5.36
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 4.8
+      value: 0.16
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
-    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!114 &1844669871
 MonoBehaviour:
@@ -9931,9 +9971,39 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0.049999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410262865346358988, guid: 147fdd878ee5352418da56837f789f42,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.16
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
-    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!1 &1871339052 stripped
 GameObject:
@@ -10064,7 +10134,72 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.53
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9192331443851275620, guid: 8112d17f3d79aa74f93d6573c158a5d0,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -998447263
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192331443851275620, guid: 8112d17f3d79aa74f93d6573c158a5d0,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192331444238461714, guid: 8112d17f3d79aa74f93d6573c158a5d0,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -998447263
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192331444238461714, guid: 8112d17f3d79aa74f93d6573c158a5d0,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192331444005664728, guid: 8112d17f3d79aa74f93d6573c158a5d0,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -998447263
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192331444005664728, guid: 8112d17f3d79aa74f93d6573c158a5d0,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192331444406792984, guid: 8112d17f3d79aa74f93d6573c158a5d0,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -998447263
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192331444406792984, guid: 8112d17f3d79aa74f93d6573c158a5d0,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192331443597638971, guid: 8112d17f3d79aa74f93d6573c158a5d0,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -998447263
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192331443597638971, guid: 8112d17f3d79aa74f93d6573c158a5d0,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192331444589878124, guid: 8112d17f3d79aa74f93d6573c158a5d0,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -998447263
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192331444589878124, guid: 8112d17f3d79aa74f93d6573c158a5d0,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9192331443224184944, guid: 8112d17f3d79aa74f93d6573c158a5d0, type: 3}
+    - {fileID: 9192331443224184941, guid: 8112d17f3d79aa74f93d6573c158a5d0, type: 3}
+    - {fileID: 9192331443224184942, guid: 8112d17f3d79aa74f93d6573c158a5d0, type: 3}
+    - {fileID: 9192331443224184943, guid: 8112d17f3d79aa74f93d6573c158a5d0, type: 3}
+    - {fileID: 9080231102662257219, guid: 8112d17f3d79aa74f93d6573c158a5d0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8112d17f3d79aa74f93d6573c158a5d0, type: 3}
 --- !u!1 &1888883141
 GameObject:
@@ -10284,7 +10419,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: df2e221c5a14b5349a124beca13cb65a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10487,7 +10622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 719229252, guid: 147fdd878ee5352418da56837f789f42, type: 3}
-    - {fileID: 1594027177, guid: 147fdd878ee5352418da56837f789f42, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 147fdd878ee5352418da56837f789f42, type: 3}
 --- !u!1 &2011333700
 GameObject:

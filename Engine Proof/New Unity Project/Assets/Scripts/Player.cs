@@ -148,23 +148,26 @@ public class Player : MonoBehaviour
         }
 
         // turn on
-        if(Input.GetAxis("Mouse ScrollWheel") > 0.0f)
+        if (!my_flashight.GetComponent<Flashlight>().IsPlaced())
         {
-            if (!my_flashight.GetComponent<Flashlight>().IsOn())
+            if (Input.GetAxis("Mouse ScrollWheel") > 0.0f)
             {
-                SoundManager.instance.PlaySFX(7);
+                if (!my_flashight.GetComponent<Flashlight>().IsOn())
+                {
+                    SoundManager.instance.PlaySFX(7);
+                }
+                my_flashight.GetComponent<Flashlight>().TurnOn();
             }
-            my_flashight.GetComponent<Flashlight>().TurnOn();
-        }
 
-        // turn off
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0.0f)
-        {
-            if (my_flashight.GetComponent<Flashlight>().IsOn())
+            // turn off
+            else if (Input.GetAxis("Mouse ScrollWheel") < 0.0f)
             {
-                SoundManager.instance.PlaySFX(6);
+                if (my_flashight.GetComponent<Flashlight>().IsOn())
+                {
+                    SoundManager.instance.PlaySFX(6);
+                }
+                my_flashight.GetComponent<Flashlight>().TurnOff();
             }
-            my_flashight.GetComponent<Flashlight>().TurnOff();
         }
 
     }
