@@ -46,7 +46,7 @@ public class Flashlight : MonoBehaviour
     
     void Update()
     {
-        if (!placeFlashlight)
+        if (!placeFlashlight && !player.PlayingPickupAnimation())
         {
             if (player.enableRotate || player.IsMove())
             {
