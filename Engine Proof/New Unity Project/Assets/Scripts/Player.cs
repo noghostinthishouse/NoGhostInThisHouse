@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
         }
 
         //place and pick up flashlight
-        if (Input.GetMouseButtonDown(1) && my_flashight)
+        if (Input.GetMouseButtonDown(1) && my_flashight && !PlayingPickupAnimation() && !PlayingWalkAnimation())
         {
             if (enableRotate)
             {
@@ -227,6 +227,20 @@ public class Player : MonoBehaviour
             }
         }
         
+    }
+
+    public bool PlayingWalkAnimation()
+    {
+        string[] nameOfWalkAnims = { "move_top_right", "move_bottom_right", "move_bottom_left", "move_top_left", "move_top_right_noflash", "move_top_left_noflash", "move_bottom_left_noflash", "move_bottom_right_noflash" };
+
+        foreach (string name in nameOfWalkAnims)
+        {
+            if (my_anim.GetCurrentAnimatorStateInfo(0).IsName(name))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public bool PlayingPickupAnimation()
