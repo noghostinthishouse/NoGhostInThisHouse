@@ -1658,7 +1658,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: right back pick up
+  m_Name: place_top_right
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1685,7 +1685,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: right back pick up 1
+  m_Name: pickup_top_right
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1770,7 +1770,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: left pick up 1
+  m_Name: pickup_bottom_left
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1913,7 +1913,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: left pick up
+  m_Name: place_bottom_left
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2025,7 +2025,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: left back pick up 0
+  m_Name: pickup_top_left
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2052,7 +2052,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: right pick up
+  m_Name: place_bottom_right
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2191,7 +2191,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: right pick up 1
+  m_Name: pickup_bottom_right
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2218,7 +2218,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: left back pick up
+  m_Name: place_top_left
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

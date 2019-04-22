@@ -46,7 +46,7 @@ public class Flashlight : MonoBehaviour
     
     void Update()
     {
-        if (!placeFlashlight)
+        if (!placeFlashlight && !player.PlayingPickupAnimation())
         {
             if (player.enableRotate || player.IsMove())
             {
@@ -106,6 +106,10 @@ public class Flashlight : MonoBehaviour
                 if (turnOn)
                 {
                     pointedTile.flashlightOn = true;
+                    if (pointedTile.GhostInitTile && pointedTile.GhostInitTile.GetComponent<Mirror>())
+                    {
+                        pointedTile.GhostInitTile.GetComponent<Mirror>().ReflectLightOn();
+                    }
                 }
             }
         }
@@ -117,6 +121,10 @@ public class Flashlight : MonoBehaviour
         {
             if (pointedTile)
             {
+                if (pointedTile.GhostInitTile && pointedTile.GhostInitTile.GetComponent<Mirror>())
+                {
+                    pointedTile.GhostInitTile.GetComponent<Mirror>().ReflectLightOff();
+                }
                 pointedTile.flashlightOn = false;
                 pointedTile = null;
             }

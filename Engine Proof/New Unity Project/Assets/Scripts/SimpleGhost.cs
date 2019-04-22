@@ -64,12 +64,14 @@ public class SimpleGhost : MonoBehaviour
                     if (triggered)
                     {
                         //Debug.Log("Game over");
+                        SoundManager.instance.PlaySFX(8);
                         eat = true;
                         PlayerTurn.GameOver = true;
                         CalculateDis(t.GetAdjacentTile(i).GetComponent<Transform>());
                     }
                     else
                     {
+                        SoundManager.instance.PlaySFX(9);
                         triggered = true;
                         anim.SetBool("Trigger", true);
                         Debug.Log("trigger");
