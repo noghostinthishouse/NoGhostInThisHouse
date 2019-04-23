@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class stageSelectController : MonoBehaviour
 {
-    static public int[] stageClear = { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }; // 0 - not cleared, 1 - cleared
+    static public int[] stageClear = { 1, 0, 0, 0, 0 }; // 0 - not cleared, 1 - cleared
     public Image stageTitle;
     public Sprite[] stageTitleSprites;
     public Image levelImage;
@@ -14,7 +14,6 @@ public class stageSelectController : MonoBehaviour
     public GameObject stageLocked;
     public GameObject leftArrow;
     public GameObject rightArrow;
-    public Text stageName;
 
     private int currentSelect;
 
@@ -43,7 +42,6 @@ public class stageSelectController : MonoBehaviour
         showLocked();
         showArrows();
         showStageArt();
-        showStageName();
     }
 
     public void startLevel()
@@ -86,7 +84,7 @@ public class stageSelectController : MonoBehaviour
     public void goRight()
     {
         SoundManager.instance.PlaySFX(3);
-        if (currentSelect < 10)
+        if (currentSelect < 4)
         {
             currentSelect++;
         }
@@ -98,7 +96,7 @@ public class stageSelectController : MonoBehaviour
         {
             leftArrow.SetActive(false);
         }
-        if (currentSelect == 10)
+        if (currentSelect == 4)
         {
             rightArrow.SetActive(false);
         }
@@ -106,7 +104,7 @@ public class stageSelectController : MonoBehaviour
         {
             leftArrow.SetActive(true);
         }
-        if (currentSelect != 10)
+        if (currentSelect != 4)
         {
             rightArrow.SetActive(true);
         }
@@ -127,13 +125,13 @@ public class stageSelectController : MonoBehaviour
 
     private void showStageArt()
     {
-        // stageTitle.sprite = stageTitleSprites[currentSelect];
+        stageTitle.sprite = stageTitleSprites[currentSelect];
         levelImage.sprite = levelImageSprites[currentSelect];
         
         var tempColor = levelImage.color;
         if (stageClear[currentSelect] == 0)
         {
-            tempColor.a = 0.5f;
+            tempColor.a = 0.4f;
         }
         else
         {
@@ -141,29 +139,5 @@ public class stageSelectController : MonoBehaviour
         }
         levelImage.color = tempColor;
         
-    }
-
-    private void showStageName()
-    {
-        int chapterNum;
-        int stageNum;
-
-        if (currentSelect < 6)
-        {
-            stageNum = currentSelect + 1;
-            chapterNum = 1;
-        }
-        else if (currentSelect < 8)
-        {
-            stageNum = currentSelect - 5;
-            chapterNum = 2;
-        }
-        else
-        {
-            stageNum = currentSelect - 7;
-            chapterNum = 3;
-        }
-
-        stageName.text = chapterNum.ToString() + " - " + stageNum.ToString();
     }
 }
