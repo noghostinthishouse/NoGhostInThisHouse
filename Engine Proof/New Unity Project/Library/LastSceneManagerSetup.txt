@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Level/Chapter1/5Puzzle1_3.unity
-=======
-- path: Assets/Scenes/StageSelect.unity
->>>>>>> parent of 33f8db7... Revert "test"
   isLoaded: 1
   isActive: 1
