@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 438ae1b6aa8af15438bfe85c14806552
+=======
+guid: 42670d25d43ebc54998f18c812c373cd
+>>>>>>> parent of 8e7252c... Revert "gamejolt alpha build"
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6
