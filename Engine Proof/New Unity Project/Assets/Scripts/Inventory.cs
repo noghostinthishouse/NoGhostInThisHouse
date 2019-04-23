@@ -30,7 +30,7 @@ public class Inventory : MonoBehaviour
 
     public void TakeItem(GameObject item)
     {
-        Debug.Log("Item taken");
+        //Debug.Log("Item taken");
         inventory[count] = item;
         if (count < noOfItem - 1)
         {

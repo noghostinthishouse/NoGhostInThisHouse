@@ -51,9 +51,8 @@ public class Player : MonoBehaviour
 	
 	void Update ()
     {
-
         //only move when play select a valid tile
-        if (move && PlayerTurn.playerTurn)
+        if (move && PlayerTurn.playerTurn && !PlayingPickupAnimation())
         {
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, distance, step);
@@ -75,7 +74,7 @@ public class Player : MonoBehaviour
         }
 
         //place and pick up flashlight
-        if (Input.GetMouseButtonDown(1) && my_flashight)
+        if (Input.GetMouseButtonDown(1) && my_flashight && !PlayingPickupAnimation() && !PlayingWalkAnimation())
         {
             if (enableRotate)
             {
@@ -117,6 +116,7 @@ public class Player : MonoBehaviour
             }
             else
             {
+                prevAngleF = my_flashight.GetComponent<Flashlight>().angle;
                 enableRotate = true;
             }
             
@@ -230,10 +230,33 @@ public class Player : MonoBehaviour
         
     }
 
-    //bool PlayingAnimation()
-    //{
-    //    my_anim.GetCurrentAnimatorStateInfo(0).IsName("");
-    //}
+    public bool PlayingWalkAnimation()
+    {
+        string[] nameOfWalkAnims = { "move_top_right", "move_bottom_right", "move_bottom_left", "move_top_left", "move_top_right_noflash", "move_top_left_noflash", "move_bottom_left_noflash", "move_bottom_right_noflash" };
+
+        foreach (string name in nameOfWalkAnims)
+        {
+            if (my_anim.GetCurrentAnimatorStateInfo(0).IsName(name))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool PlayingPickupAnimation()
+    {
+        string[] nameOfAllPickUpAnims = { "place_bottom_right", "place_bottom_left", "place_top_right", "place_top_left", "pickup_bottom_left", "pickup_top_left", "pickup_bottom_right", "pickup_top_right" };
+
+        foreach(string name in nameOfAllPickUpAnims)
+        {
+            if (my_anim.GetCurrentAnimatorStateInfo(0).IsName(name))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
     void CalculateDis()
     {

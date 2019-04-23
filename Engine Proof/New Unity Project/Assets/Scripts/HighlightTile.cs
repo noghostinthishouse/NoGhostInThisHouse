@@ -22,5 +22,10 @@ public class HighlightTile : MonoBehaviour
             highlights[i].enabled = b;
         }
     }
+
+    public void SetPosition(Vector3 newPos)
+    {
+        transform.position = newPos;
+    }
     
 }
