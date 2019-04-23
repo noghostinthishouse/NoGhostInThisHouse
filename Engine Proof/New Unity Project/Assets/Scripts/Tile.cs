@@ -98,6 +98,7 @@ public class Tile : MonoBehaviour
     public void SetHighlight(bool b)
     {
         ht.SetHighlight(b);
+        ht.SetPosition(transform.position);
         if (b)
         {
             SoundManager.instance.PlaySFX(10);
