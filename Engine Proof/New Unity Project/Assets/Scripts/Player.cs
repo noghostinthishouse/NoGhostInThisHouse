@@ -33,14 +33,14 @@ public class Player : MonoBehaviour
     {
         game_menu = GameObject.FindGameObjectWithTag("Menu Canvas").GetComponent<pauseMenu>();
 
-        my_anim = GetComponent<Animator>();
         current_t = currentTile.GetComponent<Transform>();
         my_inventory = GetComponent<Inventory>();
         tile = currentTile.GetComponent<Tile>();
+        my_anim = GetComponent<Animator>();
 
+        enableRotate = false;
         nextTile = null;
         move = false;
-        enableRotate = false;
 
         prevAngleF = my_flashight.GetComponent<Flashlight>().angle;
         prevPhase = OriginalPhase;
@@ -104,7 +104,7 @@ public class Player : MonoBehaviour
             else if(my_flashight.GetComponent<Flashlight>().IsPlaced())
             {
                 //check if player is on the tile with the flashlight
-                Debug.Log(tile.flashlightPlaced);
+                //Debug.Log(tile.flashlightPlaced);
                 if (tile.flashlightPlaced)
                 {
                     my_anim.SetBool("PickUp", false);

@@ -70,8 +70,10 @@ public class ChasingGhost : MonoBehaviour
         else
         {
             t.SetEmpty();
-            PlayerTurn.SetGhostTurn(ghostIndex);
+            FindPlayerTile();
+            CalculateDis();
             anim.SetBool("Stunt", true);
+            PlayerTurn.SetGhostTurn(ghostIndex);
         }
     }
 
@@ -165,6 +167,14 @@ public class ChasingGhost : MonoBehaviour
                 anim.SetBool("Behind", true);
                 break;
         }
+    }
+
+    void FindPlayerTile()
+    {
+        nextTile = player.currentTile;
+        nextTile_t = player.currentTile.GetComponent<Tile>();
+
+        Debug.Log(nextTile);
     }
 
     public void ChangeTile()
