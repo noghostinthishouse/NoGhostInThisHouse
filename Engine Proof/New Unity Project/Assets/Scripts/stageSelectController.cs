@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class stageSelectController : MonoBehaviour
 {
-    static public int[] stageClear = { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }; // 0 - not cleared, 1 - cleared
+    // static public int[] stageClear = { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }; // 0 - not cleared, 1 - cleared
     public Image stageTitle;
     public Sprite[] stageTitleSprites;
     public Image levelImage;
@@ -19,6 +19,7 @@ public class stageSelectController : MonoBehaviour
     public Slider slider;
 
     private int currentSelect;
+    private int levelUnlocked;
 
     // Start is called before the first frame update
     /*
@@ -39,6 +40,15 @@ public class stageSelectController : MonoBehaviour
     void Start()
     {
         currentSelect = 0;
+        if (!PlayerPrefs.HasKey("stageCompleted"))
+        {
+            PlayerPrefs.SetInt("stageCompleted", 0);
+            levelUnlocked = PlayerPrefs.GetInt("stageCompleted");
+        }
+        else
+        {
+            levelUnlocked = PlayerPrefs.GetInt("stageCompleted");
+        }
     }
 
     void Update()
@@ -51,7 +61,7 @@ public class stageSelectController : MonoBehaviour
 
     public void startLevel()
     {
-        if (stageClear[currentSelect] == 1)
+        if (currentSelect <= levelUnlocked)
         {
             PlayerTurn.Restart();
             SoundManager.instance.PlaySFX(3);
@@ -134,7 +144,7 @@ public class stageSelectController : MonoBehaviour
 
     private void showLocked()
     {
-        if (stageClear[currentSelect] == 0)
+        if (currentSelect > levelUnlocked)
         {
             stageLocked.SetActive(true);
         }
@@ -150,7 +160,7 @@ public class stageSelectController : MonoBehaviour
         levelImage.sprite = levelImageSprites[currentSelect];
         
         var tempColor = levelImage.color;
-        if (stageClear[currentSelect] == 0)
+        if (currentSelect > levelUnlocked)
         {
             tempColor.a = 0.5f;
         }

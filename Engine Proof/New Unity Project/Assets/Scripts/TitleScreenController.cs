@@ -7,6 +7,7 @@ public class TitleScreenController : MonoBehaviour
 {
     public void startGame()
     {
+        // PlayerPrefs.DeleteAll();
         SoundManager.instance.PlaySFX(3);
         SoundManager.instance.StopBGM();
         SceneManager.LoadScene("StageSelect");

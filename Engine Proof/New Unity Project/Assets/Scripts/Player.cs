@@ -340,7 +340,9 @@ public class Player : MonoBehaviour
         PlayerTurn.GameOver = true;
         if (SceneManager.GetActiveScene().buildIndex != 12)
         {
-            stageSelectController.stageClear[SceneManager.GetActiveScene().buildIndex - 1] = 1; // set next level to unlocked
+            if (SceneManager.GetActiveScene().buildIndex - 1 > PlayerPrefs.GetInt("stageCompleted")) {
+                PlayerPrefs.SetInt("stageCompleted", SceneManager.GetActiveScene().buildIndex - 1);
+            }
         }
         game_menu.Victory();
     }
