@@ -62,7 +62,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
                 if (nextT.playerOn)
                 {
                     PlayerTurn.GameOver = true;
-                    Move();
+                    eat = true;
                 }
                 else
                 {
@@ -89,6 +89,10 @@ public class ChasingGhostUpgrade : MonoBehaviour
             currentT.SetEmpty();
             anim.SetBool("Stunt", true);
             PlayerTurn.SetGhostTurn(ghostIndex);
+        }
+        if (eat)
+        {
+            Move();
         }
     }
 
