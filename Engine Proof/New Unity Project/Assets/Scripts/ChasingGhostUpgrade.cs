@@ -73,6 +73,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
             {
                 if (nextT.playerOn)
                 {
+                    eat = true;
                     PlayerTurn.GameOver = true;
                 }
                 else if(currentT.playerOn)
