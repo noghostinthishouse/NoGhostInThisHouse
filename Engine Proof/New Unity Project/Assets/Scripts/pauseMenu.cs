@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class pauseMenu : MonoBehaviour
@@ -11,6 +14,9 @@ public class pauseMenu : MonoBehaviour
     public GameObject ingameMenuUI;
     public GameObject victoryScreen;
     public GameObject loseScreen;
+
+    public GameObject loadingScreen;
+    public Slider slider;
 
     void Start()
     {
@@ -92,6 +98,22 @@ public class pauseMenu : MonoBehaviour
     {
         PlayerTurn.Clear();
         SoundManager.instance.StopBGM();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(LoadNext(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    IEnumerator LoadNext(int stageIndex)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(stageIndex);
+
+        loadingScreen.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / 0.9f);
+
+            slider.value = progress;
+
+            yield return null;
+        }
     }
 }

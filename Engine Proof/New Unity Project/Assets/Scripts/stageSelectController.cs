@@ -15,6 +15,8 @@ public class stageSelectController : MonoBehaviour
     public GameObject leftArrow;
     public GameObject rightArrow;
     public Text stageName;
+    public GameObject loadingScreen;
+    public Slider slider;
 
     private int currentSelect;
 
@@ -33,6 +35,7 @@ public class stageSelectController : MonoBehaviour
         stageClear[0] = 1;
     }
     */
+
     void Start()
     {
         currentSelect = 0;
@@ -52,7 +55,23 @@ public class stageSelectController : MonoBehaviour
         {
             PlayerTurn.Restart();
             SoundManager.instance.PlaySFX(3);
-            SceneManager.LoadScene(currentSelect + 2);
+            StartCoroutine(LoadStage(currentSelect + 2));
+        }
+    }
+
+    IEnumerator LoadStage(int stageIndex)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(stageIndex);
+
+        loadingScreen.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / 0.9f);
+
+            slider.value = progress;
+
+            yield return null;
         }
     }
 
