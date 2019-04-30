@@ -85,6 +85,15 @@ public class pauseMenu : MonoBehaviour
         SceneManager.LoadScene("StageSelect");
     }
 
+    public void Title()
+    {
+        Time.timeScale = 1f;
+        SoundManager.instance.StopBGM();
+        SoundManager.instance.PlaySFX(3);
+        PlayerTurn.Pause = false;
+        SceneManager.LoadScene("TitleScreen");
+    }
+
     public void Victory()
     {
         SoundManager.instance.StopBGM();
@@ -109,6 +118,17 @@ public class pauseMenu : MonoBehaviour
         SoundManager.instance.StopBGM();
         SoundManager.instance.PlaySFX(3);
         PlayerTurn.Pause = false;
+        loadingScreen.SetActive(true);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    /*
+    public void NextLevel()
+    {
+        PlayerTurn.Clear();
+        SoundManager.instance.StopBGM();
+        SoundManager.instance.PlaySFX(3);
+        PlayerTurn.Pause = false;
         StartCoroutine(LoadNext(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
@@ -127,4 +147,5 @@ public class pauseMenu : MonoBehaviour
             yield return null;
         }
     }
+    */
 }
