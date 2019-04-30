@@ -9323,7 +9323,14 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8029823406464904924, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 405704069708655028, guid: 88f96c78fefb1ff478d2513d525b77aa, type: 3}
+    - {fileID: 405704069312255253, guid: 88f96c78fefb1ff478d2513d525b77aa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 88f96c78fefb1ff478d2513d525b77aa, type: 3}
 --- !u!1 &1656235667
 GameObject:

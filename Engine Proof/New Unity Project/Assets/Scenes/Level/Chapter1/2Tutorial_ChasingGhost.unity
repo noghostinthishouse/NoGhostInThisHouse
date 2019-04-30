@@ -6553,6 +6553,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 19607843}
+    - target: {fileID: 8029823406464904924, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f96c78fefb1ff478d2513d525b77aa, type: 3}
 --- !u!1 &801072409
@@ -7267,9 +7272,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearbyTiles:
-  - {fileID: 1219461555}
-  - {fileID: 1273254030}
   - {fileID: 1170432811}
+  - {fileID: 1273254030}
   item: {fileID: 0}
   GhostInitTile: {fileID: 0}
   empty: 0
@@ -10179,6 +10183,9 @@ MonoBehaviour:
   stageLocked: {fileID: 0}
   leftArrow: {fileID: 0}
   rightArrow: {fileID: 0}
+  stageName: {fileID: 0}
+  loadingScreen: {fileID: 0}
+  slider: {fileID: 0}
 --- !u!4 &2029268595
 Transform:
   m_ObjectHideFlags: 0

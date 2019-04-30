@@ -87,10 +87,10 @@ public class ChasingGhostUpgrade : MonoBehaviour
         else
         {
             anim.SetBool("Stunt", true);
+            currentT.SetEmpty();
             if (PlayerTurn.ghostFinished[ghostIndex])
             {
                 FindTile();
-                currentT.SetEmpty();
                 PlayerTurn.SetGhostTurn(ghostIndex);
             }
         }

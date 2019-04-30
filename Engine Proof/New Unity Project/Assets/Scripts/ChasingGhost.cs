@@ -70,10 +70,10 @@ public class ChasingGhost : MonoBehaviour
         else
         {
             anim.SetBool("Stunt", true);
+            t.SetEmpty();
             if (PlayerTurn.ghostFinished[ghostIndex])
             {
                 FindPlayerTile();
-                t.SetEmpty();
                 CalculateDis();
                 PlayerTurn.SetGhostTurn(ghostIndex);
             }

@@ -44,6 +44,7 @@ public class pauseMenu : MonoBehaviour
         // maybe buggy?
         my_player.enabled = true;
         player_movement.enabled = true;
+        SoundManager.instance.PlaySFX(3);
 
         pauseMenuUI.SetActive(false);
         ingameMenuUI.SetActive(true);
@@ -66,8 +67,9 @@ public class pauseMenu : MonoBehaviour
     public void Retry()
     {
         Time.timeScale = 1f;
-        SoundManager.instance.StopBGM();
         PlayerTurn.Restart();
+        SoundManager.instance.StopBGM();
+        SoundManager.instance.PlaySFX(3);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -75,6 +77,7 @@ public class pauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SoundManager.instance.StopBGM();
+        SoundManager.instance.PlaySFX(3);
         SceneManager.LoadScene("StageSelect");
     }
 
@@ -98,6 +101,7 @@ public class pauseMenu : MonoBehaviour
     {
         PlayerTurn.Clear();
         SoundManager.instance.StopBGM();
+        SoundManager.instance.PlaySFX(3);
         StartCoroutine(LoadNext(SceneManager.GetActiveScene().buildIndex + 1));
     }
 

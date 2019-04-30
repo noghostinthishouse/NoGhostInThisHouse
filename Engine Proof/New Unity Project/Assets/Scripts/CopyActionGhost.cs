@@ -35,35 +35,28 @@ public class CopyActionGhost : MonoBehaviour
     
     void Update()
     {
-        if (player.my_flashight.GetComponent<Flashlight>().IsOn())
+        if (player.IsMove() && ghost_movement.GetTileToMove())
         {
-            if (player.IsMove() && ghost_movement.GetTileToMove())
+            nextTile = ghost_movement.GetTileToMove();
+            nextT = nextTile.GetComponent<Tile>();
+            if (nextT.IsEmpty())
             {
-                nextTile = ghost_movement.GetTileToMove();
-                nextT = nextTile.GetComponent<Tile>();
-                if (nextT.IsEmpty())
-                {
-                    CalculateDis();
-                }
-                else
-                {
-                    nextTile = null;
-                    nextT = null;
-                }
-            }
-            if (PlayerTurn.ghostFinished[ghostIndex] && nextTile)
-            {
-                SetAnimation();
-                if (nextT.playerOn)
-                {
-                    PlayerTurn.GameOver = true;
-                }
-                Move();
+                CalculateDis();
             }
             else
             {
-                PlayerTurn.SetGhostTurn(ghostIndex);
+                nextTile = null;
+                nextT = null;
             }
+        }
+        if (PlayerTurn.ghostFinished[ghostIndex] && nextTile)
+        {
+            SetAnimation();
+            if (nextT.playerOn)
+            {
+                PlayerTurn.GameOver = true;
+            }
+            Move();
         }
         else
         {
