@@ -50,6 +50,7 @@ public class pauseMenu : MonoBehaviour
         ingameMenuUI.SetActive(true);
         Time.timeScale = 1f;
         gameIsPaused = false;
+        PlayerTurn.Pause = false;
     }
 
     void Pause()
@@ -62,6 +63,7 @@ public class pauseMenu : MonoBehaviour
         ingameMenuUI.SetActive(false);
         Time.timeScale = 0f;
         gameIsPaused = true;
+        PlayerTurn.Pause = true;
     }
 
     public void Retry()
@@ -70,6 +72,7 @@ public class pauseMenu : MonoBehaviour
         PlayerTurn.Restart();
         SoundManager.instance.StopBGM();
         SoundManager.instance.PlaySFX(3);
+        PlayerTurn.Pause = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -78,6 +81,7 @@ public class pauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SoundManager.instance.StopBGM();
         SoundManager.instance.PlaySFX(3);
+        PlayerTurn.Pause = false;
         SceneManager.LoadScene("StageSelect");
     }
 
@@ -87,6 +91,7 @@ public class pauseMenu : MonoBehaviour
         ingameMenuUI.SetActive(false);
         pauseMenuUI.SetActive(false);
         victoryScreen.SetActive(true);
+        PlayerTurn.Pause = true;
     }
 
     public void Lose()
@@ -95,6 +100,7 @@ public class pauseMenu : MonoBehaviour
         ingameMenuUI.SetActive(false);
         pauseMenuUI.SetActive(false);
         loseScreen.SetActive(true);
+        PlayerTurn.Pause = true;
     }
 
     public void NextLevel()
@@ -102,6 +108,7 @@ public class pauseMenu : MonoBehaviour
         PlayerTurn.Clear();
         SoundManager.instance.StopBGM();
         SoundManager.instance.PlaySFX(3);
+        PlayerTurn.Pause = false;
         StartCoroutine(LoadNext(SceneManager.GetActiveScene().buildIndex + 1));
     }
 

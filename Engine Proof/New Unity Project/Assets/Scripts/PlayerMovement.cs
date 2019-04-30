@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (PlayerTurn.playerTurn && !player.IsMove() && !PlayerTurn.GameOver)
+        if (PlayerTurn.playerTurn && !PlayerTurn.Pause)
         {
             CalculateDirection();
             //angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

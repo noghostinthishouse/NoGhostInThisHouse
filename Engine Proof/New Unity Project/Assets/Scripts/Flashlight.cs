@@ -48,7 +48,7 @@ public class Flashlight : MonoBehaviour
     {
         if (!placeFlashlight && !player.PlayingPickupAnimation())
         {
-            if (player.enableRotate || player.IsMove())
+            if (player.enableRotate)
             {
                 angle = playerm.angle;
                 Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
