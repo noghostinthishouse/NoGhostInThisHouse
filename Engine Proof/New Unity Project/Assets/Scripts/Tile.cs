@@ -6,7 +6,7 @@ public class Tile : MonoBehaviour
 {
     public GameObject[] nearbyTiles;
     public GameObject item;
-    public GameObject GhostInitTile;
+    public GameObject mirror;
 
     [SerializeField] private bool empty;
 
@@ -27,10 +27,6 @@ public class Tile : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         NoOfAdjacentTiles = nearbyTiles.Length;
         empty = true;
-        if (GhostInitTile)
-        {
-            empty = false;
-        }
         if (flashlight)
         {
             flashlightPlaced = true;

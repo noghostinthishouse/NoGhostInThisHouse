@@ -35,6 +35,7 @@ public class CopyActionGhost : MonoBehaviour
     
     void Update()
     {
+        currentT.SetNotEmpty();
         if (player.IsMove() && ghost_movement.GetTileToMove())
         {
             nextTile = ghost_movement.GetTileToMove();
