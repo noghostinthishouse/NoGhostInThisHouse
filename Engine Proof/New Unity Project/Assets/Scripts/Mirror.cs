@@ -27,6 +27,8 @@ public class Mirror : MonoBehaviour
         currentTile.SetNotEmpty();
         if (currentTile.flashlightOn)
         {
+            tile2.flashlightOn = true;
+            tile1.flashlightOn = true;
             if (tile1.playerOn || tile1.flashlightPlaced)
             {
                 TurnOnLight(2);
@@ -42,25 +44,18 @@ public class Mirror : MonoBehaviour
         }
     }
 
-    public void ReflectLightOn()
-    {
-        tile2.flashlightOn = true;
-        tile1.flashlightOn = true;
-    }
-
-    public void ReflectLightOff()
-    {
-        tile2.flashlightOn = false;
-        tile1.flashlightOn = false;
-        TurnOffLight();
-    }
-
     void TurnOffLight()
     {
+        if (light1[0].enabled || light2[0].enabled)
+        {
+            tile2.flashlightOn = false;
+            tile1.flashlightOn = false;
+        }
         for (int i = 0; i < light1.Length; i++)
         {
             light1[i].enabled = false;
             light2[i].enabled = false;
+
         }
     }
 

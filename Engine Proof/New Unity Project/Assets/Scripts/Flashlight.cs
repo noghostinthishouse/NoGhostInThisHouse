@@ -106,10 +106,6 @@ public class Flashlight : MonoBehaviour
                 if (turnOn)
                 {
                     pointedTile.flashlightOn = true;
-                    if (pointedTile.mirror && pointedTile.mirror.GetComponent<Mirror>())
-                    {
-                        pointedTile.mirror.GetComponent<Mirror>().ReflectLightOn();
-                    }
                 }
             }
         }
@@ -121,10 +117,6 @@ public class Flashlight : MonoBehaviour
         {
             if (pointedTile)
             {
-                if (pointedTile.mirror && pointedTile.mirror.GetComponent<Mirror>())
-                {
-                    pointedTile.mirror.GetComponent<Mirror>().ReflectLightOff();
-                }
                 pointedTile.flashlightOn = false;
                 pointedTile = null;
             }
