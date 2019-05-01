@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreenController : MonoBehaviour
 {
+    public GameObject controlsScreen;
+    public GameObject creditsScreen;
+
     public void startGame()
     {
         // PlayerPrefs.DeleteAll();
@@ -17,5 +20,21 @@ public class TitleScreenController : MonoBehaviour
     {
         SoundManager.instance.PlaySFX(3);
         Application.Quit();
+    }
+
+    public void showControlsScreen()
+    {
+        controlsScreen.SetActive(true);
+    }
+
+    public void showCreditsScreen()
+    {
+        creditsScreen.SetActive(true);
+    }
+
+    public void goBack()
+    {
+        creditsScreen.SetActive(false);
+        controlsScreen.SetActive(false);
     }
 }

@@ -389,7 +389,7 @@ MonoBehaviour:
   - {fileID: 388005426}
   - {fileID: 1404319145}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 1689389277}
+  mirror: {fileID: 0}
   empty: 1
   playerOn: 0
   flashlightPlaced: 0
@@ -919,7 +919,7 @@ MonoBehaviour:
   - {fileID: 172497308}
   - {fileID: 513693749}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -1344,7 +1344,7 @@ MonoBehaviour:
   - {fileID: 1075856770}
   - {fileID: 2056814053}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -1586,7 +1586,7 @@ MonoBehaviour:
   - {fileID: 388005426}
   - {fileID: 1404319145}
   item: {fileID: 832958579}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -7729,7 +7729,7 @@ MonoBehaviour:
   - {fileID: 388005426}
   - {fileID: 464828938}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -8110,6 +8110,62 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405704070861117267, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 47.80005
+      objectReference: {fileID: 0}
+    - target: {fileID: 405704070988647774, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: popups.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 405704070988647774, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: popups.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 989e4d00a5455894fa922b82130e3736,
+        type: 3}
+    - target: {fileID: 405704070988647774, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: popups.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ce3a9dc39032a041b7b87760c0dcec9,
+        type: 3}
+    - target: {fileID: 405704070988647774, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: popups.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1672c5230e66edd4b848b99026f946cc,
+        type: 3}
+    - target: {fileID: 405704070988647774, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: popups.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: a0082251fbb36db4aa86dddef2d5b9fb,
+        type: 3}
+    - target: {fileID: 405704070988647774, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: popups.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 77a9b725337e84f46a73aff05b977cab,
+        type: 3}
+    - target: {fileID: 405704070988647774, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: popups.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e945c100b6d2914a968bc9793a5ffa4,
+        type: 3}
+    - target: {fileID: 8982669368450593704, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.060058594
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993066528359594211, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -24.399902
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f96c78fefb1ff478d2513d525b77aa, type: 3}
@@ -8718,7 +8774,7 @@ MonoBehaviour:
   - {fileID: 172497308}
   - {fileID: 513693749}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -9218,7 +9274,7 @@ MonoBehaviour:
   nearbyTiles:
   - {fileID: 1793607415}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -9805,7 +9861,7 @@ MonoBehaviour:
   - {fileID: 1568477810}
   - {fileID: 172497308}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -10154,7 +10210,7 @@ MonoBehaviour:
   nearbyTiles:
   - {fileID: 464828938}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 1
   flashlightPlaced: 0

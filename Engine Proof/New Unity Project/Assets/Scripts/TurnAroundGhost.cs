@@ -45,6 +45,7 @@ public class TurnAroundGhost : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentT.SetNotEmpty();
         if (!start)
         {
             currentTileIndex = 0;

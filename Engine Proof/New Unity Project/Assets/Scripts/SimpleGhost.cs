@@ -22,17 +22,20 @@ public class SimpleGhost : MonoBehaviour
     void Start()
     {
         sp = GetComponent<SpriteRenderer>();
-        stunt = false;
-        ghostIndex = PlayerTurn.AddGhost();
-        triggered = false;
         t = tile.GetComponent<Tile>();
+
+        stunt = false;
+        triggered = false;
         eat = false;
+
+        ghostIndex = PlayerTurn.AddGhost();
     }
 
     void Update()
     {
         if (!t.flashlightOn)
         {
+            t.SetNotEmpty();
             anim.SetBool("Stunt", false);
             //1st trigger statement
             if (PlayerTurn.ghostFinished[ghostIndex])

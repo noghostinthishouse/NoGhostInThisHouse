@@ -24,6 +24,7 @@ public class Mirror : MonoBehaviour
 
     void Update()
     {
+        currentTile.SetNotEmpty();
         if (currentTile.flashlightOn)
         {
             if (tile1.playerOn || tile1.flashlightPlaced)

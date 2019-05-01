@@ -27,15 +27,17 @@ public class ChasingGhost : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        nextTile_t = nextTile.GetComponent<Tile>();
         sp = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        stunt = false;
-        ghostIndex = PlayerTurn.AddGhost();
-        triggered = false;
         t = tile.GetComponent<Tile>();
-        nextTile_t = nextTile.GetComponent<Tile>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+        triggered = false;
+        stunt = false;
         eat = false;
+        
+        ghostIndex = PlayerTurn.AddGhost();
     }
 
     void Update()

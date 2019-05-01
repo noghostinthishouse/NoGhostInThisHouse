@@ -65,6 +65,18 @@ public class stageSelectController : MonoBehaviour
         {
             PlayerTurn.Restart();
             SoundManager.instance.PlaySFX(3);
+            loadingScreen.SetActive(true);
+            SceneManager.LoadScene(currentSelect + 2);
+        }
+    }
+    
+    /*
+    public void startLevel()
+    {
+        if (currentSelect <= levelUnlocked)
+        {
+            PlayerTurn.Restart();
+            SoundManager.instance.PlaySFX(3);
             StartCoroutine(LoadStage(currentSelect + 2));
         }
     }
@@ -84,6 +96,7 @@ public class stageSelectController : MonoBehaviour
             yield return null;
         }
     }
+    */
 
     public void goBackToTitle()
     {

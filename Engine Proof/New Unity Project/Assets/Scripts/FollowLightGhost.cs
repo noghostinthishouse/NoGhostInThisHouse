@@ -53,6 +53,7 @@ public class FollowLightGhost : MonoBehaviour
 
     void Update()
     {
+        currentT.SetNotEmpty();
         if (PlayerTurn.ghostFinished[ghostIndex])
         {   
             if (!currentT.flashlightPlaced && !currentT.playerOn && !move && CheckAnyFlashlightOn())
