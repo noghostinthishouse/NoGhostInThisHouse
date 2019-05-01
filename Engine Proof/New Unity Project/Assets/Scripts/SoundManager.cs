@@ -11,7 +11,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource sfxSource;                        // use to play sound effect
     public AudioSource bgmSource;                        // use to play bg music
     public AudioClip[] sfxClips; 
-    public AudioClip[] bgmClips; 
+    public AudioClip[] bgmClips;
     /*
     ------------------ use this space to tell which index is what sound ------------------ 
         SFX
@@ -28,11 +28,16 @@ public class SoundManager : MonoBehaviour
         10 - highlight tile 
         11 - clear level
         12 - enter level
+        13 - key_pickup
+        14 - menu highlight
+        15 - tile highlight
          
         BGM
         0 - game title
-        1 - ghost stage
+        1 - ghost stage 1
         2 - ambient
+        3 - ghost stage 2
+        4 - ghost stage 3
          
     */
     // Start is called before the first frame update
