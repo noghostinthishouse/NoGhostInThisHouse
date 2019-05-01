@@ -140,7 +140,7 @@ public class stageSelectController : MonoBehaviour
         {
             leftArrow.SetActive(false);
         }
-        if (currentSelect == 10)
+        if (currentSelect == 14)
         {
             rightArrow.SetActive(false);
         }
@@ -148,7 +148,7 @@ public class stageSelectController : MonoBehaviour
         {
             leftArrow.SetActive(true);
         }
-        if (currentSelect != 10)
+        if (currentSelect != 14)
         {
             rightArrow.SetActive(true);
         }
@@ -190,19 +190,19 @@ public class stageSelectController : MonoBehaviour
         int chapterNum;
         int stageNum;
 
-        if (currentSelect < 6)
+        if (currentSelect < 7)
         {
             stageNum = currentSelect + 1;
             chapterNum = 1;
         }
-        else if (currentSelect < 8)
+        else if (currentSelect < 12)
         {
-            stageNum = currentSelect - 5;
+            stageNum = currentSelect - 6;
             chapterNum = 2;
         }
         else
         {
-            stageNum = currentSelect - 7;
+            stageNum = currentSelect - 11;
             chapterNum = 3;
         }
 
