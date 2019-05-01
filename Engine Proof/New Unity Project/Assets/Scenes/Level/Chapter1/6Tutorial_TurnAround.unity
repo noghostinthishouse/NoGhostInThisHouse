@@ -376,6 +376,17 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 405704070988647774, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: popups.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 405704070988647774, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: popups.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: ae842dcc550d6fd4794698ccc5f522f5,
+        type: 3}
     - target: {fileID: 922120014111685723, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -672,7 +683,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4493a6517eff3584c8a65b3a80df2b6d, type: 3}
   m_Color: {r: 0.33962262, g: 0.3359257, b: 0.3155927, a: 1}
@@ -853,7 +864,7 @@ MonoBehaviour:
   - {fileID: 1917410630}
   - {fileID: 912819831}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -1009,7 +1020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nearbyTiles: []
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -1103,7 +1114,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4534fd461d4a21b46b2f9c153eb0c4ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1507,7 +1518,7 @@ MonoBehaviour:
   nearbyTiles:
   - {fileID: 825644133}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -2260,7 +2271,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1612712693
-  m_SortingLayer: 7
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 37de656687adbba40a77c4b222906cbe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.6627451}
@@ -2447,7 +2458,7 @@ MonoBehaviour:
   - {fileID: 825644133}
   - {fileID: 825644133}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 420158046}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -2640,7 +2651,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a21ae91017bccfc478b74c51b4816bd1, type: 3}
   m_Color: {r: 0.6792453, g: 0.6735655, b: 0.63759345, a: 1}
@@ -2844,7 +2855,7 @@ MonoBehaviour:
   - {fileID: 793893009}
   - {fileID: 458159207}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -3083,7 +3094,7 @@ MonoBehaviour:
   - {fileID: 793893009}
   - {fileID: 232888951}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -3239,7 +3250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nearbyTiles: []
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -3855,7 +3866,7 @@ MonoBehaviour:
   nearbyTiles:
   - {fileID: 912819831}
   item: {fileID: 1676112080}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -4109,7 +4120,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: df2e221c5a14b5349a124beca13cb65a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4827,7 +4838,7 @@ MonoBehaviour:
   nearbyTiles:
   - {fileID: 232888951}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 1
   flashlightPlaced: 0
@@ -4960,7 +4971,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0
@@ -9975,7 +9986,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4493a6517eff3584c8a65b3a80df2b6d, type: 3}
   m_Color: {r: 1, g: 0.9277542, b: 0.4764151, a: 1}

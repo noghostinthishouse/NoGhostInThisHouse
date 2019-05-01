@@ -30,9 +30,13 @@ public class pauseMenu : MonoBehaviour
 
         if (popups.Length > 0)
         {
-            currentPopupPage = 0;
-            popupImage.GetComponent<Image>().sprite = popups[currentPopupPage];
-            Invoke("showPopups", 1.2f);
+            if (!PlayerPrefs.HasKey("tutorialRan"))
+            {
+                PlayerPrefs.SetInt("tutorialRan", 1);
+                currentPopupPage = 0;
+                popupImage.GetComponent<Image>().sprite = popups[currentPopupPage];
+                Invoke("showPopups", 1.2f);
+            }
         }
     }
 
@@ -103,6 +107,11 @@ public class pauseMenu : MonoBehaviour
         SoundManager.instance.PlaySFX(3);
         PlayerTurn.Pause = false;
         SceneManager.LoadScene("StageSelect");
+
+        if (PlayerPrefs.HasKey("tutorialRan"))
+        {
+            PlayerPrefs.DeleteKey("tutorialRan");
+        }
     }
 
     public void Title()
@@ -112,6 +121,11 @@ public class pauseMenu : MonoBehaviour
         SoundManager.instance.PlaySFX(3);
         PlayerTurn.Pause = false;
         SceneManager.LoadScene("TitleScreen");
+
+        if (PlayerPrefs.HasKey("tutorialRan"))
+        {
+            PlayerPrefs.DeleteKey("tutorialRan");
+        }
     }
 
     public void Victory()
@@ -140,6 +154,11 @@ public class pauseMenu : MonoBehaviour
         PlayerTurn.Pause = false;
         loadingScreen.SetActive(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        if (PlayerPrefs.HasKey("tutorialRan"))
+        {
+            PlayerPrefs.DeleteKey("tutorialRan");
+        }
     }
 
     /*

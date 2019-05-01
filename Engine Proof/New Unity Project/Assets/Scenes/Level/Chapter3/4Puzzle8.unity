@@ -426,7 +426,7 @@ MonoBehaviour:
   nearbyTiles:
   - {fileID: 600027321}
   item: {fileID: 1968801811}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -1213,7 +1213,7 @@ MonoBehaviour:
   - {fileID: 406707173}
   - {fileID: 2096623538}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -1672,7 +1672,7 @@ MonoBehaviour:
   - {fileID: 1455426846}
   - {fileID: 1315502098}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -6711,7 +6711,7 @@ MonoBehaviour:
   - {fileID: 406707173}
   - {fileID: 85818771}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -7255,7 +7255,7 @@ MonoBehaviour:
   - {fileID: 1455426846}
   - {fileID: 1154306546}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 1
   flashlightPlaced: 0
@@ -7469,7 +7469,7 @@ MonoBehaviour:
   - {fileID: 600027321}
   - {fileID: 1455426846}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -7783,6 +7783,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 405704070861117267, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 47.799927
+      objectReference: {fileID: 0}
     - target: {fileID: 405704069680982634, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
       propertyPath: m_IsActive
@@ -7818,12 +7823,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 405704070861117267, guid: 88f96c78fefb1ff478d2513d525b77aa,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 47.799927
-      objectReference: {fileID: 0}
     - target: {fileID: 405704071021871964, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099789017888078382, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -8126,7 +8131,7 @@ MonoBehaviour:
   nearbyTiles:
   - {fileID: 793496121}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -8535,7 +8540,7 @@ MonoBehaviour:
   - {fileID: 2096623538}
   - {fileID: 406707173}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -8861,7 +8866,7 @@ MonoBehaviour:
   - {fileID: 867852736}
   - {fileID: 406707173}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -9747,7 +9752,7 @@ MonoBehaviour:
   nearbyTiles:
   - {fileID: 2096623538}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -10100,7 +10105,7 @@ MonoBehaviour:
   - {fileID: 600027321}
   - {fileID: 1315502098}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -10667,7 +10672,7 @@ MonoBehaviour:
   - {fileID: 85818771}
   - {fileID: 867852736}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -11041,7 +11046,7 @@ MonoBehaviour:
   - {fileID: 1315502098}
   - {fileID: 1774342168}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0

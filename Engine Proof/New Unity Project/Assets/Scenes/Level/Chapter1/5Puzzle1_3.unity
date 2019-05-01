@@ -1056,12 +1056,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f6f4c11071e25c4980345a21cc1028b, type: 3}
---- !u!1 &184536090 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3735788311949125523, guid: 8f6f4c11071e25c4980345a21cc1028b,
-    type: 3}
-  m_PrefabInstance: {fileID: 184536089}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &184536091 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3735788311949125522, guid: 8f6f4c11071e25c4980345a21cc1028b,
@@ -1355,7 +1349,7 @@ MonoBehaviour:
   nearbyTiles:
   - {fileID: 1342587718}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 1249504945}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -1667,7 +1661,7 @@ MonoBehaviour:
   - {fileID: 329685140}
   - {fileID: 1342587718}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -1880,7 +1874,7 @@ MonoBehaviour:
   - {fileID: 1181936958}
   - {fileID: 1877574808}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -2269,7 +2263,7 @@ MonoBehaviour:
   - {fileID: 280326789}
   - {fileID: 1861710045}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -2874,6 +2868,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8099789017888078382, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f96c78fefb1ff478d2513d525b77aa, type: 3}
 --- !u!1 &517315587
@@ -3383,7 +3382,7 @@ MonoBehaviour:
   - {fileID: 1683667754}
   - {fileID: 311759245}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -3521,7 +3520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nearbyTiles: []
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -8650,7 +8649,7 @@ MonoBehaviour:
   nearbyTiles:
   - {fileID: 1159050218}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 1
   flashlightPlaced: 0
@@ -8974,7 +8973,7 @@ MonoBehaviour:
   - {fileID: 280326789}
   - {fileID: 2058881490}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 6543621}
+  mirror: {fileID: 0}
   empty: 1
   playerOn: 0
   flashlightPlaced: 0
@@ -9206,7 +9205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nearbyTiles: []
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -9507,7 +9506,7 @@ MonoBehaviour:
   - {fileID: 251507283}
   - {fileID: 1861710045}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -9845,7 +9844,7 @@ MonoBehaviour:
   - {fileID: 1929428547}
   - {fileID: 819835449}
   item: {fileID: 1231770797}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -10254,7 +10253,7 @@ MonoBehaviour:
   nearbyTiles:
   - {fileID: 1877574808}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 184536090}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -10541,7 +10540,7 @@ MonoBehaviour:
   - {fileID: 1181936958}
   - {fileID: 1159050218}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -11012,7 +11011,7 @@ MonoBehaviour:
   - {fileID: 329685140}
   - {fileID: 1342587718}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -11145,7 +11144,7 @@ MonoBehaviour:
   - {fileID: 311759245}
   - {fileID: 280326789}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -11459,7 +11458,7 @@ MonoBehaviour:
   - {fileID: 1526785843}
   - {fileID: 311759245}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -11862,7 +11861,7 @@ MonoBehaviour:
   - {fileID: 1181936958}
   - {fileID: 1342587718}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0

@@ -460,7 +460,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0
@@ -5981,7 +5981,7 @@ MonoBehaviour:
   - {fileID: 1273254030}
   - {fileID: 1170432811}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 1659127751}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -6095,7 +6095,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4493a6517eff3584c8a65b3a80df2b6d, type: 3}
   m_Color: {r: 1, g: 0.9277542, b: 0.4764151, a: 1}
@@ -6543,11 +6543,17 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8029823406464904924, guid: 88f96c78fefb1ff478d2513d525b77aa,
+    - target: {fileID: 405704070988647774, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
+      propertyPath: popups.Array.size
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 405704070988647774, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: popups.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8eee1808996d0fe40b4d3b2c1afb34c0,
+        type: 3}
     - target: {fileID: 405704070988647773, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
       propertyPath: m_RenderMode
@@ -6558,6 +6564,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 19607843}
+    - target: {fileID: 8029823406464904924, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 922120014111685723, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -6667,7 +6678,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 08018035ed7d70945a8af622797ca822, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6933,7 +6944,7 @@ MonoBehaviour:
   - {fileID: 1219461555}
   - {fileID: 1709872814}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -7160,12 +7171,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1019935895 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3735788311949125523, guid: 8f6f4c11071e25c4980345a21cc1028b,
-    type: 3}
-  m_PrefabInstance: {fileID: 2037529019}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1020740096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7291,7 +7296,7 @@ MonoBehaviour:
   - {fileID: 1170432811}
   - {fileID: 1273254030}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -7722,7 +7727,7 @@ MonoBehaviour:
   - {fileID: 498365095}
   - {fileID: 1637189704}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -7836,7 +7841,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a21ae91017bccfc478b74c51b4816bd1, type: 3}
   m_Color: {r: 0.6792453, g: 0.6735655, b: 0.63759345, a: 1}
@@ -8053,7 +8058,7 @@ MonoBehaviour:
   - {fileID: 1709550646}
   - {fileID: 957284977}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 1019935895}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -8207,7 +8212,7 @@ MonoBehaviour:
   - {fileID: 1020740099}
   - {fileID: 498365095}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -8709,7 +8714,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4493a6517eff3584c8a65b3a80df2b6d, type: 3}
   m_Color: {r: 0.33962262, g: 0.3359257, b: 0.3155927, a: 1}
@@ -8867,7 +8872,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -998447263
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 52be5990dbf9f094a9d85ac7da9e8dcc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9209,7 +9214,7 @@ MonoBehaviour:
   nearbyTiles:
   - {fileID: 1170432811}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -9237,12 +9242,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &1659127751 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3735788311949125523, guid: 8f6f4c11071e25c4980345a21cc1028b,
-    type: 3}
-  m_PrefabInstance: {fileID: 458816979}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1709550645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9369,7 +9368,7 @@ MonoBehaviour:
   - {fileID: 1219461555}
   - {fileID: 1273254030}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -9526,7 +9525,7 @@ MonoBehaviour:
   nearbyTiles:
   - {fileID: 957284977}
   item: {fileID: 756541394}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 0
   flashlightPlaced: 0
@@ -10062,7 +10061,7 @@ MonoBehaviour:
   nearbyTiles:
   - {fileID: 1709550646}
   item: {fileID: 0}
-  GhostInitTile: {fileID: 0}
+  mirror: {fileID: 0}
   empty: 0
   playerOn: 1
   flashlightPlaced: 0
@@ -10156,7 +10155,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1612712693
-  m_SortingLayer: 7
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 37de656687adbba40a77c4b222906cbe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.7254902}
