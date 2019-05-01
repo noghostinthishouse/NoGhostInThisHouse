@@ -15,6 +15,10 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        // 30 = top right
+        // -40 = bottom right
+        // 160 = top left
+        // -130 = bottom left
     }
 
     void Update()
