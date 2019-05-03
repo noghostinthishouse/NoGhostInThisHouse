@@ -59,6 +59,7 @@ public class PlayerTurn : MonoBehaviour
 
     public static void Restart()
     {
+        Pause = false;
         playerTurn = true;
         GameOver = false;
         Win = false;
