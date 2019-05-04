@@ -11,13 +11,24 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] private int noOfItem;
     private int count;
+    private GameObject doorHighlight;
 
     void Start()
     {
+        doorHighlight = GameObject.FindGameObjectWithTag("Door Highlight");
+
         allItem = false;
+
+        if (noOfItem > 0)
+        {
+            doorHighlight.SetActive(false);
+        }
+
         count = 0;                             //can change the number later
         inventory = new GameObject[noOfItem];
+
         //init array with null
+
         for (int i = 0; i < noOfItem; i++)
         {
             inventory[i] = null;
@@ -39,6 +50,7 @@ public class Inventory : MonoBehaviour
         if(count == noOfItem-1)
         {
             allItem = true;
+            doorHighlight.SetActive(true);
         }
         else
         {
