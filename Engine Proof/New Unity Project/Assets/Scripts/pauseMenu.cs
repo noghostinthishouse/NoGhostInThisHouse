@@ -77,7 +77,7 @@ public class pauseMenu : MonoBehaviour
         PlayerTurn.Pause = false;
     }
 
-    public void Pause()
+    void Pause()
     {
         // maybe buggy?
         my_player.enabled = false;
@@ -96,7 +96,6 @@ public class pauseMenu : MonoBehaviour
         PlayerTurn.Restart();
         SoundManager.instance.StopBGM();
         SoundManager.instance.PlaySFX(3);
-        PlayerTurn.Pause = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -151,7 +150,6 @@ public class pauseMenu : MonoBehaviour
         PlayerTurn.Clear();
         SoundManager.instance.StopBGM();
         SoundManager.instance.PlaySFX(3);
-        PlayerTurn.Pause = false;
         loadingScreen.SetActive(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 

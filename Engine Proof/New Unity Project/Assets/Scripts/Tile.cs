@@ -12,7 +12,7 @@ public class Tile : MonoBehaviour
 
     private Player player;
 
-    public bool playerOn = false;
+    public bool playerOn;
     public bool flashlightPlaced;           //player place flashlight on the tile
     public bool flashlightOn;               //flashlight is shining on the tile
 

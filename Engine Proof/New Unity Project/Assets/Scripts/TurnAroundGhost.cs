@@ -16,7 +16,7 @@ public class TurnAroundGhost : MonoBehaviour
     private int ghostIndex;
 
     private bool eat;
-    private bool stunt;
+    [SerializeField] private bool stunt;
     private bool start;
 
     private Animator anim;
@@ -46,11 +46,13 @@ public class TurnAroundGhost : MonoBehaviour
     void Update()
     {
         currentT.SetNotEmpty();
+        // to fix when the ghost turn before its turn started after hitting retry button
         if (!start)
         {
             currentTileIndex = 0;
             start = true;
         }
+
         else if (!currentT.flashlightOn)
         {
             if (!eat && PlayerTurn.ghostFinished[ghostIndex])
@@ -72,8 +74,9 @@ public class TurnAroundGhost : MonoBehaviour
         else if(PlayerTurn.ghostFinished[ghostIndex])
         {
             stunt = true;
-            CheckPlayer();
+            //CheckPlayer();
         }
+
         if (eat && PlayerTurn.ghostFinished[ghostIndex])
         {
             if (!IsTurning())
@@ -92,9 +95,8 @@ public class TurnAroundGhost : MonoBehaviour
         if (pointedTile.playerOn)
         {
             eat = true;
-            return true;
         }
-        return false;
+        return eat;
     }
 
     void Turn()
@@ -113,6 +115,7 @@ public class TurnAroundGhost : MonoBehaviour
         if (Vector3.Distance(transform.position, distance) < 0.001f)
         {
             PlayerTurn.SetGameOver();
+            PlayerTurn.SetGhostTurn(ghostIndex);
         }
     }
 

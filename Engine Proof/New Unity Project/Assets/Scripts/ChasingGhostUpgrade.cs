@@ -94,7 +94,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
                 PlayerTurn.SetGhostTurn(ghostIndex);
             }
         }
-        if (eat)
+        if (eat && PlayerTurn.ghostFinished[ghostIndex])
         {
             Move();
         }
@@ -121,6 +121,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, distance, step);
         if (Vector3.Distance(transform.position, distance) < 0.001f)
         {
+            PlayerTurn.SetGhostTurn(ghostIndex);
             anim.SetBool("Behind", false);
             anim.SetBool("Front", false);
             ChangeTile();

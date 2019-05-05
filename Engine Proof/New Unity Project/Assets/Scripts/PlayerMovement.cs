@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
     bool CheckMovable()
     {
-        for(int i = 0; i < 4; i++)
+        for(int i = 0; i < pointedTile.nearbyTiles.Length; i++)
         {
             if (pointedTile.GetAdjacentTileT(i))
             {

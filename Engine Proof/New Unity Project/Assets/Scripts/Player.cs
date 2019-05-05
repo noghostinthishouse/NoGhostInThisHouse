@@ -45,10 +45,11 @@ public class Player : MonoBehaviour
         prevAngleF = my_flashight.GetComponent<Flashlight>().angle;
         prevPhase = OriginalPhase;
         SetDirection(OriginalPhase);
-        
+        tile.playerOn = true;
+
         //tile.DebugGetAllTile();
     }
-	
+
 	void Update ()
     {
         if (!PlayerTurn.Pause)
@@ -192,6 +193,13 @@ public class Player : MonoBehaviour
                     //adjacent tile and is empty
                     if (tile_nextTile.IsEmpty())
                     {
+                        // flashlighton = false for all nearby tile
+
+                        for(int j = 0; j < tile.nearbyTiles.Length; j++)
+                        {
+                            tile.GetAdjacentTileT(j).flashlightOn = false;
+                        }
+
                         found = true;
                         //enable move
                         move = true;
@@ -210,6 +218,7 @@ public class Player : MonoBehaviour
                         NextTurn();
 
                         SoundManager.instance.PlaySFX(0);
+
                     }
                 }
             }
