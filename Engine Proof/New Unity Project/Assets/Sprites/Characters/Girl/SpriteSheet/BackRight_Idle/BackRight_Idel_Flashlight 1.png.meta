@@ -1,0 +1,3312 @@
+fileFormatVersion: 2
+guid: 438fde1b899217f4aafc73411bcdab2b
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BackRight_Idel_Flashlight 1_0
+    21300002: BackRight_Idel_Flashlight 1_1
+    21300004: BackRight_Idel_Flashlight 1_2
+    21300006: BackRight_Idel_Flashlight 1_3
+    21300008: BackRight_Idel_Flashlight 1_4
+    21300010: BackRight_Idel_Flashlight 1_5
+    21300012: BackRight_Idel_Flashlight 1_6
+    21300014: BackRight_Idel_Flashlight 1_7
+    21300016: BackRight_Idel_Flashlight 1_8
+    21300018: BackRight_Idel_Flashlight 1_9
+    21300020: BackRight_Idel_Flashlight 1_10
+    21300022: BackRight_Idel_Flashlight 1_11
+    21300024: BackRight_Idel_Flashlight 1_12
+    21300026: BackRight_Idel_Flashlight 1_13
+    21300028: BackRight_Idel_Flashlight 1_14
+    21300030: BackRight_Idel_Flashlight 1_15
+    21300032: BackRight_Idel_Flashlight 1_16
+    21300034: BackRight_Idel_Flashlight 1_17
+    21300036: BackRight_Idel_Flashlight 1_18
+    21300038: BackRight_Idel_Flashlight 1_19
+    21300040: BackRight_Idel_Flashlight 1_20
+    21300042: BackRight_Idel_Flashlight 1_21
+    21300044: BackRight_Idel_Flashlight 1_22
+    21300046: BackRight_Idel_Flashlight 1_23
+    21300048: BackRight_Idel_Flashlight 1_24
+    21300050: BackRight_Idel_Flashlight 1_25
+    21300052: BackRight_Idel_Flashlight 1_26
+    21300054: BackRight_Idel_Flashlight 1_27
+    21300056: BackRight_Idel_Flashlight 1_28
+    21300058: BackRight_Idel_Flashlight 1_29
+    21300060: BackRight_Idel_Flashlight 1_30
+    21300062: BackRight_Idel_Flashlight 1_31
+    21300064: BackRight_Idel_Flashlight 1_32
+    21300066: BackRight_Idel_Flashlight 1_33
+    21300068: BackRight_Idel_Flashlight 1_34
+    21300070: BackRight_Idel_Flashlight 1_35
+    21300072: BackRight_Idel_Flashlight 1_36
+    21300074: BackRight_Idel_Flashlight 1_37
+    21300076: BackRight_Idel_Flashlight 1_38
+    21300078: BackRight_Idel_Flashlight 1_39
+    21300080: BackRight_Idel_Flashlight 1_40
+    21300082: BackRight_Idel_Flashlight 1_41
+    21300084: BackRight_Idel_Flashlight 1_42
+    21300086: BackRight_Idel_Flashlight 1_43
+    21300088: BackRight_Idel_Flashlight 1_44
+    21300090: BackRight_Idel_Flashlight 1_45
+    21300092: BackRight_Idel_Flashlight 1_46
+    21300094: BackRight_Idel_Flashlight 1_47
+    21300096: BackRight_Idel_Flashlight 1_48
+    21300098: BackRight_Idel_Flashlight 1_49
+    21300100: BackRight_Idel_Flashlight 1_50
+    21300102: BackRight_Idel_Flashlight 1_51
+    21300104: BackRight_Idel_Flashlight 1_52
+    21300106: BackRight_Idel_Flashlight 1_53
+    21300108: BackRight_Idel_Flashlight 1_54
+    21300110: BackRight_Idel_Flashlight 1_55
+    21300112: BackRight_Idel_Flashlight 1_56
+    21300114: BackRight_Idel_Flashlight 1_57
+    21300116: BackRight_Idel_Flashlight 1_58
+    21300118: BackRight_Idel_Flashlight 1_59
+    21300120: BackRight_Idel_Flashlight 1_60
+    21300122: BackRight_Idel_Flashlight 1_61
+    21300124: BackRight_Idel_Flashlight 1_62
+    21300126: BackRight_Idel_Flashlight 1_63
+    21300128: BackRight_Idel_Flashlight 1_64
+    21300130: BackRight_Idel_Flashlight 1_65
+    21300132: BackRight_Idel_Flashlight 1_66
+    21300134: BackRight_Idel_Flashlight 1_67
+    21300136: BackRight_Idel_Flashlight 1_68
+    21300138: BackRight_Idel_Flashlight 1_69
+    21300140: BackRight_Idel_Flashlight 1_70
+    21300142: BackRight_Idel_Flashlight 1_71
+    21300144: BackRight_Idel_Flashlight 1_72
+    21300146: BackRight_Idel_Flashlight 1_73
+    21300148: BackRight_Idel_Flashlight 1_74
+    21300150: BackRight_Idel_Flashlight 1_75
+    21300152: BackRight_Idel_Flashlight 1_76
+    21300154: BackRight_Idel_Flashlight 1_77
+    21300156: BackRight_Idel_Flashlight 1_78
+    21300158: BackRight_Idel_Flashlight 1_79
+    21300160: BackRight_Idel_Flashlight 1_80
+    21300162: BackRight_Idel_Flashlight 1_81
+    21300164: BackRight_Idel_Flashlight 1_82
+    21300166: BackRight_Idel_Flashlight 1_83
+    21300168: BackRight_Idel_Flashlight 1_84
+    21300170: BackRight_Idel_Flashlight 1_85
+    21300172: BackRight_Idel_Flashlight 1_86
+    21300174: BackRight_Idel_Flashlight 1_87
+    21300176: BackRight_Idel_Flashlight 1_88
+    21300178: BackRight_Idel_Flashlight 1_89
+    21300180: BackRight_Idel_Flashlight 1_90
+    21300182: BackRight_Idel_Flashlight 1_91
+    21300184: BackRight_Idel_Flashlight 1_92
+    21300186: BackRight_Idel_Flashlight 1_93
+    21300188: BackRight_Idel_Flashlight 1_94
+    21300190: BackRight_Idel_Flashlight 1_95
+    21300192: BackRight_Idel_Flashlight 1_96
+    21300194: BackRight_Idel_Flashlight 1_97
+    21300196: BackRight_Idel_Flashlight 1_98
+    21300198: BackRight_Idel_Flashlight 1_99
+    21300200: BackRight_Idel_Flashlight 1_100
+    21300202: BackRight_Idel_Flashlight 1_101
+    21300204: BackRight_Idel_Flashlight 1_102
+    21300206: BackRight_Idel_Flashlight 1_103
+    21300208: BackRight_Idel_Flashlight 1_104
+    21300210: BackRight_Idel_Flashlight 1_105
+    21300212: BackRight_Idel_Flashlight 1_106
+    21300214: BackRight_Idel_Flashlight 1_107
+    21300216: BackRight_Idel_Flashlight 1_108
+    21300218: BackRight_Idel_Flashlight 1_109
+    21300220: BackRight_Idel_Flashlight 1_110
+    21300222: BackRight_Idel_Flashlight 1_111
+    21300224: BackRight_Idel_Flashlight 1_112
+    21300226: BackRight_Idel_Flashlight 1_113
+    21300228: BackRight_Idel_Flashlight 1_114
+    21300230: BackRight_Idel_Flashlight 1_115
+    21300232: BackRight_Idel_Flashlight 1_116
+    21300234: BackRight_Idel_Flashlight 1_117
+    21300236: BackRight_Idel_Flashlight 1_118
+    21300238: BackRight_Idel_Flashlight 1_119
+    21300240: BackRight_Idel_Flashlight 1_120
+    21300242: BackRight_Idel_Flashlight 1_121
+    21300244: BackRight_Idel_Flashlight 1_122
+    21300246: BackRight_Idel_Flashlight 1_123
+    21300248: BackRight_Idel_Flashlight 1_124
+    21300250: BackRight_Idel_Flashlight 1_125
+    21300252: BackRight_Idel_Flashlight 1_126
+    21300254: BackRight_Idel_Flashlight 1_127
+    21300256: BackRight_Idel_Flashlight 1_128
+    21300258: BackRight_Idel_Flashlight 1_129
+    21300260: BackRight_Idel_Flashlight 1_130
+    21300262: BackRight_Idel_Flashlight 1_131
+    21300264: BackRight_Idel_Flashlight 1_132
+    21300266: BackRight_Idel_Flashlight 1_133
+    21300268: BackRight_Idel_Flashlight 1_134
+    21300270: BackRight_Idel_Flashlight 1_135
+    21300272: BackRight_Idel_Flashlight 1_136
+    21300274: BackRight_Idel_Flashlight 1_137
+    21300276: BackRight_Idel_Flashlight 1_138
+    21300278: BackRight_Idel_Flashlight 1_139
+    21300280: BackRight_Idel_Flashlight 1_140
+    21300282: BackRight_Idel_Flashlight 1_141
+    21300284: BackRight_Idel_Flashlight 1_142
+    21300286: BackRight_Idel_Flashlight 1_143
+    21300288: BackRight_Idel_Flashlight 1_144
+    21300290: BackRight_Idel_Flashlight 1_145
+    21300292: BackRight_Idel_Flashlight 1_146
+    21300294: BackRight_Idel_Flashlight 1_147
+    21300296: BackRight_Idel_Flashlight 1_148
+    21300298: BackRight_Idel_Flashlight 1_149
+    21300300: BackRight_Idel_Flashlight 1_150
+    21300302: BackRight_Idel_Flashlight 1_151
+    21300304: BackRight_Idel_Flashlight 1_152
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 80
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6556
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cda10ec7a2046d4eb1bfba7296425ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_1
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 6556
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfe6f4162f77a44bbcbfde11365b5ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_2
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 6556
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c524726fe8cb74fa26546fe7ae7165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_3
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 6556
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587643bdca567524498af858eee0e6fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_4
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 6556
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a90a4dd5f34be468e55b4b496a7c24
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_5
+      rect:
+        serializedVersion: 2
+        x: 2980
+        y: 6556
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee53e739e2a93a346aff1e74842eec93
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_6
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 6556
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccef88f91520e9f43bffad9cd374a165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_7
+      rect:
+        serializedVersion: 2
+        x: 4172
+        y: 6556
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63119f2b809b26e4899ba032b77f5a07
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_8
+      rect:
+        serializedVersion: 2
+        x: 4768
+        y: 6556
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca627cad8ed3da4089ff7c558c69164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_9
+      rect:
+        serializedVersion: 2
+        x: 5364
+        y: 6556
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c604f7d9a2e8cf41b77370939ad8b8e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_10
+      rect:
+        serializedVersion: 2
+        x: 5960
+        y: 6556
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8822b285c5201479dfff2482275ca6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_11
+      rect:
+        serializedVersion: 2
+        x: 6556
+        y: 6556
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e6936606d7671448bf2175ea07aed1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_12
+      rect:
+        serializedVersion: 2
+        x: 7152
+        y: 6556
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955cd60594fac9744968ef2f1828133f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5960
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c23aee7cdfd2e84ebdc6ac558bf0cdf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_14
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 5960
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b97b0cd57c8ea46b8d057998f764c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_15
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 5960
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb5c9b174f262a4e977ef9ecbef8301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_16
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 5960
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b525a01e6153cd40be1927ccca8cebb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_17
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 5960
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471c3d8d1cdc6fa4bbeb8e7460d4b7a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_18
+      rect:
+        serializedVersion: 2
+        x: 2980
+        y: 5960
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5da805ede52364295467d24809baab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_19
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 5960
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b1a9bebc9700e42a1aeb67767e9ec4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_20
+      rect:
+        serializedVersion: 2
+        x: 4172
+        y: 5960
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee51b521ab613924d80a2d3323f89fef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_21
+      rect:
+        serializedVersion: 2
+        x: 4768
+        y: 5960
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0be278594bf22b4895a475d4e1b8a28
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_22
+      rect:
+        serializedVersion: 2
+        x: 5364
+        y: 5960
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1cf49ef3279ea43b322e0395af7d12
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_23
+      rect:
+        serializedVersion: 2
+        x: 5960
+        y: 5960
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852b9041aac525c4c8eba446608b2bdf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_24
+      rect:
+        serializedVersion: 2
+        x: 6556
+        y: 5960
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56cff42fc31a01646a65c97c7e814fba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_25
+      rect:
+        serializedVersion: 2
+        x: 7152
+        y: 5960
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf944582527e5a54c8814559a9c1da2b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5364
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967d6b2381f4e3641987cc3c42475af6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_27
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 5364
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdbc60eb81af2774bbf4e75823eaa25e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_28
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 5364
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64bee78c7c114214d997c8d99351579e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_29
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 5364
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1ae8e70d2334042a9855bfb8a5178a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_30
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 5364
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ea5bb1897401d44b1125d7bc5e53b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_31
+      rect:
+        serializedVersion: 2
+        x: 2980
+        y: 5364
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1410bd470a3174fabe286061cc2d0c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_32
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 5364
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2c71c76758c9c4194e53da804ee5a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_33
+      rect:
+        serializedVersion: 2
+        x: 4172
+        y: 5364
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716f68cfd19e0c14c81b9b445d6ace67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_34
+      rect:
+        serializedVersion: 2
+        x: 4768
+        y: 5364
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91efac1896425342933d74bfe5cff97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_35
+      rect:
+        serializedVersion: 2
+        x: 5364
+        y: 5364
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4722994a66ecdaa4da730cdf1587864f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_36
+      rect:
+        serializedVersion: 2
+        x: 5960
+        y: 5364
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3916468368cd54d922f2aa6f04407d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_37
+      rect:
+        serializedVersion: 2
+        x: 6556
+        y: 5364
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca221f13fdcefd49a1babaa70c2fe5c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_38
+      rect:
+        serializedVersion: 2
+        x: 7152
+        y: 5364
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e576f59f886a84d99b08a5d6ac5db3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4768
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0f65975da84194388201e97192dfa9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_40
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 4768
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f06c75357b4b4449fc971a2e9f37c5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_41
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 4768
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e203ef8c66935f47b7716c983ad8372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_42
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 4768
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88beacfbb3ec6e94dac53697c46b382c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_43
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 4768
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c8138a544ceae45912f2b7824a36f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_44
+      rect:
+        serializedVersion: 2
+        x: 2980
+        y: 4768
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ba8bc838b77014d9c3cedef912a8f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_45
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 4768
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52de0820ca7bb4c4e9b956b5cdb0369e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_46
+      rect:
+        serializedVersion: 2
+        x: 4172
+        y: 4768
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df01b421399cfa42b8f3d9c24d195de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_47
+      rect:
+        serializedVersion: 2
+        x: 4768
+        y: 4768
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e19bce4dae0c64b9cc8edd0ba72450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_48
+      rect:
+        serializedVersion: 2
+        x: 5364
+        y: 4768
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a9e60f3d884164d87670fc209e032c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_49
+      rect:
+        serializedVersion: 2
+        x: 5960
+        y: 4768
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f1326d9a386c942ab6a61f25b835a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_50
+      rect:
+        serializedVersion: 2
+        x: 6556
+        y: 4768
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871320b2963594b4f8e57eaaf5f8ee67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_51
+      rect:
+        serializedVersion: 2
+        x: 7152
+        y: 4768
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0798ee6d744e07c40a2210ac975f77f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4172
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912ded88b4e75cc47b57c18933fb3ea1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_53
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 4172
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db2eff4d5f5f96428153866d00e3f19
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_54
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 4172
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f7cbf4e0ceca14884304703208cf0b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_55
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 4172
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ea5ac2b8fd38645b70ecfeac811ba0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_56
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 4172
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f9adc0e09f12f499292ff844f52c81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_57
+      rect:
+        serializedVersion: 2
+        x: 2980
+        y: 4172
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda11dbc3383371489251300aedcac25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_58
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 4172
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670463c1677950948bb3ee03fa916f69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_59
+      rect:
+        serializedVersion: 2
+        x: 4172
+        y: 4172
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ace68cdb116c5247a92c658961d6a6c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_60
+      rect:
+        serializedVersion: 2
+        x: 4768
+        y: 4172
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992f52aa90325084ba06041aaf31f979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_61
+      rect:
+        serializedVersion: 2
+        x: 5364
+        y: 4172
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2835121ab3932c24c9ee9eef5dab7e16
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_62
+      rect:
+        serializedVersion: 2
+        x: 5960
+        y: 4172
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c6bd23e7280814598b8cdae0f29a08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_63
+      rect:
+        serializedVersion: 2
+        x: 6556
+        y: 4172
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44184a79cceb3db41a64926ad573a9d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_64
+      rect:
+        serializedVersion: 2
+        x: 7152
+        y: 4172
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ae73bae47864642b06e5717975bbea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3576
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688b497eff9f4994db2baf6056c8ba7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_66
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 3576
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090c153787fec904b8bc116eefa50235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_67
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 3576
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3dacb77d15c71c4fb8a75e23cc307c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_68
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 3576
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f0532945ee3364699af3d4c6cce2a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_69
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 3576
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff804fd82d9091418cf26acef94ebb2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_70
+      rect:
+        serializedVersion: 2
+        x: 2980
+        y: 3576
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07886c08d30d9ec49b5d3d64a8f2c50a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_71
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 3576
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a870794ccafbe9f46ab8c18870372d07
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_72
+      rect:
+        serializedVersion: 2
+        x: 4172
+        y: 3576
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f98f0bd06e758e4d89b2809a8b8b8e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_73
+      rect:
+        serializedVersion: 2
+        x: 4768
+        y: 3576
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561442b2d5aced4419b7aef990390b34
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_74
+      rect:
+        serializedVersion: 2
+        x: 5364
+        y: 3576
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7439e73a2b95347a8e36315b069aaf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_75
+      rect:
+        serializedVersion: 2
+        x: 5960
+        y: 3576
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe2b86418a9df54b85f7e074e4ddca7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_76
+      rect:
+        serializedVersion: 2
+        x: 6556
+        y: 3576
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d261e69f45b5491468184bdc51b01787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_77
+      rect:
+        serializedVersion: 2
+        x: 7152
+        y: 3576
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c570e9230030c46bbf903ba7bb3c36
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2980
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808287ad79dc0f040b8c9cbec24b2585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_79
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 2980
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87ecd1b9a0da0041be8f5580e485f16
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_80
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 2980
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a105d421a6d318e4c85612222244096d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_81
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 2980
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6112f18f72fb03446a05a71ed30df4f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_82
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 2980
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a560d2470df44cf4c82cc3999898ef9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_83
+      rect:
+        serializedVersion: 2
+        x: 2980
+        y: 2980
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a37ad233c0fe9d4d970aecaab5d0016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_84
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 2980
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa99b32f21f878b4590d018b7a702dff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_85
+      rect:
+        serializedVersion: 2
+        x: 4172
+        y: 2980
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3826353d3a4f378459cd408d4fff8f3e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_86
+      rect:
+        serializedVersion: 2
+        x: 4768
+        y: 2980
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0d882f04dfc26449b0606dcacb0be9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_87
+      rect:
+        serializedVersion: 2
+        x: 5364
+        y: 2980
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cae1f2ab30ad6849b4356a10dc0406f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_88
+      rect:
+        serializedVersion: 2
+        x: 5960
+        y: 2980
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58e90fcc91e721479bc08f823d4fcdf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_89
+      rect:
+        serializedVersion: 2
+        x: 6556
+        y: 2980
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50b712abb1518c459309d155549264b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_90
+      rect:
+        serializedVersion: 2
+        x: 7152
+        y: 2980
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e85537c11adfbc046a538de66177d8c5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2384
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe181c8b51a3864c95336bb49a03101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_92
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 2384
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6216c973551ba224d9a934e931713f50
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_93
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 2384
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c7149fa2887c847acb47d1752d8496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_94
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 2384
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988c57f80c6323248ad39e067df5f3dc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_95
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 2384
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20644a14c6d25aa4f9a084e7e7bff2f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_96
+      rect:
+        serializedVersion: 2
+        x: 2980
+        y: 2384
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e871c1fa13b1e164f9f1a4b152da562b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_97
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 2384
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4e47621d5bbfc4dbd20f7f8eba28f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_98
+      rect:
+        serializedVersion: 2
+        x: 4172
+        y: 2384
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2411164d7ef0a842887a3151ad89cb7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_99
+      rect:
+        serializedVersion: 2
+        x: 4768
+        y: 2384
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1aa012cdc484484ab2362324e6cb850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_100
+      rect:
+        serializedVersion: 2
+        x: 5364
+        y: 2384
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796327613d391e0429914e481e07e6ed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_101
+      rect:
+        serializedVersion: 2
+        x: 5960
+        y: 2384
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62583e7e6ca71684daf9fcb94cb48f5c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_102
+      rect:
+        serializedVersion: 2
+        x: 6556
+        y: 2384
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35dc09b2568040c4392a4f75d0ef0adb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_103
+      rect:
+        serializedVersion: 2
+        x: 7152
+        y: 2384
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b6869bbdb8b20449715227390bb950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1788
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f30520ee4a7a44428549027a42b5d86
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_105
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1788
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da174ed450ebf448b92b91f044e9b64
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_106
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 1788
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8077aef0af16e3c4e97eba2934ff2f99
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_107
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 1788
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbada9379847d2247bf8be0627f041c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_108
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 1788
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa6b72b4a03e0845b0abec42001638b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_109
+      rect:
+        serializedVersion: 2
+        x: 2980
+        y: 1788
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17f7b4ad0822884e93e18a56b928baf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_110
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 1788
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450f2df24e8b20a42b96ab43a26ebb3c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_111
+      rect:
+        serializedVersion: 2
+        x: 4172
+        y: 1788
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bace3d4489f7244ba2c5d56db212c76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_112
+      rect:
+        serializedVersion: 2
+        x: 4768
+        y: 1788
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5b428ec3a7ee745871bf571c86d1c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_113
+      rect:
+        serializedVersion: 2
+        x: 5364
+        y: 1788
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95778b22212f87e4fa75440600ddea7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_114
+      rect:
+        serializedVersion: 2
+        x: 5960
+        y: 1788
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18120c646dbb89a41ba5ac02598502ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_115
+      rect:
+        serializedVersion: 2
+        x: 6556
+        y: 1788
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf14ff37ab11774488d7250b072fe26
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_116
+      rect:
+        serializedVersion: 2
+        x: 7152
+        y: 1788
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37cd2a3a4b944741991e2c8d9f82e80
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_117
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1192
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2e263e06e058c47a17b329cec8349b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_118
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1192
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad32c73e14bd3314e922ab46ce11a968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_119
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 1192
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee0ecc7059d8b1b409795dc0a5b44c05
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_120
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 1192
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0abc0b1e85f564e44bd5b2c212b27773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_121
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 1192
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4683d275cdceea34b86474e28996109b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_122
+      rect:
+        serializedVersion: 2
+        x: 2980
+        y: 1192
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9965f36e29ff3946bb40613d90593c5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_123
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 1192
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e1c19a931a6f148b76640d67a7efcc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_124
+      rect:
+        serializedVersion: 2
+        x: 4172
+        y: 1192
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519b4969c06cd4b418e50d04dd013607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_125
+      rect:
+        serializedVersion: 2
+        x: 4768
+        y: 1192
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f221eac24b32ed4ba35dee59722b5d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_126
+      rect:
+        serializedVersion: 2
+        x: 5364
+        y: 1192
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a3943afebaba440956f8504ca0888d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_127
+      rect:
+        serializedVersion: 2
+        x: 5960
+        y: 1192
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39f0ba5314cb9b438c77b800f90f327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_128
+      rect:
+        serializedVersion: 2
+        x: 6556
+        y: 1192
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e32f99b1f6a2d458e469120e38670c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_129
+      rect:
+        serializedVersion: 2
+        x: 7152
+        y: 1192
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321f992b0686ec94a893fd4bcb530e46
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 596
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4393d01a27547d49a06d5b4abf6d9dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_131
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 596
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616bed7f2c4c1054b9dcf87236b66186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_132
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 596
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada1fa810e7ce9b45bc1002c08bec604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_133
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 596
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f50821cce501d4ba19e84dbd274c14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_134
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 596
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c0c731b2e9719a419f55dc5c36063ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_135
+      rect:
+        serializedVersion: 2
+        x: 2980
+        y: 596
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05c8de780b898245a43f2debaf8ab66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_136
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 596
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3d2bc1ef2ab5d49990f5a6406b14d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_137
+      rect:
+        serializedVersion: 2
+        x: 4172
+        y: 596
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b48d9399b4ac1e489935c7bbbc425ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_138
+      rect:
+        serializedVersion: 2
+        x: 4768
+        y: 596
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9280173c181a5145bbec11323ffb452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_139
+      rect:
+        serializedVersion: 2
+        x: 5364
+        y: 596
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e898d15b1e887c4ba955a139086dc09
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_140
+      rect:
+        serializedVersion: 2
+        x: 5960
+        y: 596
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9423d876f497c4fa429763fd537326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_141
+      rect:
+        serializedVersion: 2
+        x: 6556
+        y: 596
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04bdad478dc29034a9eaa72e7b593459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_142
+      rect:
+        serializedVersion: 2
+        x: 7152
+        y: 596
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e11e8a9d1001144804479fccac0665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_143
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b11db717a915946b7509f6d8b2898c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_144
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 0
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd11c6a9e80fbc46beeb288d06ffc7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_145
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 0
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e2d80611a64174185987d06beec01e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_146
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 0
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e1df147a3411b48a2fc403f2babd7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_147
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 0
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f5504099bfa934298339f905145497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_148
+      rect:
+        serializedVersion: 2
+        x: 2980
+        y: 0
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c95eac214f13034b81e271a0b31ea68
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_149
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 0
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8868d61d35803c44bca39d185e64ac7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_150
+      rect:
+        serializedVersion: 2
+        x: 4172
+        y: 0
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37746f58fc5fef0469fb9912bc1f1746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_151
+      rect:
+        serializedVersion: 2
+        x: 6556
+        y: 0
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9274102d4f28be6478cc909f3f90cb31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackRight_Idel_Flashlight 1_152
+      rect:
+        serializedVersion: 2
+        x: 7152
+        y: 0
+        width: 596
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11cb1dbb474b75146a884801c2135951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: facd9563f639ed44b8f6af8f5b48c116
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
