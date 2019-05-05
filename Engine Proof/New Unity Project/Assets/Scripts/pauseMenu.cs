@@ -77,7 +77,7 @@ public class pauseMenu : MonoBehaviour
         PlayerTurn.Pause = false;
     }
 
-    void Pause()
+    public void Pause()
     {
         // maybe buggy?
         my_player.enabled = false;
