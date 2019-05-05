@@ -294,7 +294,7 @@ MonoBehaviour:
   m_MinSize: {x: 334, y: 274}
   m_MaxSize: {x: 14004, y: 10024}
   vertical: 0
-  controlID: 167
+  controlID: 176
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -341,8 +341,8 @@ MonoBehaviour:
     y: 0
     width: 907
     height: 279
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 124}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -457,9 +457,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ecf4ffff
-      m_LastClickedID: -2836
-      m_ExpandedIDs: bef4ffffc4f7ffffd4fbffff7c590000de590000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: d4fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -549,9 +549,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.3039236, y: 3.8940372, z: -6.1894917}
+    m_Target: {x: -0.98750097, y: 2.9148588, z: -6.1568437}
     speed: 2
-    m_Value: {x: -1.3039236, y: 3.8940372, z: -6.1894917}
+    m_Value: {x: -0.98750097, y: 2.9148588, z: -6.1568437}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -583,9 +583,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: -1}
   m_Size:
-    m_Target: 15.853323
+    m_Target: 12.59323
     speed: 2
-    m_Value: 15.853323
+    m_Value: 12.59323
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -635,35 +635,35 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites/Backgrounds/Level/Chapter2/5Puzzle2_5/House
+    - Assets/Sprites/Characters/Girl
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites/Backgrounds/Level/Chapter2/5Puzzle2_5/House
+  - Assets/Sprites/Characters/Girl/SpriteSheet
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Thanakom S\Desktop\No_Ghost\NoGhostInThisHouse\Engine
     Proof\New Unity Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 286}
-    m_SelectedIDs: 10180000
-    m_LastClickedID: 6160
-    m_ExpandedIDs: 00000000260a0000e20d00002a1200006414000064150000481700004c1800004c190000902100009621000002240000a8250000ce25000042280000102f00004a3100004e330000a05e000000ca9a3b
+    scrollPos: {x: 0, y: 586}
+    m_SelectedIDs: d0340000
+    m_LastClickedID: 13520
+    m_ExpandedIDs: 00000000260a00005813000092150000921600007a19000098200000c622000032250000fe2600002a2f000076310000b0330000d0340000b435000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: left back idle
-      m_OriginalName: left back idle
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 5074
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 13}
     m_SearchString: 
@@ -677,7 +677,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000260a0000e20d00002a1200006414000064150000481700004c1800004c190000902100009621000002240000a825000042280000102f00004a3100004e330000
+    m_ExpandedIDs: 00000000260a0000e20d0000581300009215000092160000761800007a1900007a1a0000c0220000c622000032250000d8260000fe260000a62a00002a2f000076310000b0330000b4350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
