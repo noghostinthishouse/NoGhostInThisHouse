@@ -119,7 +119,7 @@ public class Player : MonoBehaviour
                 }
                 else
                 {
-                    prevAngleF = my_flashight.GetComponent<Flashlight>().angle;
+                    //prevAngleF = my_flashight.GetComponent<Flashlight>().angle;
                     enableRotate = true;
                 }
 

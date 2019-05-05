@@ -40,9 +40,17 @@ public class CopyActionGhost : MonoBehaviour
         {
             nextTile = ghost_movement.GetTileToMove();
             nextT = nextTile.GetComponent<Tile>();
-            if (nextT.IsEmpty())
+            if (checkAdjacentTile())
             {
-                CalculateDis();
+                if (nextT.IsEmpty())
+                {
+                    CalculateDis();
+                }
+                else
+                {
+                    nextTile = null;
+                    nextT = null;
+                }
             }
             else
             {
@@ -53,10 +61,10 @@ public class CopyActionGhost : MonoBehaviour
         if (PlayerTurn.ghostFinished[ghostIndex] && nextTile)
         {
             SetAnimation();
-            if (nextT.playerOn)
-            {
-                PlayerTurn.GameOver = true;
-            }
+            //if (nextT.playerOn)
+            //{
+            //    PlayerTurn.GameOver = true;
+            //}
             Move();
         }
         else
@@ -74,15 +82,27 @@ public class CopyActionGhost : MonoBehaviour
             anim.SetBool("Behind", false);
             anim.SetBool("Front", false);
             ChangeTile();
-            if (PlayerTurn.GameOver)
+            //if (PlayerTurn.GameOver)
+            //{
+            //    PlayerTurn.SetGameOver();
+            //}
+            //else
+            //{
+            PlayerTurn.SetGhostTurn(ghostIndex);
+            //}
+        }
+    }
+
+    bool checkAdjacentTile()
+    {
+        for(int i=0;i< nextT.nearbyTiles.Length; i++)
+        {
+            if(nextT.GetAdjacentTile(i) == currentTile)
             {
-                PlayerTurn.SetGameOver();
-            }
-            else
-            {
-                PlayerTurn.SetGhostTurn(ghostIndex);
+                return true;
             }
         }
+        return false;
     }
 
     void ChangeTile()
