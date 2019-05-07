@@ -55,6 +55,7 @@ public class TurnAroundGhost : MonoBehaviour
 
         else if (!currentT.flashlightOn)
         {
+            anim.SetBool("Stunt", false);
             if (!eat && PlayerTurn.ghostFinished[ghostIndex])
             {
                 if (!CheckPlayer())
@@ -75,6 +76,10 @@ public class TurnAroundGhost : MonoBehaviour
         {
             stunt = true;
             //CheckPlayer();
+        }
+        else
+        {
+            anim.SetBool("Stunt", true);
         }
 
         if (eat && PlayerTurn.ghostFinished[ghostIndex])

@@ -46,11 +46,8 @@ public class Mirror : MonoBehaviour
 
     void TurnOffLight()
     {
-        if (light1[0].enabled || light2[0].enabled)
-        {
-            tile2.flashlightOn = false;
-            tile1.flashlightOn = false;
-        }
+        tile2.flashlightOn = false;
+        tile1.flashlightOn = false;
         for (int i = 0; i < light1.Length; i++)
         {
             light1[i].enabled = false;
