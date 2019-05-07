@@ -80,6 +80,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
                 {
                     PlayerTurn.SetGameOver();
                 }
+                anim.SetBool("Move", true);
                 SetAnimation();
                 Move();
             }
@@ -105,6 +106,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
         if (nextT.playerOn || nextNextT.playerOn)
         {
             trigger = true;
+            SetAnimation();
             anim.SetBool("Awake",true);
         }
     }
@@ -122,8 +124,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
         if (Vector3.Distance(transform.position, distance) < 0.001f)
         {
             PlayerTurn.SetGhostTurn(ghostIndex);
-            anim.SetBool("Behind", false);
-            anim.SetBool("Front", false);
+            anim.SetBool("Move", false);
             ChangeTile();
             CalculateDis();
             if (PlayerTurn.GameOver)
@@ -196,6 +197,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
                     isFacingRight = !isFacingRight;
                 }
                 anim.SetBool("Behind", true);
+                anim.SetBool("Front", false);
                 break;
             case 2:
                 if (isFacingRight)
@@ -204,6 +206,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
                     isFacingRight = !isFacingRight;
                 }
                 anim.SetBool("Front", true);
+                anim.SetBool("Behind", false);
                 break;
             case 3:
                 if (!isFacingRight)
@@ -212,6 +215,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
                     isFacingRight = !isFacingRight;
                 }
                 anim.SetBool("Front", true);
+                anim.SetBool("Behind", false);
                 break;
             case 4:
                 if (!isFacingRight)
@@ -220,6 +224,7 @@ public class ChasingGhostUpgrade : MonoBehaviour
                     isFacingRight = !isFacingRight;
                 }
                 anim.SetBool("Behind", true);
+                anim.SetBool("Front", false);
                 break;
         }
     }
