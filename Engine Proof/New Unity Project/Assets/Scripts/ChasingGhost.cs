@@ -46,8 +46,6 @@ public class ChasingGhost : MonoBehaviour
         {
             t.SetNotEmpty();
             anim.SetBool("Stunt", false);
-            anim.SetBool("Behind", false);
-            anim.SetBool("Front", false);
             //this statement is use to detect player in front of their tile
             if (!triggered && PlayerTurn.ghostFinished[ghostIndex])
             {
@@ -65,6 +63,7 @@ public class ChasingGhost : MonoBehaviour
                 {
                     PlayerTurn.SetGameOver();
                 }
+                anim.SetBool("Move", true);
                 SetAnimation();
                 Move();
             }
@@ -72,6 +71,7 @@ public class ChasingGhost : MonoBehaviour
         else
         {
             anim.SetBool("Stunt", true);
+            //SetAnimation();
             t.SetEmpty();
             if (PlayerTurn.ghostFinished[ghostIndex])
             {
@@ -97,8 +97,9 @@ public class ChasingGhost : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, distance, step);
         if (Vector3.Distance(transform.position, distance) < 0.001f)
         {
-            anim.SetBool("Behind", false);
-            anim.SetBool("Front", false);
+            //anim.SetBool("Behind", false);
+            //anim.SetBool("Front", false);
+            anim.SetBool("Move", false);
             ChangeTile();
             CalculateDis();
             PlayerTurn.SetGhostTurn(ghostIndex);
@@ -146,6 +147,7 @@ public class ChasingGhost : MonoBehaviour
                     isFacingRight = !isFacingRight;
                 }
                 anim.SetBool("Behind", true);
+                anim.SetBool("Front", false);
                 break;
             case 2:
                 if (isFacingRight)
@@ -154,6 +156,7 @@ public class ChasingGhost : MonoBehaviour
                     isFacingRight = !isFacingRight;
                 }
                 anim.SetBool("Front", true);
+                anim.SetBool("Behind", false);
                 break;
             case 3:
                 if (!isFacingRight)
@@ -162,6 +165,7 @@ public class ChasingGhost : MonoBehaviour
                     isFacingRight = !isFacingRight;
                 }
                 anim.SetBool("Front", true);
+                anim.SetBool("Behind", false);
                 break;
             case 4:
                 if (!isFacingRight)
@@ -170,6 +174,7 @@ public class ChasingGhost : MonoBehaviour
                     isFacingRight = !isFacingRight;
                 }
                 anim.SetBool("Behind", true);
+                anim.SetBool("Front", false);
                 break;
         }
     }
@@ -179,7 +184,7 @@ public class ChasingGhost : MonoBehaviour
         nextTile = player.currentTile;
         nextTile_t = player.currentTile.GetComponent<Tile>();
 
-        Debug.Log(nextTile);
+        //Debug.Log(nextTile);
     }
 
     public void ChangeTile()
