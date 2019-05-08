@@ -10,6 +10,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance = null;
     public AudioSource sfxSource;                        // use to play sound effect
     public AudioSource bgmSource;                        // use to play bg music
+    public AudioSource ambientSource;                    // use to play ambient sound
     public AudioClip[] sfxClips; 
     public AudioClip[] bgmClips;
     /*
@@ -52,6 +53,10 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+
+        // setup ambient sound
+        ambientSource.clip = bgmClips[2];
+        ambientSource.loop = true;
     }
 
     // play once
@@ -63,14 +68,29 @@ public class SoundManager : MonoBehaviour
     // play loops
     public void PlayBGM(int index)
     {
+        
         bgmSource.clip = bgmClips[index];
         bgmSource.loop = true;
         bgmSource.Play();
+        ambientSource.Play();
     }
 
     public void StopBGM()
     {
         bgmSource.Stop();
+        ambientSource.Stop();
+    }
+
+    // call once to mute or unmute
+    public void MuteBGM()
+    {
+        bgmSource.mute = !bgmSource.mute;
+        ambientSource.mute = !ambientSource.mute;
+    }
+
+    public void MuteSFX()
+    {
+        sfxSource.mute = !sfxSource.mute;
     }
 }
 
