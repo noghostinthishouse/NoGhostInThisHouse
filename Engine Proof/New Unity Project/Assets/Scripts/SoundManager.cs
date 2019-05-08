@@ -92,5 +92,16 @@ public class SoundManager : MonoBehaviour
     {
         sfxSource.mute = !sfxSource.mute;
     }
+
+    public void SetVolumeSFX(float vol)
+    {
+        sfxSource.volume = vol;
+    }
+
+    public void SetVolumeBGM(float vol)
+    {
+        bgmSource.volume = vol;
+        ambientSource.volume = vol;
+    }
 }
 
