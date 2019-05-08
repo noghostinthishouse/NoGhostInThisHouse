@@ -35,6 +35,7 @@ public class SimpleGhost : MonoBehaviour
     {
         if (!t.flashlightOn)
         {
+            stunt = false;
             t.SetNotEmpty();
             anim.SetBool("Stunt", false);
             //1st trigger statement
@@ -51,6 +52,8 @@ public class SimpleGhost : MonoBehaviour
         }
         else
         {
+            stunt = true;
+            CheckPlayer();
             anim.SetBool("Stunt", true);
             PlayerTurn.SetGhostTurn(ghostIndex);
         }
@@ -64,7 +67,7 @@ public class SimpleGhost : MonoBehaviour
             {
                 if (t.GetAdjacentTileT(i).playerOn)
                 {
-                    if (triggered)
+                    if (triggered && !stunt)
                     {
                         //Debug.Log("Game over");
                         SoundManager.instance.PlaySFX(8);
