@@ -105,6 +105,7 @@ public class Flashlight : MonoBehaviour
                 pointedTile = collider.GetComponent<Tile>();
                 if (turnOn)
                 {
+                    Debug.Log("on");
                     pointedTile.flashlightOn = true;
                 }
             }
