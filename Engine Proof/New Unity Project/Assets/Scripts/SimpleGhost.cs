@@ -52,8 +52,11 @@ public class SimpleGhost : MonoBehaviour
         }
         else
         {
+            if (!triggered && PlayerTurn.ghostFinished[ghostIndex])
+            {
+                CheckPlayer();
+            }
             stunt = true;
-            CheckPlayer();
             anim.SetBool("Stunt", true);
             PlayerTurn.SetGhostTurn(ghostIndex);
         }

@@ -32,6 +32,7 @@ public class SoundManager : MonoBehaviour
         13 - key_pickup
         14 - menu highlight
         15 - tile highlight
+        16 - click
          
         BGM
         0 - game title

@@ -106,6 +106,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (pointedTile)
         {
+            SoundManager.instance.PlaySFX(16);
             pointedTile.MoveToThisTile();
         }
     }

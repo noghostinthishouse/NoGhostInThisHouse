@@ -144,6 +144,7 @@ public class Player : MonoBehaviour
                 }
                 else
                 {
+                    SoundManager.instance.PlaySFX(16);
                     enableRotate = false;
                     SetDirection(prevPhase);
                     my_flashight.GetComponent<Flashlight>().SetAngle(prevAngleF);
