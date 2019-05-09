@@ -67,6 +67,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8423119c11a5773458c515b5c06f278b, type: 3}
   - {fileID: 8300000, guid: c4c3347ad27b7bf4e926a3271c9368a4, type: 3}
   - {fileID: 8300000, guid: edf96d43bb42c0046a021cfe8036b4b4, type: 3}
+  - {fileID: 8300000, guid: 21f26fce828757648b8f30f0e6ec744e, type: 3}
+  - {fileID: 8300000, guid: 70965ea7a3ec3704090f107de255598f, type: 3}
+  - {fileID: 8300000, guid: 83cf7349bca397244aa15d91ac53b315, type: 3}
+  - {fileID: 8300000, guid: 1f49bf7ed83f5104693ccbb2f7f0b31f, type: 3}
   bgmClips:
   - {fileID: 8300000, guid: 3498b0a37f82c224d913bcd9616ef942, type: 3}
   - {fileID: 8300000, guid: 0aa99fca43f6733469ae244e27bafd3f, type: 3}
