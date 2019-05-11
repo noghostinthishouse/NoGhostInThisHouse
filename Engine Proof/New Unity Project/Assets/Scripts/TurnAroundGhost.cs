@@ -99,6 +99,7 @@ public class TurnAroundGhost : MonoBehaviour
     {
         if (pointedTile.playerOn)
         {
+            SoundManager.instance.PlaySFX(17);
             eat = true;
         }
         return eat;

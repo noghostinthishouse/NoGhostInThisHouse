@@ -41,8 +41,9 @@ public class Inventory : MonoBehaviour
 
     public void TakeItem(GameObject item)
     {
-        Debug.Log(inventory.Length);
+        //Debug.Log(inventory.Length);
         inventory[count] = item;
+        SoundManager.instance.PlaySFX(13);
         if (count < noOfItem - 1)
         {
             count++;

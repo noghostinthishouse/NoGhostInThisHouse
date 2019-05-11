@@ -33,6 +33,10 @@ public class SoundManager : MonoBehaviour
         14 - menu highlight
         15 - tile highlight
         16 - click
+        17 - detected owl
+        18 - cat sleeping
+        19 - blanket ghost sound 1
+        20 - blanket ghost sound 2
          
         BGM
         0 - game title

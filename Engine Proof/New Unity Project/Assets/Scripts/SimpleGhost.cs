@@ -10,6 +10,7 @@ public class SimpleGhost : MonoBehaviour
     public float speed;
 
     public GameObject tile;
+
     private bool eat;
     private Tile t;
     private Vector3 distance;
@@ -61,7 +62,7 @@ public class SimpleGhost : MonoBehaviour
             PlayerTurn.SetGhostTurn(ghostIndex);
         }
     }
-    
+
     public void CheckPlayer()
     {
         for(int i = 0; i < 4; i++)
