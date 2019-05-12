@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
 
     public PlayerMovement my_movement;
     public GameObject my_flashight;         // so we can switch between different flashlights
+    private GhostSounds gs;
     private Inventory my_inventory;
     private Animator my_anim;
     private pauseMenu game_menu;
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour
         my_inventory = GetComponent<Inventory>();
         tile = currentTile.GetComponent<Tile>();
         my_anim = GetComponent<Animator>();
+        gs = GetComponent<GhostSounds>();
 
         enableRotate = false;
         nextTile = null;
@@ -67,6 +69,7 @@ public class Player : MonoBehaviour
                     move = false;
                     my_anim.SetBool("Move", false);
 
+                    gs.PlayGhostSound();
                     PickUpItem();
                     CheckEndGame();
                     PlayerTurn.SetPlayerTurn();

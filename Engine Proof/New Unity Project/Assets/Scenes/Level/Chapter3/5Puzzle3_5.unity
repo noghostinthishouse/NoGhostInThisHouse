@@ -404,6 +404,21 @@ PrefabInstance:
       propertyPath: angle
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3964051636507020246, guid: 32081521d58dad648804e81fbd03bf37,
+        type: 3}
+      propertyPath: madGhost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964051636507020246, guid: 32081521d58dad648804e81fbd03bf37,
+        type: 3}
+      propertyPath: copyActionGhost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964051636507020246, guid: 32081521d58dad648804e81fbd03bf37,
+        type: 3}
+      propertyPath: owlGhost
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32081521d58dad648804e81fbd03bf37, type: 3}
 --- !u!1 &124082916 stripped
@@ -3012,7 +3027,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1055631895}
-  - component: {fileID: 1055631896}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -3037,19 +3051,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1055631896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055631894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01e79a06df4a0224e9478a8d55be4f45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allGhostSoundsInLevel: 
 --- !u!1 &1065501052
 GameObject:
   m_ObjectHideFlags: 0
