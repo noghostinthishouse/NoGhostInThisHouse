@@ -71,6 +71,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 70965ea7a3ec3704090f107de255598f, type: 3}
   - {fileID: 8300000, guid: 83cf7349bca397244aa15d91ac53b315, type: 3}
   - {fileID: 8300000, guid: 1f49bf7ed83f5104693ccbb2f7f0b31f, type: 3}
+  - {fileID: 8300000, guid: e30f59c40de84694e9ad07f0fee97a14, type: 3}
+  - {fileID: 8300000, guid: 331bf9a48a849734a83e5c7f55637142, type: 3}
+  - {fileID: 8300000, guid: 62b0fc363c42ca64cbe5ea8233c501bb, type: 3}
+  - {fileID: 8300000, guid: 04e130b7b0b8a1944a0d83409a68a15f, type: 3}
+  - {fileID: 8300000, guid: dbc0a35efbb0d86448318e08fc54390d, type: 3}
+  - {fileID: 8300000, guid: 963cdf6ec0deb0045af75407be5d526a, type: 3}
+  - {fileID: 8300000, guid: c4a19f3bc50f58e4586a422aba1796f3, type: 3}
+  - {fileID: 8300000, guid: 6c69d560afa709a4f81cff884377866c, type: 3}
+  - {fileID: 8300000, guid: 6a8382b8046149a4cb5431d05018dda3, type: 3}
   bgmClips:
   - {fileID: 8300000, guid: 3498b0a37f82c224d913bcd9616ef942, type: 3}
   - {fileID: 8300000, guid: 0aa99fca43f6733469ae244e27bafd3f, type: 3}

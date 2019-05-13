@@ -26,7 +26,8 @@ public class GhostSounds : MonoBehaviour
         }
         if (chasingGhost)
         {
-            // add sound index
+            ghostSoundIndexes.Add(24);
+            ghostSoundIndexes.Add(25);
         }
         if (owlGhost)
         {
@@ -34,15 +35,19 @@ public class GhostSounds : MonoBehaviour
         }
         if (followLightGhost)
         {
-            // add sound index
+            ghostSoundIndexes.Add(21);
+            ghostSoundIndexes.Add(22);
+            ghostSoundIndexes.Add(23);
         }
         if (copyActionGhost)
         {
-            // add sound index
+            ghostSoundIndexes.Add(26);
+            ghostSoundIndexes.Add(27);
         }
         if (madGhost)
         {
-            // add sound index
+            ghostSoundIndexes.Add(28);
+            ghostSoundIndexes.Add(29);
         }
     }
 
