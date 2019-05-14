@@ -74,8 +74,6 @@ public class Player : MonoBehaviour
                     CheckEndGame();
                     PlayerTurn.SetPlayerTurn();
 
-                    prevAngleF = my_flashight.GetComponent<Flashlight>().angle;
-                    prevPhase = my_movement.GetPhase();
                 }
             }
 
@@ -211,6 +209,9 @@ public class Player : MonoBehaviour
 
                         prevAngleM = my_movement.angle;
                         my_flashight.GetComponent<Flashlight>().angle = my_movement.angle;
+
+                        prevAngleF = my_flashight.GetComponent<Flashlight>().angle;
+                        prevPhase = my_movement.GetPhase();
 
                         tile.playerOn = false;
                         tile_nextTile.playerOn = true;
