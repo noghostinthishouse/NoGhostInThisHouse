@@ -8362,17 +8362,17 @@ PrefabInstance:
     - target: {fileID: 3827736453666984338, guid: 4b5aadcf59af2e54d97a365d6e4fdf74,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.89
+      value: 14.890001
       objectReference: {fileID: 0}
     - target: {fileID: 3827736453666984338, guid: 4b5aadcf59af2e54d97a365d6e4fdf74,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.46
+      value: -5.4599996
       objectReference: {fileID: 0}
     - target: {fileID: 3827736453666984338, guid: 4b5aadcf59af2e54d97a365d6e4fdf74,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: -3.5869842
       objectReference: {fileID: 0}
     - target: {fileID: 3827736453666984338, guid: 4b5aadcf59af2e54d97a365d6e4fdf74,
         type: 3}
@@ -12891,7 +12891,7 @@ MonoBehaviour:
   item: {fileID: 0}
   mirror: {fileID: 0}
   empty: 1
-  playerOn: 1
+  playerOn: 0
   flashlightPlaced: 0
   flashlightOn: 0
   ht: {fileID: 2133350916}

@@ -6872,7 +6872,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   room: {fileID: 1544078577}
   cam: {fileID: 627465385}
-  BGMIndex: 1
+  BGMIndex: 4
 --- !u!81 &627465384
 AudioListener:
   m_ObjectHideFlags: 0
@@ -7782,11 +7782,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 405704070861117267, guid: 88f96c78fefb1ff478d2513d525b77aa,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 47.799927
-      objectReference: {fileID: 0}
     - target: {fileID: 405704069680982634, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
       propertyPath: m_IsActive
@@ -7821,6 +7816,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405704070861117267, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 47.799927
       objectReference: {fileID: 0}
     - target: {fileID: 405704071021871964, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}

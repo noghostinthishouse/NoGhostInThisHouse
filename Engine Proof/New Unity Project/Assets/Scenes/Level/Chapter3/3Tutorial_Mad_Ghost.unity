@@ -2620,7 +2620,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   room: {fileID: 1838014899}
   cam: {fileID: 1030763179}
-  BGMIndex: 1
+  BGMIndex: 4
 --- !u!81 &1030763181
 AudioListener:
   m_ObjectHideFlags: 0
