@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class stageSelectController : MonoBehaviour
 {
     // static public int[] stageClear = { 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }; // 0 - not cleared, 1 - cleared
-    public Image stageTitle;
-    public Sprite[] stageTitleSprites;
+    //public Image stageTitle;
+    //public Sprite[] stageTitleSprites;
     public Image levelImage;
     public Sprite[] levelImageSprites;
     public GameObject stageLocked;
@@ -128,7 +128,7 @@ public class stageSelectController : MonoBehaviour
     public void goRight()
     {
         SoundManager.instance.PlaySFX(3);
-        if (currentSelect < 10)
+        if (currentSelect < 15)
         {
             currentSelect++;
         }
@@ -140,15 +140,15 @@ public class stageSelectController : MonoBehaviour
         {
             leftArrow.SetActive(false);
         }
-        if (currentSelect == 14)
-        {
-            rightArrow.SetActive(false);
-        }
-        if (currentSelect != 0)
+        else
         {
             leftArrow.SetActive(true);
         }
-        if (currentSelect != 14)
+        if (currentSelect == 15)
+        {
+            rightArrow.SetActive(false);
+        }
+        else
         {
             rightArrow.SetActive(true);
         }

@@ -8,6 +8,14 @@ public class TitleScreenController : MonoBehaviour
     public GameObject controlsScreen;
     public GameObject creditsScreen;
 
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.P))
+        {
+            Debug.Log("Delete All PlayerPrefs");
+            PlayerPrefs.DeleteAll();
+        }
+    }
     public void startGame()
     {
         // PlayerPrefs.DeleteAll();

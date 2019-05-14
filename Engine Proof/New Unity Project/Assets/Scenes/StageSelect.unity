@@ -1751,19 +1751,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc14ecd34ae13d4883748cbbcf6c735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageTitle: {fileID: 1276124799}
-  stageTitleSprites:
-  - {fileID: 21300000, guid: 2a2c8fafbe8dc3a489f9fb1303130c1c, type: 3}
-  - {fileID: 21300000, guid: fe3489a7467d7d64f98c875fb6fa91c7, type: 3}
-  - {fileID: 21300000, guid: 9ae5aa0cc9b586f4689b87cf14be2c79, type: 3}
-  - {fileID: 21300000, guid: 8c36947555252d546a315642637314e2, type: 3}
-  - {fileID: 21300000, guid: 3f3b766f1ad331640aac73301f92e223, type: 3}
-  - {fileID: 21300000, guid: 3f3b766f1ad331640aac73301f92e223, type: 3}
-  - {fileID: 21300000, guid: 3f3b766f1ad331640aac73301f92e223, type: 3}
-  - {fileID: 21300000, guid: 3f3b766f1ad331640aac73301f92e223, type: 3}
-  - {fileID: 21300000, guid: 3f3b766f1ad331640aac73301f92e223, type: 3}
-  - {fileID: 21300000, guid: 3f3b766f1ad331640aac73301f92e223, type: 3}
-  - {fileID: 21300000, guid: 3f3b766f1ad331640aac73301f92e223, type: 3}
   levelImage: {fileID: 1763825985}
   levelImageSprites:
   - {fileID: 21300000, guid: 01adb73f43267ef4ab04fdad80917f69, type: 3}
@@ -1772,13 +1759,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9da3000d7e8792248804b5173034503a, type: 3}
   - {fileID: 21300000, guid: 032075e4b78099145941a0d6c3e38106, type: 3}
   - {fileID: 21300000, guid: 8fa4c2727eb55df419fe4280d32bdb8e, type: 3}
-  - {fileID: 21300000, guid: e9f1db2cd23e69c4f97713ea97a5d786, type: 3}
+  - {fileID: 21300000, guid: 757619d40cc08ad478a39cec64f8e925, type: 3}
   - {fileID: 21300000, guid: 79fa1ead89719174ba460225a1b7bf7f, type: 3}
-  - {fileID: 21300000, guid: 79fa1ead89719174ba460225a1b7bf7f, type: 3}
-  - {fileID: 21300000, guid: 4c6d99b39a0ab3442a25fe2c9bc721e6, type: 3}
   - {fileID: 21300000, guid: 94c353f50afe6564d81fc01296f981ac, type: 3}
+  - {fileID: 21300000, guid: 4c6d99b39a0ab3442a25fe2c9bc721e6, type: 3}
   - {fileID: 21300000, guid: 5b3e902938c129344b8c2e72d6005775, type: 3}
+  - {fileID: 21300000, guid: 11598f8488667744394351df5d68e980, type: 3}
   - {fileID: 21300000, guid: 607aeafd11f8ed442bf69355f7073efd, type: 3}
+  - {fileID: 21300000, guid: 2fcaf531948816341bb07051f4745238, type: 3}
   - {fileID: 21300000, guid: 2d1e3adbab54ddd4db0a8c0b27876ac7, type: 3}
   - {fileID: 21300000, guid: 0db16ac76d65b04449cfccd430bebffc, type: 3}
   stageLocked: {fileID: 975903832}
