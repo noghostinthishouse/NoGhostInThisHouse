@@ -1061,15 +1061,15 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 1.7700195
       objectReference: {fileID: 0}
-    - target: {fileID: 8099789017888078382, guid: 88f96c78fefb1ff478d2513d525b77aa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8684874993114888954, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.23999023
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099789017888078382, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f96c78fefb1ff478d2513d525b77aa, type: 3}
@@ -3554,26 +3554,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1308475914}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1308475918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1308475917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab7480af380a64a448cfe82e7308cd47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTile: {fileID: 0}
-  tiles:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  speed: 5
-  stunt: 0
 --- !u!114 &1308475919
 MonoBehaviour:
   m_ObjectHideFlags: 0
