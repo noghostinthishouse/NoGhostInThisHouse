@@ -28,7 +28,7 @@ public class CopyActionGhostMovement : MonoBehaviour
         {
             angle = playerCol.angle;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
+            transform.rotation = rotation;
         }
     }
 
