@@ -75,7 +75,7 @@ public class GhostSounds : MonoBehaviour
     bool RandomPlaySound()
     {
         float tmp = Random.Range(1, 100);
-        Debug.Log(tmp);
+        //Debug.Log(tmp);
         if (tmp >= 70)
         {
             return true;
