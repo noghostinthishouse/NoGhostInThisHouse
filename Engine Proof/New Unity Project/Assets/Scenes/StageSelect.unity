@@ -1769,6 +1769,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2fcaf531948816341bb07051f4745238, type: 3}
   - {fileID: 21300000, guid: 2d1e3adbab54ddd4db0a8c0b27876ac7, type: 3}
   - {fileID: 21300000, guid: 0db16ac76d65b04449cfccd430bebffc, type: 3}
+  - {fileID: 21300000, guid: 77070c4b5f1adb843b2707b61e9a45fa, type: 3}
   stageLocked: {fileID: 975903832}
   leftArrow: {fileID: 17307842}
   rightArrow: {fileID: 1185730737}
