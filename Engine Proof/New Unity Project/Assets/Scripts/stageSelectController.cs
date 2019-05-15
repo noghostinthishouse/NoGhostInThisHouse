@@ -66,7 +66,26 @@ public class stageSelectController : MonoBehaviour
             PlayerTurn.Restart();
             SoundManager.instance.PlaySFX(3);
             loadingScreen.SetActive(true);
-            SceneManager.LoadScene(currentSelect + 2);
+
+            if (currentSelect == 0)
+            {
+                PlayerPrefs.SetInt("runCutscene", 0);
+                SceneManager.LoadScene("Cutscenes");
+            }
+            else if (currentSelect == 7)
+            {
+                PlayerPrefs.SetInt("runCutscene", 2);
+                SceneManager.LoadScene("Cutscenes");
+            }
+            else if (currentSelect == 12)
+            {
+                PlayerPrefs.SetInt("runCutscene", 4);
+                SceneManager.LoadScene("Cutscenes");
+            }
+            else
+            {
+                SceneManager.LoadScene(currentSelect + 3);
+            }
         }
     }
     

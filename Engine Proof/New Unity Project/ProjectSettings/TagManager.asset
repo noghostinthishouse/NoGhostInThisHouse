@@ -8,6 +8,10 @@ TagManager:
   - Tile
   - Flashlight
   - Menu Canvas
+  - Door Highlight
+  - PlayerCol
+  - SoundManager
+  - CutsceneController
   layers:
   - Default
   - TransparentFX
