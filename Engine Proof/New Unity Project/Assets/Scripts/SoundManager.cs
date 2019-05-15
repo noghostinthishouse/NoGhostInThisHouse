@@ -73,7 +73,6 @@ public class SoundManager : MonoBehaviour
     // play loops
     public void PlayBGM(int index)
     {
-        
         bgmSource.clip = bgmClips[index];
         bgmSource.loop = true;
         bgmSource.Play();

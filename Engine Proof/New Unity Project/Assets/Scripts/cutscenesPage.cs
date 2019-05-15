@@ -18,6 +18,16 @@ public class cutscenesPage : MonoBehaviour
         }
 
         cutscenes[0].SetActive(true);
+        if (cutscenes[0].GetComponent<PanelSFX>().hasSFX)
+        {
+            SoundManager.instance.PlaySFX(cutscenes[0].GetComponent<PanelSFX>().soundIndex);
+            Debug.Log("playsfx");
+        }
+        else if (cutscenes[0].GetComponent<PanelSFX>().hasBGM)
+        {
+            Debug.Log("playbgm");
+            SoundManager.instance.PlayBGM(cutscenes[0].GetComponent<PanelSFX>().soundIndex);
+        }
         currentScene = 0;
 
         cutscenesCon = GameObject.FindGameObjectWithTag("CutsceneController").GetComponent<cutscenesController>();
@@ -30,6 +40,16 @@ public class cutscenesPage : MonoBehaviour
         if (currentScene != cutscenes.Length)
         {
             cutscenes[currentScene].SetActive(true);
+            if (cutscenes[currentScene].GetComponent<PanelSFX>().hasSFX)
+            {
+                SoundManager.instance.PlaySFX(cutscenes[currentScene].GetComponent<PanelSFX>().soundIndex);
+                Debug.Log("playsfx");
+            }
+            else if (cutscenes[currentScene].GetComponent<PanelSFX>().hasBGM)
+            {
+                Debug.Log("playbgm");
+                SoundManager.instance.PlayBGM(cutscenes[currentScene].GetComponent<PanelSFX>().soundIndex);
+            }
         }
         else
         {
