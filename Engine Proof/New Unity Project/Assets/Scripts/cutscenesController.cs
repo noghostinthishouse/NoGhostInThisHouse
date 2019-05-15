@@ -54,7 +54,7 @@ public class cutscenesController : MonoBehaviour
         }
         else if (runScene == 5)
         {
-            SceneManager.LoadScene("StageSelect");
+            SceneManager.LoadScene("TitleScreen");
         }
 
     }
