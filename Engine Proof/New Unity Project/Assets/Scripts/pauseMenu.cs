@@ -18,8 +18,13 @@ public class pauseMenu : MonoBehaviour
     public GameObject popupImage;
     public GameObject Xbutton;
     public Sprite[] popups;
+    public GameObject allpopupScreen;
+    public GameObject allpopupImage;
+    public GameObject allXbutton;
+    public Sprite[] allPopups;
 
     private int currentPopupPage;
+    private int currentAllPopupPage;
     public GameObject loadingScreen;
     public Slider slider;
 
@@ -60,6 +65,14 @@ public class pauseMenu : MonoBehaviour
 
             if (currentPopupPage == popups.Length - 1)
                 Xbutton.SetActive(true);
+        }
+
+        if (allpopupScreen.activeSelf == true)
+        {
+            allpopupImage.GetComponent<Image>().sprite = allPopups[currentAllPopupPage];
+
+            if (currentAllPopupPage == PlayerPrefs.GetInt("allPopupLength") - 1)
+                allXbutton.SetActive(true);
         }
     }
 
@@ -151,7 +164,25 @@ public class pauseMenu : MonoBehaviour
         SoundManager.instance.StopBGM();
         SoundManager.instance.PlaySFX(3);
         loadingScreen.SetActive(true);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (SceneManager.GetActiveScene().buildIndex == 9)
+        {
+            PlayerPrefs.SetInt("runCutscene", 1);
+            SceneManager.LoadScene("Cutscenes");
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 14)
+        {
+            PlayerPrefs.SetInt("runCutscene", 3);
+            SceneManager.LoadScene("Cutscenes");
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 19)
+        {
+            PlayerPrefs.SetInt("runCutscene", 5);
+            SceneManager.LoadScene("Cutscenes");
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
 
         if (PlayerPrefs.HasKey("tutorialRan"))
         {
@@ -214,6 +245,39 @@ public class pauseMenu : MonoBehaviour
         SoundManager.instance.PlaySFX(3);
 
         popupScreen.SetActive(false);
+        ingameMenuUI.SetActive(true);
+        Time.timeScale = 1f;
+        PlayerTurn.Pause = false;
+    }
+
+    public void showAllPopups()
+    {
+        currentAllPopupPage = 0;
+        allpopupImage.GetComponent<Image>().sprite = allPopups[currentAllPopupPage];
+        allXbutton.SetActive(false);
+
+        my_player.enabled = false;
+        player_movement.enabled = false;
+
+        allpopupScreen.SetActive(true);
+        ingameMenuUI.SetActive(false);
+        Time.timeScale = 0f;
+        PlayerTurn.Pause = true;
+    }
+
+    public void nextAllPopupPage()
+    {
+        if (currentAllPopupPage < PlayerPrefs.GetInt("allPopupLength") - 1)
+            currentAllPopupPage++;
+    }
+
+    public void closeAllPopup()
+    {
+        my_player.enabled = true;
+        player_movement.enabled = true;
+        SoundManager.instance.PlaySFX(3);
+
+        allpopupScreen.SetActive(false);
         ingameMenuUI.SetActive(true);
         Time.timeScale = 1f;
         PlayerTurn.Pause = false;

@@ -50,6 +50,9 @@ public class Player : MonoBehaviour
         tile.playerOn = true;
 
         //tile.DebugGetAllTile();
+
+        updateAllPopupLength();
+        
     }
 
 	void Update ()
@@ -355,12 +358,59 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Level complete");
         PlayerTurn.GameOver = true;
-        if (SceneManager.GetActiveScene().buildIndex != 12)
+        if (SceneManager.GetActiveScene().buildIndex < 19)
         {
-            if (SceneManager.GetActiveScene().buildIndex - 1 > PlayerPrefs.GetInt("stageCompleted")) {
-                PlayerPrefs.SetInt("stageCompleted", SceneManager.GetActiveScene().buildIndex - 1);
+            if (SceneManager.GetActiveScene().buildIndex - 1 > PlayerPrefs.GetInt("stageCompleted"))
+            {
+                PlayerPrefs.SetInt("stageCompleted", SceneManager.GetActiveScene().buildIndex - 2);
             }
+
+            PlayerPrefs.SetInt("lastCompleted", SceneManager.GetActiveScene().buildIndex - 2);
         }
-        game_menu.Victory();
+        else
+        {
+            PlayerPrefs.SetInt("lastCompleted", 0);
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex < 19)
+        {
+            game_menu.Victory();
+        }
+        else
+        {
+            game_menu.NextLevel();
+        }
+    }
+
+    void updateAllPopupLength()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            PlayerPrefs.SetInt("allPopupLength", 6);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            PlayerPrefs.SetInt("allPopupLength", 7);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 8)
+        {
+            PlayerPrefs.SetInt("allPopupLength", 8);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 10)
+        {
+            PlayerPrefs.SetInt("allPopupLength", 9);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 12)
+        {
+            PlayerPrefs.SetInt("allPopupLength", 10);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 15)
+        {
+            PlayerPrefs.SetInt("allPopupLength", 11);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 17)
+        {
+            PlayerPrefs.SetInt("allPopupLength", 12);
+        }
     }
 }

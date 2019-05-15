@@ -39,7 +39,15 @@ public class stageSelectController : MonoBehaviour
 
     void Start()
     {
-        currentSelect = 0;
+        if (PlayerPrefs.HasKey("lastCompleted"))
+        {
+            currentSelect = PlayerPrefs.GetInt("lastCompleted");
+        }
+        else
+        {
+            currentSelect = 0;
+        }
+
         if (!PlayerPrefs.HasKey("stageCompleted"))
         {
             PlayerPrefs.SetInt("stageCompleted", 0);
@@ -48,6 +56,11 @@ public class stageSelectController : MonoBehaviour
         else
         {
             levelUnlocked = PlayerPrefs.GetInt("stageCompleted");
+        }
+
+        if (!PlayerPrefs.HasKey("allPopupLength"))
+        {
+            PlayerPrefs.SetInt("allPopupLength", 6);
         }
     }
 
@@ -147,7 +160,7 @@ public class stageSelectController : MonoBehaviour
     public void goRight()
     {
         SoundManager.instance.PlaySFX(3);
-        if (currentSelect < 15)
+        if (currentSelect < 16)
         {
             currentSelect++;
         }
@@ -163,7 +176,7 @@ public class stageSelectController : MonoBehaviour
         {
             leftArrow.SetActive(true);
         }
-        if (currentSelect == 15)
+        if (currentSelect == 16)
         {
             rightArrow.SetActive(false);
         }
