@@ -35,6 +35,8 @@ public class cutscenesPage : MonoBehaviour
 
     public void nextScene()
     {
+        Debug.Log("WW");
+
         currentScene++;
 
         if (currentScene != cutscenes.Length)
