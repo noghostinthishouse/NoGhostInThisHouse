@@ -12,6 +12,9 @@ public class cutscenesPage : MonoBehaviour
 
     void Start()
     {
+
+        cutscenesCon = GameObject.FindGameObjectWithTag("CutsceneController").GetComponent<cutscenesController>();
+
         for (int i = 0; i < cutscenes.Length; i++)
         {
             cutscenes[i].SetActive(false);
@@ -29,8 +32,6 @@ public class cutscenesPage : MonoBehaviour
             SoundManager.instance.PlayBGM(cutscenes[0].GetComponent<PanelSFX>().soundIndex);
         }
         currentScene = 0;
-
-        cutscenesCon = GameObject.FindGameObjectWithTag("CutsceneController").GetComponent<cutscenesController>();
     }
 
     public void nextScene()
