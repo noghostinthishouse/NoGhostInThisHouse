@@ -60,7 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FadeIn_Time.cs" />
     <Compile Include="Assets\Scripts\AllTiles.cs" />
     <Compile Include="Assets\Scripts\animationAutoDestroy.cs" />
     <Compile Include="Assets\Scripts\backToTitleButton.cs" />
@@ -73,6 +72,7 @@
     <Compile Include="Assets\Scripts\CopyActionGhostMovement.cs" />
     <Compile Include="Assets\Scripts\cutscenesController.cs" />
     <Compile Include="Assets\Scripts\cutscenesPage.cs" />
+    <Compile Include="Assets\Scripts\FadeIn_Time.cs" />
     <Compile Include="Assets\Scripts\Flashlight.cs" />
     <Compile Include="Assets\Scripts\flashlightPlace.cs" />
     <Compile Include="Assets\Scripts\FollowLightGhost.cs" />
