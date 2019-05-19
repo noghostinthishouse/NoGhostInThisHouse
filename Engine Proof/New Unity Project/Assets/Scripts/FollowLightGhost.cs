@@ -49,6 +49,9 @@ public class FollowLightGhost : MonoBehaviour
         move = false;
         eat = false;
         count = 0;
+
+        anim.SetBool("Awake", true);
+        anim.SetBool("Front", true);
     }
 
     void Update()
@@ -58,9 +61,8 @@ public class FollowLightGhost : MonoBehaviour
         {
             if (!currentT.flashlightPlaced && !currentT.playerOn && !move && CheckAnyFlashlightOn())
             {
-                anim.SetBool("Front", false);
-                anim.SetBool("Behind", false);
                 move = true;
+                anim.SetBool("Move", true);
                 if (IsFlashlightPlaced())
                 {
                     targetTile = FindTileWithFlashlight();
@@ -94,11 +96,18 @@ public class FollowLightGhost : MonoBehaviour
                 {
                     targetTile = FindTileWithPlayer();
                 }
-
                 nextTile = FindPath(targetTile);
                 nextT = nextTile.GetComponent<Tile>();
                 CalculateDis();
             }
+        }
+        if (CheckAnyFlashlightOn())
+        {
+            anim.SetBool("Awake", true);
+        }
+        else
+        {
+            anim.SetBool("Awake", false);
         }
     }
     
@@ -186,8 +195,7 @@ public class FollowLightGhost : MonoBehaviour
         // Debug.Log("END");
         return currentT.nearbyTiles[index];
     }
-
-
+    
     GameObject[] SortTile(GameObject[] tileToSort, GameObject target)
     {
         GameObject[] tiles = tileToSort;
@@ -201,13 +209,6 @@ public class FollowLightGhost : MonoBehaviour
                 tileToSort[i + 1] = tmp;
             }
         }
-        //Debug.Log("Sort tile start");
-        //for (int i = 0; i < tileToSort.Length; i++)
-        //{
-        //    Debug.Log(tileToSort[i]);
-        //}
-        //Debug.Log("Sort tile end");
-
         return tileToSort;
     }
 
@@ -266,8 +267,7 @@ public class FollowLightGhost : MonoBehaviour
         if (Vector3.Distance(transform.position, distance) < 0.001f)
         {
             move = false;
-            anim.SetBool("Behind", false);
-            anim.SetBool("Front", false);
+            anim.SetBool("Move", false);
 
             ChangeTile();
             if (eat)
@@ -321,6 +321,7 @@ public class FollowLightGhost : MonoBehaviour
                     isFacingRight = !isFacingRight;
                 }
                 anim.SetBool("Behind", true);
+                anim.SetBool("Front", false);
                 break;
             case 2:
                 if (isFacingRight)
@@ -329,6 +330,7 @@ public class FollowLightGhost : MonoBehaviour
                     isFacingRight = !isFacingRight;
                 }
                 anim.SetBool("Front", true);
+                anim.SetBool("Behind", false);
                 break;
             case 3:
                 if (!isFacingRight)
@@ -337,6 +339,7 @@ public class FollowLightGhost : MonoBehaviour
                     isFacingRight = !isFacingRight;
                 }
                 anim.SetBool("Front", true);
+                anim.SetBool("Behind", false);
                 break;
             case 4:
                 if (!isFacingRight)
@@ -345,6 +348,7 @@ public class FollowLightGhost : MonoBehaviour
                     isFacingRight = !isFacingRight;
                 }
                 anim.SetBool("Behind", true);
+                anim.SetBool("Front", false);
                 break;
         }
     }
