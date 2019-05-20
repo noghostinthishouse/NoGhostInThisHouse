@@ -129,6 +129,8 @@ public class Player : MonoBehaviour
 
             }
 
+            // DEV TOOLS COMMENTED OUT
+            /*
             if (Input.GetKey(KeyCode.R))
             {
                 PlayerTurn.Restart();
@@ -139,6 +141,7 @@ public class Player : MonoBehaviour
             {
                 LevelComplete();
             }
+            */
 
             if (Input.GetMouseButtonDown(0))
             {
