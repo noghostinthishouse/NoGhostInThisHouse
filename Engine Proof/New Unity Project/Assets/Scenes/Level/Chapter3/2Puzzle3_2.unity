@@ -22047,7 +22047,7 @@ PrefabInstance:
     - target: {fileID: 405704070988647774, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
       propertyPath: popups.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 405704070988647774, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
