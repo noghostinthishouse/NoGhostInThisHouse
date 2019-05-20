@@ -7,15 +7,20 @@ public class TitleScreenController : MonoBehaviour
 {
     public GameObject controlsScreen;
     public GameObject creditsScreen;
-
+   
+    // DEV TOOLS COMMENTED OUT
+    /*
     void Update()
     {
+        
         if (Input.GetKey(KeyCode.P))
         {
             Debug.Log("Delete All PlayerPrefs");
             PlayerPrefs.DeleteAll();
         }
     }
+    */
+
     public void startGame()
     {
         // PlayerPrefs.DeleteAll();
