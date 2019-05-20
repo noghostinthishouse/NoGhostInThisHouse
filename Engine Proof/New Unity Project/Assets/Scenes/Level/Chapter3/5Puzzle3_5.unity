@@ -20758,7 +20758,7 @@ PrefabInstance:
     - target: {fileID: 405704070988647774, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
       propertyPath: popups.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 405704070988647774, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
@@ -20766,15 +20766,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e0f260489ea95384e858054e979f0bb3,
         type: 3}
-    - target: {fileID: 8029823406464904924, guid: 88f96c78fefb1ff478d2513d525b77aa,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 405704070861117267, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 47.80005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993066528359594211, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 233.92993
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993066528359594211, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -27.560913
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029823406464904924, guid: 88f96c78fefb1ff478d2513d525b77aa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 922120014111685723, guid: 88f96c78fefb1ff478d2513d525b77aa,
         type: 3}
@@ -20790,16 +20800,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 28.310059
-      objectReference: {fileID: 0}
-    - target: {fileID: 6993066528359594211, guid: 88f96c78fefb1ff478d2513d525b77aa,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 233.92993
-      objectReference: {fileID: 0}
-    - target: {fileID: 6993066528359594211, guid: 88f96c78fefb1ff478d2513d525b77aa,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -27.560913
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 405704069708655028, guid: 88f96c78fefb1ff478d2513d525b77aa, type: 3}
@@ -21708,7 +21708,7 @@ Transform:
   - {fileID: 1410558529}
   - {fileID: 1715970543}
   m_Father: {fileID: 372413182}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2126424607 stripped
 GameObject:
